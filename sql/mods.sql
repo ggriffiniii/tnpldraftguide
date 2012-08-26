@@ -1,4 +1,5 @@
 CREATE USER 'tnpldraft'@'localhost' IDENTIFIED BY 'tnpldraft';
+GRANT ALL PRIVILEGES ON tnpldraft.* TO 'tnpldraft'@'localhost';
 use tnpldraft;
 ALTER TABLE Master MODIFY playerID VARCHAR(10) UNIQUE KEY;
 ALTER TABLE Master MODIFY lahmanID INT(11) PRIMARY KEY;
