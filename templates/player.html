@@ -1,0 +1,23 @@
+{{ name }}
+
+<table>
+<tr>
+<td>Year</td>
+<td>BA / AB</td>
+<td>Run</td>
+<td>HR</td>
+<td>RBI</td>
+<td>SB</td>
+<td>Total</td>
+{% for season in seasons %}
+  <tr>
+  <td>{{ season.yearid }}</td>
+  <td>{{ season.ba|floatformat:3 }}/{{ season.ab }} ({{ season.ba_val|floatformat }})</td>
+  <td>{{ season.r }} ({{ season.r_val|floatformat }})</td>
+  <td>{{ season.hr }} ({{ season.hr_val|floatformat }})</td>
+  <td>{{ season.rbi }} ({{ season.rbi_val|floatformat }})</td>
+  <td>{{ season.sb }} ({{ season.sb_val|floatformat }})</td>
+  <td>{{ season.total_val|floatformat }}</td>
+  </tr>
+{% endfor %}
+</table>
