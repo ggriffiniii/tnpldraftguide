@@ -1,0 +1,62 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function() {
+	/* For zebra striping */
+	$("table tr:nth-child(odd)").addClass("odd-row");
+	/* For cell text alignment */
+	$("table td:first-child, table th:first-child").addClass("first");
+	/* For removing the last border */
+	$("table td:last-child, table th:last-child").addClass("last");
+});
+
+</script>
+<style type="text/css">
+	.bold {
+		font-weight:900;
+	}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>Team</th>
+<th>Hitting Salary</th>
+<th>BA</th>
+<th>R</th>
+<th>HR</th>
+<th>RBI</th>
+<th>SB</th>
+<th>Total Hitting</th>
+<th>Pitching Salary</th>
+<th>ERA</th>
+<th>WHIP</th>
+<th>W</th>
+<th>K</th>
+<th>S</th>
+<th>Total Pitching</th>
+</tr>
+{% for team in teams %}
+	<tr>
+	<td><a href="/team/{{ team.id}}/">{{ team.name }}</a></td>
+	<td>{{ team.summary.hitting_salary|floatformat:2 }}</td>
+	<td>{{ team.summary.ba_val|floatformat:1 }}</td>
+	<td>{{ team.summary.r_val|floatformat:1 }}</td>
+	<td>{{ team.summary.hr_val|floatformat:1 }}</td>
+	<td>{{ team.summary.rbi_val|floatformat:1 }}</td>
+	<td>{{ team.summary.sb_val|floatformat:1 }}</td>
+	<td>{{ team.summary.hitting_val|floatformat:1 }}</td>
+	<td>{{ team.summary.pitching_salary|floatformat:2 }}</td>
+	<td>{{ team.summary.era_val|floatformat:1 }}</td>
+	<td>{{ team.summary.whip_val|floatformat:1 }}</td>
+	<td>{{ team.summary.w_val|floatformat:1 }}</td>
+	<td>{{ team.summary.k_val|floatformat:1 }}</td>
+	<td>{{ team.summary.sv_val|floatformat:1 }}</td>
+	<td>{{ team.summary.pitching_val|floatformat:1 }}</td>
+	</tr>
+{% endfor %}
+</table>
+</body>
+</html>

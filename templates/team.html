@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+	function getCookie(name) {
+	    var cookieValue = null;
+	    if (document.cookie && document.cookie != '') {
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+		    var cookie = jQuery.trim(cookies[i]);
+		    // Does this cookie string begin with the name we want?
+		    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+			cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+			break;
+		    }
+		}
+	    }
+	    return cookieValue;
+	}
+ $(function() {
+	/* For zebra striping */
+	$("table tr:nth-child(odd)").addClass("odd-row");
+	/* For cell text alignment */
+	$("table td:first-child, table th:first-child").addClass("first");
+	/* For removing the last border */
+	$("table td:last-child, table th:last-child").addClass("last");
+
+	$.ajaxSetup({
+	    crossDomain: false, // obviates need for sameOrigin test
+	    beforeSend: function(xhr, settings) {
+	        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+	    }
+	});
+});
+
+</script>
+<style type="text/css">
+	.bold {
+		font-weight:900;
+	}
+</style>
+</head>
+<body>
+<h1>{{ name }}</h1>
+<table>
+<tr><th colspan="6">Hitting Summary</th></tr>
+<tr><td>Players</td><td colspan="5">{{ hitting_totals.player_count }}</td></tr>
+<tr><td>Salary</td><td colspan="5">{{ hitting_totals.salary }}</td></tr>
+<tr><td>Average Salary</td><td colspan="5">{{ hitting_totals.avg_salary|floatformat:2 }}</td></tr>
+<tr><th>BA</th><th>Runs</th><th>HR</th><th>RBI</th><th>SB</th></tr>
+<tr>
+<td>{{ hitting_totals.BA|floatformat }}</td>
+<td>{{ hitting_totals.Runs|floatformat }}</td>
+<td>{{ hitting_totals.HR|floatformat }}</td>
+<td>{{ hitting_totals.RBI|floatformat }}</td>
+<td>{{ hitting_totals.SB|floatformat }}</td>
+</tr>
+</table>
+<table>
+<tr><th colspan="6">Pitching Summary</th></tr>
+<tr><td>Players</td><td colspan="5">{{ pitching_totals.player_count }}</td></tr>
+<tr><td>Salary</td><td colspan="5">{{ pitching_totals.salary }}</td></tr>
+<tr><td>Average Salary</td><td colspan="5">{{ pitching_totals.avg_salary|floatformat:2 }}</td></tr>
+<tr><th>ERA</th><th>WHIP</th><th>W</th><th>K</th><th>S</th></tr>
+<tr>
+<td>{{ pitching_totals.ERA|floatformat }}</td>
+<td>{{ pitching_totals.WHIP|floatformat }}</td>
+<td>{{ pitching_totals.W|floatformat }}</td>
+<td>{{ pitching_totals.K|floatformat }}</td>
+<td>{{ pitching_totals.S|floatformat }}</td>
+</tr>
+</table>
+<table>
+<tr><th>Name</th><th>Salary</th><th>BA</th><th>Runs</th><th>HR</th><th>RBI</th><th>SB</th><th>Total</th></tr>
+{% for hitter in hitters %}
+	<tr>
+	<td><a href="/player/{{ hitter.id }}/">{{ hitter.name }}</a></td>
+	<td>{{ hitter.salary }}</td>
+	<td>{{ hitter.hitting_value.ba_val|floatformat:1 }}</td>
+	<td>{{ hitter.hitting_value.r_val|floatformat:1 }}</td>
+	<td>{{ hitter.hitting_value.hr_val|floatformat:1 }}</td>
+	<td>{{ hitter.hitting_value.rbi_val|floatformat:1 }}</td>
+	<td>{{ hitter.hitting_value.sb_val|floatformat:1 }}</td>
+	<td>{{ hitter.hitting_value.total_val|floatformat:1 }}</td>
+	</tr>
+{% endfor %}
+</table>
+<table>
+<tr><th>Name</th><th>Salary</th><th>ERA</th><th>WHIP</th><th>W</th><th>K</th><th>S</th><th>Total</th></tr>
+{% for pitcher in pitchers %}
+	<tr>
+	<td><a href="/player/{{ pitcher.id }}/">{{ pitcher.name }}</a></td>
+	<td>{{ pitcher.salary }}</td>
+	<td>{{ pitcher.pitching_value.era_val|floatformat:1 }}</td>
+	<td>{{ pitcher.pitching_value.whip_val|floatformat:1 }}</td>
+	<td>{{ pitcher.pitching_value.w_val|floatformat:1 }}</td>
+	<td>{{ pitcher.pitching_value.k_val|floatformat:1 }}</td>
+	<td>{{ pitcher.pitching_value.sv_val|floatformat:1 }}</td>
+	<td>{{ pitcher.pitching_value.total_val|floatformat:1 }}</td>
+	</tr>
+{% endfor %}
+</table>
+</body>
+</html>

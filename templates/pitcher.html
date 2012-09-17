@@ -1,0 +1,90 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.form.js"></script>
+<script type="text/javascript">
+$(function() {
+	/* For zebra striping */
+	$("table tr:nth-child(odd)").addClass("odd-row");
+	/* For cell text alignment */
+	$("table td:first-child, table th:first-child").addClass("first");
+	/* For removing the last border */
+	$("table td:last-child, table th:last-child").addClass("last");
+
+	$("#id_salary").change(function() {
+		console.log("changed");
+		$("#ownership_form_status").text('').hide();
+	});
+	$("#id_team").change(function() {
+		console.log("changed");
+		$("#ownership_form_status").text('').hide();
+	});
+
+	$("#ownership_form").submit(function() {
+		$(this).ajaxSubmit({
+			success: function() {
+				console.log("success");
+				$("#ownership_form_status").text("saved").show();
+			},
+			error: function() {
+				console.log("error");
+				$("#ownership_form_status").text("error").show();
+			}
+		});
+		return false;
+	});
+});
+
+</script>
+<style type="text/css">
+	.bold {
+		font-weight:900;
+	}
+</style>
+
+</head>
+<body>
+<h1>{{ name }}</h1>
+{% if team %}
+	{{ team }}</br>
+{% else %}
+	Unknown</br>
+{% endif %}
+bats: {{ bats }} throws: {{ throws }}</br>
+age: {{ age }} ({{ birthdate }})</br>
+
+<form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
+{{ ownership_form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+<div id="ownership_form_status" style="display:none;"></div>
+
+<table>
+<tr>
+<th>Year</th>
+<th colspan=2>ERA / IP</th>
+<th colspan=2>WHIP / IP</th>
+<th colspan=2>W</th>
+<th colspan=2>K</th>
+<th colspan=2>S</th>
+<th>Total Value</th>
+{% for season in seasons %}
+  <tr>
+  <td>{{ season.year }}</td>
+  <td>{{ season.pitching_value.era|floatformat:2 }} / {{ season.pitching_value.ip|floatformat:1 }}</td>
+  <td class="bold">{{ season.pitching_value.era_val|floatformat }}</td>
+  <td>{{ season.pitching_value.whip|floatformat:3 }} / {{ season.pitching_value.ip|floatformat:1 }}</td>
+  <td class="bold">{{ season.pitching_value.whip_val|floatformat }}</td>
+  <td>{{ season.pitching_value.w }}</td>
+  <td class="bold">{{ season.pitching_value.w_val|floatformat }}</td>
+  <td>{{ season.pitching_value.k }}</td>
+  <td class="bold">{{ season.pitching_value.k_val|floatformat }}</td>
+  <td>{{ season.pitching_value.sv }}</td>
+  <td class="bold">{{ season.pitching_value.sv_val|floatformat }}</td>
+  <td class="bold">{{ season.pitching_value.total_val|floatformat }}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/autoSuggest.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/statstable.js"></script>
+<script src="/static/js/jquery.form.js"></script>
+<script src="/static/js/jquery.autoSuggest.js"></script>
+<style type="text/css">
+        table tr td.highlight {
+                background: -moz-linear-gradient(100% 25% 90deg, #ffffcc, #ffffdd);
+                background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#ffffcc), to(#ffffdd));
+
+                font-weight:900;
+        }
+
+        .sort-header {
+                border-radius:10px;
+                background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#D5D5D5));
+		padding-left:12px;
+		padding-right:12px;
+		padding-top:4px;
+		padding-bottom:4px;
+        }
+
+        .active {
+                background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBD4F1), to(#A3C2E5));
+        }
+</style>
+<script type="text/javascript">
+ $(function() {
+	/* For zebra striping */
+	$("table tr:nth-child(odd)").addClass("odd-row");
+	/* For cell text alignment */
+	$("table td:first-child, table th:first-child").addClass("first");
+	/* For removing the last border */
+	$("table td:last-child, table th:last-child").addClass("last");
+
+	$("#player_filter_form").submit(function() {
+		$("#player_results").empty();
+		$(this).ajaxSubmit({
+			dataType: 'json',
+			success: function(data) {
+				var table = TNPL.StatsTable($('#player_results'), data);
+			},
+			error: function() {
+				console.log("error");
+			}
+		});
+		return false;
+	});
+
+	$("#search").autoSuggest("/form/player_search", {
+		minChars: 2,
+		matchCase: false,
+		selectedItemProp: "name",
+		selectedValuesProp: "id",
+		searchObjProps: "name",
+		resultClick: function(data) {
+			console.log("data: " + data);
+			window.location.href = "/player/" + data.attributes.id + "/";
+		}
+	})
+});
+
+</script>
+</head>
+<body>
+<form action="/form/player_filter" method="post" id="player_filter_form">{% csrf_token %}
+{{ filter_form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+<input id="search" type="text" />
+<div id="player_results"></div>
+
+</body>
+</html>

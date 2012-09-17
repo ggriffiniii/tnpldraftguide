@@ -1,0 +1,53 @@
+<html>
+<head>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/statstable.js"></script>
+<script type="text/javascript">
+var data = {
+	headers: [
+		{title: 'Name',
+		 cumulative: false},
+		{title: 'HR',
+		 cumulative: true},
+		{title: 'RBI',
+		 cumulative: true},
+		{title: 'R',
+		 cumulative: true},
+		{title: 'SB',
+		 cumulative: true}
+	],
+	rows: [
+		{link: '/player/1234',
+		 cols: ['John Doe', 25, 100, 10, 5]},
+		{link: '/player/12345',
+		 cols: ['Joe Foo', 15, 90, 100, 50]},
+		{link: '/player/12346',
+		 cols: ['Joe Foo', 50, 40, 30, 20]}
+	]
+};
+
+$(function() {
+	var table = new TNPL.StatsTable($('#container'), data);
+});
+</script>
+<style type="text/css">
+	.sort-header {
+		border-radius:12px;
+		border:1px;
+		border-color:#BBB;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#D5D5D5));
+		padding-bottom:3px;
+		padding-top:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	.active {
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBD4F1), to(#A3C2E5));
+	}
+</style>
+</head>
+<body>
+<div id='container'></div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.form.js"></script>
+<script type="text/javascript">
+ $(function() {
+	/* For zebra striping */
+	$("table tr:nth-child(odd)").addClass("odd-row");
+	/* For cell text alignment */
+	$("table td:first-child, table th:first-child").addClass("first");
+	/* For removing the last border */
+	$("table td:last-child, table th:last-child").addClass("last");
+
+	$("#id_salary").change(function() {
+		console.log("changed");
+		$("#ownership_form_status").text('').hide();
+	});
+	$("#id_team").change(function() {
+		console.log("changed");
+		$("#ownership_form_status").text('').hide();
+	});
+
+	$("#ownership_form").submit(function() {
+		$(this).ajaxSubmit({
+			success: function() {
+				console.log("success");
+				$("#ownership_form_status").text("saved").show();
+			},
+			error: function() {
+				console.log("error");
+				$("#ownership_form_status").text("error").show();
+			}
+		});
+		return false;
+	});
+});
+
+</script>
+<style type="text/css">
+	.bold {
+		font-weight:900;
+	}
+</style>
+</head>
+<body>
+<h1>{{ name }}</h1>
+{% if team %}
+	{{ team }}</br>
+{% else %}
+	Unknown</br>
+{% endif %}
+bats: {{ bats }} throws: {{ throws }}</br>
+age: {{ age }} ({{ birthdate }})</br>
+position:
+
+{% for pos in eligibility %}
+ {{ pos }}&nbsp;
+{% endfor %}</br>
+
+<form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
+{{ ownership_form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+<div id="ownership_form_status" style="display:none;"></div>
+
+<table>
+<tr>
+<th>Year</th>
+<th colspan=2>BA / AB</th>
+<th colspan=2>Run</th>
+<th colspan=2>HR</th>
+<th colspan=2>RBI</th>
+<th colspan=2>SB</th>
+<th>Total Value</th>
+{% for season in seasons %}
+  <tr>
+  <td>{{ season.year }}</td>
+  <td>{{ season.hitting_value.ba|floatformat:3 }} / {{ season.hitting_value.ab }}</td>
+  <td class="bold">{{ season.hitting_value.ba_val|floatformat }}</td>
+  <td>{{ season.hitting_value.r }}</td>
+  <td class="bold">{{ season.hitting_value.r_val|floatformat }}</td>
+  <td>{{ season.hitting_value.hr }}</td>
+  <td class="bold">{{ season.hitting_value.hr_val|floatformat }}</td>
+  <td>{{ season.hitting_value.rbi }}</td>
+  <td class="bold">{{ season.hitting_value.rbi_val|floatformat }}</td>
+  <td>{{ season.hitting_value.sb }}</td>
+  <td class="bold">{{ season.hitting_value.sb_val|floatformat }}</td>
+  <td class="bold">{{ season.hitting_value.total_val|floatformat }}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
