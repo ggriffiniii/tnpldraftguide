@@ -9,13 +9,17 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.db.models import Q
 from django.template import Context, loader, RequestContext
 from draftapp.models import *
+import draftapp.stats
 import operator
 from django.db import connection
 import datetime
 import time
 from django.utils import simplejson
+import math
 
 PREV_YEAR = 2011
+NUM_TEAMS = 13
+HITTERS_PER_TEAM = 15
 
 class PlayerSummary(object):
 	def has_hitting_projection(self):
@@ -45,6 +49,285 @@ class PlayerSummary(object):
 		else:
 			return PitchingValue(self.w, self.sv, self.ipouts,
 					     self.h, self.er, self.bb, self.k)
+
+class HitterPopulationStats(object):
+	def UpdateStats(self, hitters):
+		for i in xrange(20):
+			print "iteration %d" % (i)
+			prev_list = hitters[:]
+			self.calculate_mean(hitters)
+			self.calculate_stddev(hitters)
+			hitters.sort(key=self.hitting_zscore, reverse=True)
+			diff = [x for x, y
+				in zip(prev_list, hitters)
+				if x.id != y.id]
+			if len(diff) == 0:
+				print "Exiting after finding perfect pool"
+				break;
+		else:
+			print "No perfect pool found"
+
+		self.calculate_position_offsets(hitters)
+		hitters.sort(key=self.zscore, reverse=True)
+		self.calculate_sum_of_draft(hitters)
+
+		print "BA Mean: %.3f" % (self.ba_mean)
+		print "BA STDDev: %.3f" % (self.h_sd)
+		print "R Mean: %.3f" % (self.r_mean)
+		print "R STDDev: %.3f" % (self.r_sd)
+		print "HR Mean: %.3f" % (self.hr_mean)
+		print "HR STDDev: %.3f" % (self.hr_sd)
+		print "RBI Mean: %.3f" % (self.rbi_mean)
+		print "RBI STDDev: %.3f" % (self.rbi_sd)
+		print "SB Mean: %.3f" % (self.sb_mean)
+		print "SB STDDev: %.3f" % (self.sb_sd)
+		print "Sum of Draft: %.3f" % (self.drafted_sum)
+
+	def calculate_mean(self, hitters):
+		entries = 0
+		ab_sum = 0
+		h_sum = 0
+		r_sum = 0
+		hr_sum = 0
+		rbi_sum = 0
+		sb_sum = 0
+		for hitter in hitters[:NUM_TEAMS*HITTERS_PER_TEAM]:
+			entries += 1
+			ab_sum += hitter.ab
+			h_sum += hitter.h
+			r_sum += hitter.r
+			hr_sum += hitter.hr
+			rbi_sum += hitter.rbi
+			sb_sum += hitter.sb
+
+		self.ba_mean = float(h_sum) / ab_sum
+		self.r_mean = float(r_sum) / entries
+		self.hr_mean = float(hr_sum) / entries
+		self.rbi_mean = float(rbi_sum) / entries
+		self.sb_mean = float(sb_sum) / entries
+
+	def calculate_stddev(self, hitters):
+		entries = 0
+		h_var_sum = 0
+		r_var_sum = 0
+		hr_var_sum = 0
+		rbi_var_sum = 0
+		sb_var_sum = 0
+		for hitter in hitters[:NUM_TEAMS*HITTERS_PER_TEAM]:
+			entries += 1
+			xh = hitter.h - (hitter.ab * self.ba_mean)
+			h_var_sum += math.pow(xh, 2)
+			r_var_sum += math.pow(hitter.r - self.r_mean, 2)
+			hr_var_sum += math.pow(hitter.hr - self.hr_mean, 2)
+			rbi_var_sum += math.pow(hitter.rbi - self.rbi_mean, 2)
+			sb_var_sum += math.pow(hitter.sb - self.sb_mean, 2)
+		self.h_sd = math.sqrt(h_var_sum / entries)
+		self.r_sd = math.sqrt(r_var_sum / entries)
+		self.hr_sd = math.sqrt(hr_var_sum / entries)
+		self.rbi_sd = math.sqrt(rbi_var_sum / entries)
+		self.sb_sd = math.sqrt(sb_var_sum / entries)
+
+	def calculate_position_offsets(self, hitters):
+		print "calculating position offsets"
+		rv = {} # replacement values per position
+		n_c = 0
+		n_1b = 0
+		n_2b = 0
+		n_3b = 0
+		n_ss = 0
+		n_of = 0
+		n_ci = 0
+		n_mi = 0
+		n_u = 0
+		utility_rv_set = False
+
+		for hitter in hitters:
+			pos = hitter.get_position()
+			zs = self.hitting_zscore(hitter)
+			if pos == 'C':
+				if n_c < NUM_TEAMS * 2:
+					rv['C'] = zs
+					n_c += 1
+					hitter.drafted_pos = 'C'
+				else:
+					if n_u < NUM_TEAMS * 2:
+						rv['C'] = zs
+						n_u += 1
+						hitter.drafted_pos = 'U'
+			elif pos == 'SS':
+				if n_ss < NUM_TEAMS:
+					rv['SS'] = zs
+					n_ss += 1
+					hitter.drafted_pos = 'SS'
+				else:
+					if n_mi < NUM_TEAMS:
+						rv['SS'] = zs
+						hitter.drafted_pos = 'MI'
+						n_mi += 1
+					else:
+						if n_u < NUM_TEAMS * 2:
+							rv['SS'] = zs
+							hitter.drafted_pos = 'U'
+							n_u += 1
+			elif pos == '2B':
+				if n_2b < NUM_TEAMS:
+					rv['2B'] = zs
+					n_2b += 1
+					hitter.drafted_pos = '2B'
+				else:
+					if n_mi < NUM_TEAMS:
+						rv['2B'] = zs
+						hitter.drafted_pos = 'MI'
+						n_mi += 1
+					else:
+						if n_u < NUM_TEAMS * 2:
+							rv['2B'] = zs
+							hitter.drafted_pos = 'U'
+							n_u += 1
+			elif pos == '3B':
+				if n_3b < NUM_TEAMS:
+					rv['3B'] = zs
+					n_3b += 1
+					hitter.drafted_pos = '3B'
+				else:
+					if n_ci < NUM_TEAMS:
+						rv['3B'] = zs
+						hitter.drafted_pos = 'CI'
+						n_ci += 1
+					else:
+						if n_u < NUM_TEAMS * 2:
+							rv['3B'] = zs
+							hitter.drafted_pos = 'U'
+							n_u += 1
+			elif pos == 'OF':
+				if n_of < NUM_TEAMS * 5:
+					rv['OF'] = zs
+					n_of += 1
+					hitter.drafted_pos = 'OF'
+				else:
+					if n_u < NUM_TEAMS * 2:
+						rv['OF'] = zs
+						n_u += 1
+						hitter.drafted_pos = 'U'
+			elif pos == '1B':
+				if n_1b < NUM_TEAMS:
+					rv['1B'] = zs
+					n_1b += 1
+					hitter.drafted_pos = '1B'
+				else:
+					if n_ci < NUM_TEAMS:
+						rv['1B'] = zs
+						hitter.drafted_pos = 'CI'
+						n_ci += 1
+					else:
+						if n_u < NUM_TEAMS * 2:
+							rv['1B'] = zs
+							hitter.drafted_pos = 'U'
+							n_u += 1
+			elif pos == 'U':
+				print "utility player %s" % (hitter.name)
+				if n_u < NUM_TEAMS * 2:
+					n_u += 1
+					hitter.drafted_pos = 'U'
+					rv['U'] = zs
+
+			if n_u + n_ci + n_mi == NUM_TEAMS * 2 and not utility_rv_set:
+				utility_rv_set = True
+				print "utility replacement hitter %s value %.3f" % (hitter.name, zs)
+				rv['U'] = zs
+
+			# all positions are filled
+			if (n_c == NUM_TEAMS * 2 and
+			    n_1b == NUM_TEAMS and
+			    n_2b == NUM_TEAMS and
+			    n_3b == NUM_TEAMS and
+			    n_ss == NUM_TEAMS and
+			    n_of == NUM_TEAMS * 5 and
+			    n_mi == NUM_TEAMS and
+			    n_ci == NUM_TEAMS and
+			    n_u == NUM_TEAMS * 2):
+				break
+
+		self.replacement_values = rv
+
+		for k, v in self.replacement_values.iteritems():
+			print "Replacement %s: %.3f" % (k, v * -1)
+
+	def calculate_sum_of_draft(self, hitters):
+		self.drafted_sum = 0.0
+		for hitter in hitters:
+			x = self.zscore(hitter)
+			if x > 0.0:
+				self.drafted_sum += x
+			else:
+				break
+
+	def zscore(self, hitter):
+		return self.hitting_zscore(hitter) + self.pos_zscore(hitter)
+
+	def hitting_zscore(self, hitter):
+		return (self.h_zscore(hitter) + self.r_zscore(hitter) +
+			self.hr_zscore(hitter) + self.rbi_zscore(hitter) +
+			self.sb_zscore(hitter))
+
+	def h_zscore(self, hitter):
+		return (hitter.h - (hitter.ab * self.ba_mean)) / self.h_sd
+
+	def r_zscore(self, hitter):
+		return (hitter.r - self.r_mean) / self.r_sd
+
+	def hr_zscore(self, hitter):
+		return (hitter.hr - self.hr_mean) / self.hr_sd
+
+	def rbi_zscore(self, hitter):
+		return (hitter.rbi - self.rbi_mean) / self.rbi_sd
+
+	def sb_zscore(self, hitter):
+		return (hitter.sb - self.sb_mean) / self.sb_sd
+
+	def pos_zscore(self, hitter):
+		if self.replacement_values.has_key(hitter.get_position()):
+			return self.replacement_values[hitter.get_position()] * -1
+		else:
+			return 0.0
+			
+
+class Hitter(object):
+	def __init__(self, id, name):
+		self.id = id
+		self.name = name
+		self.tnpl_team = None
+		self.tnpl_team_id = None
+		self.tnpl_salary = None
+		self.ab = 0
+		self.h = 0
+		self.r = 0
+		self.hr = 0
+		self.rbi = 0
+		self.sb = 0
+		self.positions = set(['U'])
+
+	def get_position(self):
+		if 'C' in self.positions:
+			return 'C'
+		elif 'SS' in self.positions:
+			return 'SS'
+		elif '2B' in self.positions:
+			return '2B'
+		elif '3B' in self.positions:
+			return '3B'
+		elif 'OF' in self.positions:
+			return 'OF'
+		elif '1B' in self.positions:
+			return '1B'
+		elif 'CI' in self.positions:
+			return 'CI'
+		elif 'MI' in self.positions:
+			return 'MI'
+		else:
+			return 'U'
+		
+
 
 class PlayerFilterForm(forms.Form):
 	position = forms.ChoiceField(choices=(('C', 'C'),
@@ -104,57 +387,77 @@ def json_hitters(request, form_data):
 			
 	results = []
 	start_fetch = time.time()
-	query = 'SELECT Master.lahmanid, Master.nameFirst, Master.nameLast, draftapp_tnplteam.name, draftapp_tnplteam.id, draftapp_tnplownership.salary, SUM(Batting.AB), SUM(Batting.H), SUM(Batting.R), SUM(Batting.HR), SUM(Batting.RBI), SUM(Batting.SB), draftapp_tnplbattingproj.AB, draftapp_tnplbattingproj.H, draftapp_tnplbattingproj.R, draftapp_tnplbattingproj.HR, draftapp_tnplbattingproj.RBI, draftapp_tnplbattingproj.SB  FROM Master JOIN Batting USING(playerID) JOIN Appearances ON (Batting.playerID = Appearances.playerID AND Batting.yearID = Appearances.yearID) LEFT OUTER JOIN draftapp_tnplownership ON (draftapp_tnplownership.playerID = Master.playerID) LEFT OUTER JOIN draftapp_tnplteam ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id) LEFT OUTER JOIN draftapp_tnplbattingproj ON (draftapp_tnplbattingproj.playerID = Master.playerID) WHERE %s GROUP BY Batting.yearID, Batting.playerID' % (where_clause)
+	#query = 'SELECT Master.lahmanid, Master.nameFirst, Master.nameLast, draftapp_tnplteam.name, draftapp_tnplteam.id, draftapp_tnplownership.salary, SUM(Batting.AB), SUM(Batting.H), SUM(Batting.R), SUM(Batting.HR), SUM(Batting.RBI), SUM(Batting.SB), draftapp_tnplbattingproj.AB, draftapp_tnplbattingproj.H, draftapp_tnplbattingproj.R, draftapp_tnplbattingproj.HR, draftapp_tnplbattingproj.RBI, draftapp_tnplbattingproj.SB  FROM Master JOIN Batting USING(playerID) JOIN Appearances ON (Batting.playerID = Appearances.playerID AND Batting.yearID = Appearances.yearID) LEFT OUTER JOIN draftapp_tnplownership ON (draftapp_tnplownership.playerID = Master.playerID) LEFT OUTER JOIN draftapp_tnplteam ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id) LEFT OUTER JOIN draftapp_tnplbattingproj ON (draftapp_tnplbattingproj.playerID = Master.playerID) WHERE %s GROUP BY Batting.yearID, Batting.playerID' % (where_clause)
+	query = 'SELECT Master.lahmanid, Master.nameFirst, Master.nameLast, draftapp_tnplteam.name, draftapp_tnplteam.id, draftapp_tnplownership.salary, SUM(Batting.AB), SUM(Batting.H), SUM(Batting.R), SUM(Batting.HR), SUM(Batting.RBI), SUM(Batting.SB), Appearances.g_c, Appearances.g_1b, Appearances.g_2b, Appearances.g_3b, Appearances.g_ss, Appearances.g_of  FROM Master JOIN Batting USING(playerID) JOIN Appearances ON (Batting.playerID = Appearances.playerID AND Batting.yearID = Appearances.yearID) LEFT OUTER JOIN draftapp_tnplownership ON (draftapp_tnplownership.playerID = Master.playerID) LEFT OUTER JOIN draftapp_tnplteam ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id) WHERE Batting.yearID = %s GROUP BY Batting.yearID, Batting.playerID;'
 	print query
 	cursor = connection.cursor()
-	cursor.execute(query)
+	cursor.execute(query, (PREV_YEAR, ))
+
 	for row in cursor:
-		player = PlayerSummary()
-		player.id = row[0]
-		player.name = '%s %s' % (row[1], row[2])
-		player.team = row[3]
-		player.team_id = row[4]
-		player.salary = row[5]
-		player.ab = row[6]
-		player.h = row[7]
-		player.r = row[8]
-		player.hr = row[9]
-		player.rbi = row[10]
-		player.sb = row[11]
-		player.proj_ab = row[12]
-		player.proj_h = row[13]
-		player.proj_r = row[14]
-		player.proj_hr = row[15]
-		player.proj_rbi = row[16]
-		player.proj_sb = row[17]
-		results.append(player)
+		hitter = Hitter(row[0], '%s %s' % (row[1], row[2]))
+		hitter.tnpl_team = row[3]
+		hitter.tnpl_team_id = row[4]
+		hitter.tnpl_salary = row[5]
+		hitter.ab = int(row[6])
+		hitter.h = int(row[7])
+		hitter.r = int(row[8])
+		hitter.hr = int(row[9])
+		hitter.rbi = int(row[10])
+		hitter.sb = int(row[11])
+		g_c = row[12]
+		g_1b = row[13]
+		g_2b = row[14]
+		g_3b = row[15]
+		g_ss = row[16]
+		g_of = row[17]
+		if g_c >= 20:
+			hitter.positions.add('C')
+		if g_1b >= 20:
+			hitter.positions.update(['1B', 'CI'])
+		if g_2b >= 20:
+			hitter.positions.update(['2B', 'MI'])
+		if g_3b >= 20:
+			hitter.positions.update(['3B', 'CI'])
+		if g_ss >= 20:
+			hitter.positions.update(['SS', 'MI'])
+		if g_of >= 20:
+			hitter.positions.add('OF')
+		results.append(hitter)
 	done_fetch = time.time()
 	print "Data Fetch duration: %d ms" % ((done_fetch - start_fetch) * 1000)
 	print "%d players" % (len(results))
 
-	def sort_key(player):
-		return player.hitting_value().total_val()
+	hitter_stats = HitterPopulationStats()
+	hitter_stats.UpdateStats(results)
 
-	results.sort(key=sort_key, reverse=True)
+	#results.sort(key=hitter_stats.hitting_zscore, reverse=True)
+	i = 1
+	for hitter in results[:200]:
+		if hasattr(hitter, 'drafted_pos'):
+			pos = hitter.drafted_pos
+		else:
+			pos = 'undrafted'
+		print i, hitter.name, pos, hitter_stats.hitting_zscore(hitter), hitter_stats.zscore(hitter)
+		i += 1
+
 	done_sort = time.time()
 	print "Data Sort duration: %d ms" % ((done_sort - done_fetch) * 1000)
 	print "Total time for view: %d ms" % ((done_sort - start) * 1000)
 
 	def player_table_info(player):
-		hitting_val = player.hitting_value()
-		if player.salary is None:
+		if player.tnpl_salary is None:
 			salary = None
 		else:
-			salary = float(player.salary)
+			salary = float(player.tnpl_salary)
 
 		
 
-		if player.team_id is None or player.team is None:
+		if player.tnpl_team_id is None or player.tnpl_team is None:
 			team_column = {'value': None, 'highlight': True}
 			salary_column = {'value': None, 'highlight': True}
 		else:
-			team_column = {'value': player.team,
-				       'link': '/team/%d/' % (player.team_id)}
+			team_column = {'value': player.tnpl_team,
+				       'link': '/team/%d/' % (player.tnpl_team_id)}
 			salary_column = salary
 
 		def columnize_val(value):
@@ -168,11 +471,12 @@ def json_hitters(request, form_data):
 			 'link': '/player/%d/' % (player.id)},
 			team_column,
 			salary_column,
-			columnize_val(hitting_val.ba_val()),
-			columnize_val(hitting_val.r_val()),
-			columnize_val(hitting_val.hr_val()),
-			columnize_val(hitting_val.rbi_val()),
-			columnize_val(hitting_val.sb_val()))
+			columnize_val(hitter_stats.h_zscore(player)),
+			columnize_val(hitter_stats.r_zscore(player)),
+			columnize_val(hitter_stats.hr_zscore(player)),
+			columnize_val(hitter_stats.rbi_zscore(player)),
+			columnize_val(hitter_stats.sb_zscore(player)),
+			columnize_val(hitter_stats.pos_zscore(player)))
 
 	headers = (
 		{'title': 'Player',
@@ -184,19 +488,22 @@ def json_hitters(request, form_data):
 		 'tofixed': 2},
 		{'title': 'BA',
 		 'cumulative': True,
-		 'tofixed': 1},
+		 'tofixed': 2},
 		{'title': 'Runs',
 		 'cumulative': True,
-		 'tofixed': 1},
+		 'tofixed': 2},
 		{'title': 'HR',
 		 'cumulative': True,
-		 'tofixed': 1},
+		 'tofixed': 2},
 		{'title': 'RBI',
 		 'cumulative': True,
-		 'tofixed': 1},
+		 'tofixed': 2},
 		{'title': 'SB',
 		 'cumulative': True,
-		 'tofixed': 1})
+		 'tofixed': 2},
+		{'title': 'POS',
+		 'cumulative': True,
+		 'tofixed': 2})
 
 	table_results = [player_table_info(x) for x in results[:350]]
 
