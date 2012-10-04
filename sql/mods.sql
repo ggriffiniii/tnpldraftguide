@@ -11,4 +11,11 @@ CREATE INDEX master_playerid ON Master (playerID);
 CREATE INDEX appearances_playerid ON Appearances (playerID);
 CREATE INDEX appearances_year on Appearances (yearID);
 CREATE INDEX batting_playerid ON Batting (playerID);
+CREATE INDEX batting_yearid ON Batting (yearID);
 CREATE INDEX pitching_playerid ON Pitching (playerID);
+CREATE INDEX pitching_yearid ON Pitching (yearID);
+CREATE INDEX battingproj_playerid ON BattingProj(playerID);
+CREATE INDEX battingproj_type ON BattingProj(TYPE);
+CREATE INDEX pitchingproj_playerid ON PitchingProj(playerID);
+CREATE INDEX pitchingproj_type ON PitchingProj(TYPE);
+

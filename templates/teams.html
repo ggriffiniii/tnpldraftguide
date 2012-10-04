@@ -1,7 +1,13 @@
+{% load draftapp_extras %}
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/tnpl.css" />
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="/static/js/highcharts/highcharts.js"></script>
 <script type="text/javascript">
  $(function() {
 	/* For zebra striping */
@@ -10,53 +16,204 @@
 	$("table td:first-child, table th:first-child").addClass("first");
 	/* For removing the last border */
 	$("table td:last-child, table th:last-child").addClass("last");
+
+	var teams = {{teams_js|safe}};
+
+	var hitter_series_data = []
+	var pitcher_series_data = []
+	for (var team in teams) {
+		var hitter_series = { name: teams[team].name };
+		hitter_series.data = [
+			teams[team].hitter_totals.BA_dollar,
+			teams[team].hitter_totals.R_dollar,
+			teams[team].hitter_totals.HR_dollar,
+			teams[team].hitter_totals.RBI_dollar,
+			teams[team].hitter_totals.SB_dollar
+		];
+		hitter_series_data.push(hitter_series);
+
+		var pitcher_series = { name: teams[team].name };
+		pitcher_series.data = [
+			teams[team].pitcher_totals.ERA_dollar,
+			teams[team].pitcher_totals.WHIP_dollar,
+			teams[team].pitcher_totals.W_dollar,
+			teams[team].pitcher_totals.K_dollar,
+			teams[team].pitcher_totals.S_dollar
+		];
+		pitcher_series_data.push(pitcher_series);
+	}
+
+	common_opts = {
+                chart: {
+                        type: 'bar',
+                },
+                legend: {
+                        enabled: true,
+			layout: 'vertical',
+			verticalAlign: 'top',
+			x: 50,
+			align: 'left',
+			floating: true
+                },
+                tooltip: {
+                        formatter: function() {
+                                if (this.y < 0.0) {
+                                        var strval = '-$';
+                                } else {
+                                        var strval = '$';
+                                }
+                                strval += Math.abs(this.y).toFixed(2);
+                                return '' + this.x +
+					'<br/><span style="color:' +
+					this.series.color + '">' +
+					this.series.name + '</span>: <b>' +
+					strval + '</b><br/>';
+                        }
+                },
+                yAxis: {
+                        title: {
+                                text: null
+                        },
+                        labels: {
+                                formatter: function() {
+                                        if (this.value < 0.0) {
+                                                var prefix = '-$';
+                                        } else {
+                                                var prefix = '$';
+                                        }
+                                        return prefix + Math.abs(this.value);
+                                }
+                        }
+                },
+	};
+
+        // Show hitter graph
+        var div = $("#hitter_graph");
+        var c = $("<p />").height(800).appendTo(div);
+	var hitter_opts = $.extend(true, {}, common_opts, {
+		chart: {
+			renderTo: c.get(0),
+		},
+		title: {
+			text: 'Hitting',
+		},
+                xAxis: {
+                        categories: ['BA', 'R', 'HR', 'RBI', 'SB']
+                },
+		series: hitter_series_data
+	});
+	var hitter_chart = new Highcharts.Chart(hitter_opts);
+
+	div = $("#pitcher_graph");
+	c = $("<p />").height(800).appendTo(div);
+	var pitcher_opts = $.extend(true, {}, common_opts, {
+		chart: {
+			renderTo: c.get(0),
+		},
+		title: {
+			text: 'Pitching',
+		},
+                xAxis: {
+                        categories: ['ERA', 'WHIP', 'W', 'K', 'S']
+                },
+		series: pitcher_series_data
+	});
+	var pitcher_chart = new Highcharts.Chart(pitcher_opts);
 });
 
 </script>
 <style type="text/css">
-	.bold {
-		font-weight:900;
-	}
+        #teams_table td,th {
+                text-align: center;
+        }
+
+        #teams_table .left-border {
+                border-left-style: solid;
+                border-left-width: 1px;
+                padding-left: 5px;
+                text-align: left;
+        }
+        #teams_table .right-border {
+                border-right-style: solid;
+                border-right-width: 1px;
+                padding-right: 5px;
+                text-align: right;
+        }
+
+        #teams_table th.left-border.right-border {
+                text-align:center;
+        }
 </style>
 </head>
 <body>
-<table>
-<tr>
-<th>Team</th>
-<th>Hitting Salary</th>
-<th>BA</th>
-<th>R</th>
-<th>HR</th>
-<th>RBI</th>
-<th>SB</th>
-<th>Total Hitting</th>
-<th>Pitching Salary</th>
-<th>ERA</th>
-<th>WHIP</th>
-<th>W</th>
-<th>K</th>
-<th>S</th>
-<th>Total Pitching</th>
-</tr>
-{% for team in teams %}
-	<tr>
-	<td><a href="/team/{{ team.id}}/">{{ team.name }}</a></td>
-	<td>{{ team.summary.hitting_salary|floatformat:2 }}</td>
-	<td>{{ team.summary.ba_val|floatformat:1 }}</td>
-	<td>{{ team.summary.r_val|floatformat:1 }}</td>
-	<td>{{ team.summary.hr_val|floatformat:1 }}</td>
-	<td>{{ team.summary.rbi_val|floatformat:1 }}</td>
-	<td>{{ team.summary.sb_val|floatformat:1 }}</td>
-	<td>{{ team.summary.hitting_val|floatformat:1 }}</td>
-	<td>{{ team.summary.pitching_salary|floatformat:2 }}</td>
-	<td>{{ team.summary.era_val|floatformat:1 }}</td>
-	<td>{{ team.summary.whip_val|floatformat:1 }}</td>
-	<td>{{ team.summary.w_val|floatformat:1 }}</td>
-	<td>{{ team.summary.k_val|floatformat:1 }}</td>
-	<td>{{ team.summary.sv_val|floatformat:1 }}</td>
-	<td>{{ team.summary.pitching_val|floatformat:1 }}</td>
-	</tr>
-{% endfor %}
-</table>
+<div class="container_12">
+<div class="grid_2 prefix_10">
+                <form action="{% url draftapp.views.teams %}" method="get">
+                        <table>
+			{{ dataset_form.as_table }}
+			<tr><th></th><td>
+				<input type="submit" value="Submit" />
+			</td>
+			</tr>
+			</table>
+                </form>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+	<table id="teams_table">
+		<tr>
+			<th class="left-border">Team</th>
+			<th colspan=7 class="left-border right-border">Hitting</th>
+			<th colspan=7 class="left-border right-border">Pitching</th>
+			<th colspan=2 class="left-border right-border">Unknown</th>
+		</tr>
+		<tr>
+			<th class="left-border"></th>
+			<th class="left-border">Salary</th>
+			<th># Players</th>
+			<th>BA</th>
+			<th>R</th>
+			<th>HR</th>
+			<th>RBI</th>
+			<th class="right-border">SB</th>
+			<th class="left-border">Salary</th>
+			<th># Players</th>
+			<th>ERA</th>
+			<th>WHIP</th>
+			<th>W</th>
+			<th>K</th>
+			<th class="right-border">S</th>
+			<th class="left-border">Salary</th>
+			<th class="right-border"># Players</th>
+		</tr>
+	{% for id,team in teams.items %}
+		<tr>
+			<td class="left-border"><a href="/team/{{id}}/">{{team.name}}</a></td>
+			<td class="left-border">{{team.hitter_totals.salary|dollars}}</td>
+			<td>{{team.hitter_totals.num_players}}</td>
+			<td>{{team.hitter_totals.BA_dollar|dollars}}</td>
+			<td>{{team.hitter_totals.R_dollar|dollars}}</td>
+			<td>{{team.hitter_totals.HR_dollar|dollars}}</td>
+			<td>{{team.hitter_totals.RBI_dollar|dollars}}</td>
+			<td class="right-border">{{team.hitter_totals.SB_dollar|dollars}}</td>
+			<td class="left-border">{{team.pitcher_totals.salary|dollars}}</td>
+			<td>{{team.pitcher_totals.num_players}}</td>
+			<td>{{team.pitcher_totals.ERA_dollar|dollars}}</td>
+			<td>{{team.pitcher_totals.WHIP_dollar|dollars}}</td>
+			<td>{{team.pitcher_totals.W_dollar|dollars}}</td>
+			<td>{{team.pitcher_totals.K_dollar|dollars}}</td>
+			<td class="right-border">{{team.pitcher_totals.S_dollar|dollars}}</td>
+			<td class="left-border">{{team.unknown_totals.salary|dollars}}</td>
+			<td class="right-border">{{team.unknown_totals.num_players}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+</div>
+<div class="clear"></div>
+<div class="grid_12" id="hitter_graph"></div>
+<div class="clear"></div>
+<div class="grid_12" id="pitcher_graph"></div>
+<div class="clear"></div>
+</div>
 </body>
 </html>

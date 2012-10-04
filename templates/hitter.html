@@ -1,9 +1,70 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/tnpl.css" />
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/sonic.js"></script>
 <script src="/static/js/jquery.form.js"></script>
 <script type="text/javascript">
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function startSpinner(container) {
+	container.width(80);
+	var height = container.height();
+	var width = container.width();
+	var spinner = new Sonic({
+		width: width,
+		height: height,
+		stepsPerFrame: 1,
+		trailLength: 0.25,
+		pointDistance: .05,
+		fps: 15,
+		padding: 0,
+
+		fillColor: '#555',
+
+		setup: function() {
+			this._.lineWidth = height-2;
+		},
+
+		path: [
+			['line', 2, height/2, width-2, height/2],
+			['line', width-2, height/2, 2, height/2]
+		]
+	});
+	spinner.play();
+	container.append(spinner.canvas);
+	return spinner;
+}
+
+function dollarString(dollar_val) {
+	var text = '';
+	if (dollar_val < 0.0) {
+		var text = '-$';
+	} else {
+		var text = '$';
+	}
+	text += Math.abs(dollar_val).toFixed(2);
+	return text;
+}
+
  $(function() {
 	/* For zebra striping */
 	$("table tr:nth-child(odd)").addClass("odd-row");
@@ -34,61 +95,273 @@
 		});
 		return false;
 	});
+
+        $.ajaxSetup({
+                crossDomain: false,
+                beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+        });
+
+	var seasons = {{seasons|safe}};
+	var projections = {{projections|safe}};
+
+	var seasons_table = $("#seasons_table");
+	seasons.forEach(function(season) {
+		var row = $("<tr />");
+		$("<td />")
+			.addClass("left-border")
+			.text(season['year'])
+			.appendTo(row);
+		var ba = season['H'] / season['AB'];
+		var ba_text = ba.toFixed(3) + ' (' + season['AB'] + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(ba_text)
+			.appendTo(row);
+		var ba_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['R'])
+			.appendTo(row);
+		var r_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['HR'])
+			.appendTo(row);
+		var hr_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['RBI'])
+			.appendTo(row);
+		var rbi_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('             ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['SB'])
+			.appendTo(row);
+		var sb_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		var total_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		row.appendTo(seasons_table);
+		var ba_spinner = startSpinner(ba_dollar_td);
+		var r_spinner = startSpinner(r_dollar_td);
+		var hr_spinner = startSpinner(hr_dollar_td);
+		var rbi_spinner = startSpinner(rbi_dollar_td);
+		var sb_spinner = startSpinner(sb_dollar_td);
+		var total_spinner = startSpinner(total_dollar_td);
+		$.ajax({
+			url: "/form/player_dollar_value",
+			dataType: "json",
+			data: {playerid: {{id|escapejs}},
+			       dataset: season['year'],
+			       is_pitcher: false},
+			type: "POST",
+			success: function(val) {
+				ba_spinner.stop();
+				ba_dollar_td.text(dollarString(val.BA));
+				r_spinner.stop();
+				r_dollar_td.text(dollarString(val.R));
+				hr_spinner.stop();
+				hr_dollar_td.text(dollarString(val.HR));
+				rbi_spinner.stop();
+				rbi_dollar_td.text(dollarString(val.RBI));
+				sb_spinner.stop();
+				sb_dollar_td.text(dollarString(val.SB));
+				total_spinner.stop();
+				total_dollar_td.text(dollarString(val.total));
+			},
+			error: function(val) {
+				console.log("error");
+			}
+		});
+	});
+
+	var proj_table = $("#projections_table");
+	projections.forEach(function(proj) {
+		var row = $("<tr />");
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['type'])
+			.appendTo(row);
+		var ba = proj['H'] / proj['AB'];
+		var ba_text = ba.toFixed(3) + ' (' + proj['AB'] + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(ba_text)
+			.appendTo(row);
+		var ba_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['R'])
+			.appendTo(row);
+		var r_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['HR'])
+			.appendTo(row);
+		var hr_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['RBI'])
+			.appendTo(row);
+		var rbi_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('             ')
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['SB'])
+			.appendTo(row);
+		var sb_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		var total_dollar_td = $("<td />")
+			.addClass("right-border")
+			.text('       ')
+			.appendTo(row);
+		row.appendTo(proj_table);
+		var ba_spinner = startSpinner(ba_dollar_td);
+		var r_spinner = startSpinner(r_dollar_td);
+		var hr_spinner = startSpinner(hr_dollar_td);
+		var rbi_spinner = startSpinner(rbi_dollar_td);
+		var sb_spinner = startSpinner(sb_dollar_td);
+		var total_spinner = startSpinner(total_dollar_td);
+		$.ajax({
+			url: "/form/player_dollar_value",
+			dataType: "json",
+			data: {playerid: {{id|escapejs}},
+			       dataset: 'proj_' + proj['type'],
+			       is_pitcher: false},
+			type: "POST",
+			success: function(val) {
+				ba_spinner.stop();
+				ba_dollar_td.text(dollarString(val.BA));
+				r_spinner.stop();
+				r_dollar_td.text(dollarString(val.R));
+				hr_spinner.stop();
+				hr_dollar_td.text(dollarString(val.HR));
+				rbi_spinner.stop();
+				rbi_dollar_td.text(dollarString(val.RBI));
+				sb_spinner.stop();
+				sb_dollar_td.text(dollarString(val.SB));
+				total_spinner.stop();
+				total_dollar_td.text(dollarString(val.total));
+			},
+			error: function(val) {
+				console.log("error");
+			}
+		});
+	});
 });
 
 </script>
 <style type="text/css">
-	.bold {
-		font-weight:900;
-	}
+        .left-border {
+                border-left-style: solid;
+                border-left-width: 1px;
+                padding-left: 5px;
+                text-align: left;
+        }
+        .right-border {
+                border-right-style: solid;
+                border-right-width: 1px;
+                padding-right: 5px;
+                text-align: right;
+        }
+
+        th.left-border.right-border {
+                text-align:center;
+        }
 </style>
 </head>
 <body>
+<div class="container_12">
+<div class="grid_6">
 <h1>{{ name }}</h1>
+<h2>
 {% if team %}
-	{{ team }}</br>
+	{{ team }}
 {% else %}
-	Unknown</br>
+	Unknown Team
 {% endif %}
-bats: {{ bats }} throws: {{ throws }}</br>
-age: {{ age }} ({{ birthdate }})</br>
-position:
-
+</h2>
+Bats: {{ bats }} Throws: {{ throws }}</br>
+Age: {{ age }} ({{ birthdate }})</br>
+Position:
 {% for pos in eligibility %}
  {{ pos }}&nbsp;
-{% endfor %}</br>
-
+{% endfor %}
+</br>
+</div>
+<div class="grid_4 prefix_2">
 <form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
-{{ ownership_form.as_p }}
-<input type="submit" value="Submit" />
+<table>
+	{{ ownership_form.as_table }}
+	<tr>
+		<th></th>
+		<td><input type="submit" value="Submit" /></td>
+	</tr>
+</table>
 </form>
 <div id="ownership_form_status" style="display:none;"></div>
-
-<table>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<h2>Seasons</h2>
+<table id="seasons_table">
 <tr>
-<th>Year</th>
-<th colspan=2>BA / AB</th>
-<th colspan=2>Run</th>
-<th colspan=2>HR</th>
-<th colspan=2>RBI</th>
-<th colspan=2>SB</th>
-<th>Total Value</th>
-{% for season in seasons %}
-  <tr>
-  <td>{{ season.year }}</td>
-  <td>{{ season.hitting_value.ba|floatformat:3 }} / {{ season.hitting_value.ab }}</td>
-  <td class="bold">{{ season.hitting_value.ba_val|floatformat }}</td>
-  <td>{{ season.hitting_value.r }}</td>
-  <td class="bold">{{ season.hitting_value.r_val|floatformat }}</td>
-  <td>{{ season.hitting_value.hr }}</td>
-  <td class="bold">{{ season.hitting_value.hr_val|floatformat }}</td>
-  <td>{{ season.hitting_value.rbi }}</td>
-  <td class="bold">{{ season.hitting_value.rbi_val|floatformat }}</td>
-  <td>{{ season.hitting_value.sb }}</td>
-  <td class="bold">{{ season.hitting_value.sb_val|floatformat }}</td>
-  <td class="bold">{{ season.hitting_value.total_val|floatformat }}</td>
-  </tr>
-{% endfor %}
+<th class="left-border">Year</th>
+<th colspan=2 class="left-border right-border">BA</th>
+<th colspan=2 class="left-border right-border">R</th>
+<th colspan=2 class="left-border right-border">HR</th>
+<th colspan=2 class="left-border right-border">RBI</th>
+<th colspan=2 class="left-border right-border">SB</th>
+<th class="right-border">Total</th>
 </table>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<h2>Projections</h2>
+<table id="projections_table">
+<tr>
+<th class="left-border">Type</th>
+<th colspan=2 class="left-border right-border">BA</th>
+<th colspan=2 class="left-border right-border">R</th>
+<th colspan=2 class="left-border right-border">HR</th>
+<th colspan=2 class="left-border right-border">RBI</th>
+<th colspan=2 class="left-border right-border">SB</th>
+<th class="right-border">Total</th>
+</table>
+</div>
+<div class="clear"></div>
+
+</div>
 </body>
 </html>

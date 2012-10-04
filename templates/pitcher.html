@@ -1,10 +1,71 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/tnpl.css" />
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/sonic.js"></script>
 <script src="/static/js/jquery.form.js"></script>
 <script type="text/javascript">
-$(function() {
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function startSpinner(container) {
+	container.width(80);
+	var height = container.height();
+	var width = container.width();
+	var spinner = new Sonic({
+		width: width,
+		height: height,
+		stepsPerFrame: 1,
+		trailLength: 0.25,
+		pointDistance: .05,
+		fps: 15,
+		padding: 0,
+
+		fillColor: '#555',
+
+		setup: function() {
+			this._.lineWidth = height-2;
+		},
+
+		path: [
+			['line', 2, height/2, width-2, height/2],
+			['line', width-2, height/2, 2, height/2]
+		]
+	});
+	spinner.play();
+	container.append(spinner.canvas);
+	return spinner;
+}
+
+function dollarString(dollar_val) {
+	var text = '';
+	if (dollar_val < 0.0) {
+		var text = '-$';
+	} else {
+		var text = '$';
+	}
+	text += Math.abs(dollar_val).toFixed(2);
+	return text;
+}
+
+ $(function() {
 	/* For zebra striping */
 	$("table tr:nth-child(odd)").addClass("odd-row");
 	/* For cell text alignment */
@@ -34,57 +95,269 @@ $(function() {
 		});
 		return false;
 	});
+
+        $.ajaxSetup({
+                crossDomain: false,
+                beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+        });
+
+	var seasons = {{seasons|safe}};
+	var projections = {{projections|safe}};
+
+	var seasons_table = $("#seasons_table");
+	seasons.forEach(function(season) {
+		var row = $("<tr />");
+		$("<td />")
+			.addClass("left-border")
+			.text(season['year'])
+			.appendTo(row);
+		var era = season['ER'] / (season['IP'] / 9.0);
+		var era_text = era.toFixed(3) + ' (' +
+			season['IP'].toFixed(1) + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(era_text)
+			.appendTo(row);
+		var era_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+                var whip = (season['H'] + season['BB']) / season['IP'];
+                var whip_text = whip.toFixed(3) + ' (' +
+                                season['IP'].toFixed(1) + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(whip_text)
+			.appendTo(row);
+		var whip_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['W'])
+			.appendTo(row);
+		var w_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['K'])
+			.appendTo(row);
+		var k_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(season['S'])
+			.appendTo(row);
+		var s_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		var total_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		row.appendTo(seasons_table);
+		var era_spinner = startSpinner(era_dollar_td);
+		var whip_spinner = startSpinner(whip_dollar_td);
+		var w_spinner = startSpinner(w_dollar_td);
+		var k_spinner = startSpinner(k_dollar_td);
+		var s_spinner = startSpinner(s_dollar_td);
+		var total_spinner = startSpinner(total_dollar_td);
+		$.ajax({
+			url: "/form/player_dollar_value",
+			dataType: "json",
+			data: {playerid: {{id|escapejs}},
+			       dataset: season['year'],
+			       is_pitcher: false},
+			type: "POST",
+			success: function(val) {
+				era_spinner.stop();
+				era_dollar_td.text(dollarString(val.ERA));
+				whip_spinner.stop();
+				whip_dollar_td.text(dollarString(val.WHIP));
+				w_spinner.stop();
+				w_dollar_td.text(dollarString(val.W));
+				k_spinner.stop();
+				k_dollar_td.text(dollarString(val.K));
+				s_spinner.stop();
+				s_dollar_td.text(dollarString(val.S));
+				total_spinner.stop();
+				total_dollar_td.text(dollarString(val.total));
+			},
+			error: function(val) {
+				console.log("error");
+			}
+		});
+	});
+
+	var proj_table = $("#projections_table");
+	projections.forEach(function(proj) {
+		var row = $("<tr />");
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['type'])
+			.appendTo(row);
+		var era = proj['ER'] / (proj['IP'] / 9.0);
+		var era_text = era.toFixed(3) + ' (' +
+			proj['IP'].toFixed(1) + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(era_text)
+			.appendTo(row);
+		var era_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+                var whip = (proj['H'] + proj['BB']) / proj['IP'];
+                var whip_text = whip.toFixed(3) + ' (' +
+                                proj['IP'].toFixed(1) + ')';
+		$("<td />")
+			.addClass("left-border")
+			.text(whip_text)
+			.appendTo(row);
+		var whip_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['W'])
+			.appendTo(row);
+		var w_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['K'])
+			.appendTo(row);
+		var k_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		$("<td />")
+			.addClass("left-border")
+			.text(proj['S'])
+			.appendTo(row);
+		var s_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		var total_dollar_td = $("<td />")
+			.addClass("right-border")
+			.appendTo(row);
+		row.appendTo(proj_table);
+		var era_spinner = startSpinner(era_dollar_td);
+		var whip_spinner = startSpinner(whip_dollar_td);
+		var w_spinner = startSpinner(w_dollar_td);
+		var k_spinner = startSpinner(k_dollar_td);
+		var s_spinner = startSpinner(s_dollar_td);
+		var total_spinner = startSpinner(total_dollar_td);
+		$.ajax({
+			url: "/form/player_dollar_value",
+			dataType: "json",
+			data: {playerid: {{id|escapejs}},
+			       dataset: 'proj_' + proj['type'],
+			       is_pitcher: false},
+			type: "POST",
+			success: function(val) {
+				era_spinner.stop();
+				era_dollar_td.text(dollarString(val.ERA));
+				whip_spinner.stop();
+				whip_dollar_td.text(dollarString(val.WHIP));
+				w_spinner.stop();
+				w_dollar_td.text(dollarString(val.W));
+				k_spinner.stop();
+				k_dollar_td.text(dollarString(val.K));
+				s_spinner.stop();
+				s_dollar_td.text(dollarString(val.S));
+				total_spinner.stop();
+				total_dollar_td.text(dollarString(val.total));
+			},
+			error: function(val) {
+				console.log("error");
+			}
+		});
+	});
 });
 
 </script>
 <style type="text/css">
-	.bold {
-		font-weight:900;
-	}
-</style>
+        .left-border {
+                border-left-style: solid;
+                border-left-width: 1px;
+                padding-left: 5px;
+                text-align: left;
+        }
+        .right-border {
+                border-right-style: solid;
+                border-right-width: 1px;
+                padding-right: 5px;
+                text-align: right;
+        }
 
+        th.left-border.right-border {
+                text-align:center;
+        }
+</style>
 </head>
 <body>
+<div class="container_12">
+<div class="grid_6">
 <h1>{{ name }}</h1>
+<h2>
 {% if team %}
-	{{ team }}</br>
+	{{ team }}
 {% else %}
-	Unknown</br>
+	Unknown Team
 {% endif %}
-bats: {{ bats }} throws: {{ throws }}</br>
-age: {{ age }} ({{ birthdate }})</br>
-
+</h2>
+Bats: {{ bats }} Throws: {{ throws }}</br>
+Age: {{ age }} ({{ birthdate }})</br>
+Position:
+{% for pos in eligibility %}
+ {{ pos }}&nbsp;
+{% endfor %}
+</br>
+</div>
+<div class="grid_4 prefix_2">
 <form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
-{{ ownership_form.as_p }}
-<input type="submit" value="Submit" />
+<table>
+	{{ ownership_form.as_table }}
+	<tr>
+		<th></th>
+		<td><input type="submit" value="Submit" /></td>
+	</tr>
+</table>
 </form>
 <div id="ownership_form_status" style="display:none;"></div>
-
-<table>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<h2>Seasons</h2>
+<table id="seasons_table">
 <tr>
-<th>Year</th>
-<th colspan=2>ERA / IP</th>
-<th colspan=2>WHIP / IP</th>
-<th colspan=2>W</th>
-<th colspan=2>K</th>
-<th colspan=2>S</th>
-<th>Total Value</th>
-{% for season in seasons %}
-  <tr>
-  <td>{{ season.year }}</td>
-  <td>{{ season.pitching_value.era|floatformat:2 }} / {{ season.pitching_value.ip|floatformat:1 }}</td>
-  <td class="bold">{{ season.pitching_value.era_val|floatformat }}</td>
-  <td>{{ season.pitching_value.whip|floatformat:3 }} / {{ season.pitching_value.ip|floatformat:1 }}</td>
-  <td class="bold">{{ season.pitching_value.whip_val|floatformat }}</td>
-  <td>{{ season.pitching_value.w }}</td>
-  <td class="bold">{{ season.pitching_value.w_val|floatformat }}</td>
-  <td>{{ season.pitching_value.k }}</td>
-  <td class="bold">{{ season.pitching_value.k_val|floatformat }}</td>
-  <td>{{ season.pitching_value.sv }}</td>
-  <td class="bold">{{ season.pitching_value.sv_val|floatformat }}</td>
-  <td class="bold">{{ season.pitching_value.total_val|floatformat }}</td>
-  </tr>
-{% endfor %}
+<th class="left-border">Year</th>
+<th colspan=2 class="left-border right-border">ERA</th>
+<th colspan=2 class="left-border right-border">WHIP</th>
+<th colspan=2 class="left-border right-border">W</th>
+<th colspan=2 class="left-border right-border">K</th>
+<th colspan=2 class="left-border right-border">S</th>
+<th class="right-border">Total</th>
 </table>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<h2>Projections</h2>
+<table id="projections_table">
+<tr>
+<th class="left-border">Type</th>
+<th colspan=2 class="left-border right-border">ERA</th>
+<th colspan=2 class="left-border right-border">WHIP</th>
+<th colspan=2 class="left-border right-border">W</th>
+<th colspan=2 class="left-border right-border">K</th>
+<th colspan=2 class="left-border right-border">S</th>
+<th class="right-border">Total</th>
+</table>
+</div>
+<div class="clear"></div>
+
+</div>
 </body>
 </html>

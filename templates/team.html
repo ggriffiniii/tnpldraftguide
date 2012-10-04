@@ -1,23 +1,14 @@
+{% load draftapp_extras %}
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/tnpl.css" />
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="/static/js/highcharts/highcharts.js"></script>
 <script type="text/javascript">
-	function getCookie(name) {
-	    var cookieValue = null;
-	    if (document.cookie && document.cookie != '') {
-		var cookies = document.cookie.split(';');
-		for (var i = 0; i < cookies.length; i++) {
-		    var cookie = jQuery.trim(cookies[i]);
-		    // Does this cookie string begin with the name we want?
-		    if (cookie.substring(0, name.length + 1) == (name + '=')) {
-			cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-			break;
-		    }
-		}
-	    }
-	    return cookieValue;
-	}
  $(function() {
 	/* For zebra striping */
 	$("table tr:nth-child(odd)").addClass("odd-row");
@@ -32,74 +23,310 @@
 	        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
 	    }
 	});
+
+	var hitter_totals = {{hitter_totals_js|safe}};
+	var pitcher_totals = {{pitcher_totals_js|safe}};
+
+	// Show hitter graph
+	var div = $("#hitter_graph");
+	var c = $("<p />").height(150).appendTo(div);
+	var hitter_chart = new Highcharts.Chart({
+		chart: {
+			renderTo: c.get(0),
+			type: 'bar',
+		},
+		title: {
+			text: null,
+		},
+		legend: {
+			enabled: false
+		},
+		tooltip: {
+			formatter: function() {
+				if (this.y < 0.0) {
+					var strval = '-$';
+				} else {
+					var strval = '$';
+				}
+				strval += Math.abs(this.y).toFixed(2);
+				return this.x + ': <b>' + strval + '</b>';
+			}
+		},
+		xAxis: {
+			categories: ['BA', 'R', 'HR', 'RBI', 'SB']
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+				formatter: function() {
+					if (this.value < 0.0) {
+						var prefix = '-$';
+					} else {
+						var prefix = '$';
+					}
+					return prefix + Math.abs(this.value);
+				}
+			}
+		},
+		series: [{
+			data: [hitter_totals.BA_dollar,
+			       hitter_totals.R_dollar,
+			       hitter_totals.HR_dollar,
+			       hitter_totals.RBI_dollar,
+			       hitter_totals.SB_dollar]
+		}]
+	});
+
+	// Show pitcher graph
+	var div = $("#pitcher_graph");
+	var c = $("<p />").height(150).appendTo(div);
+	var pitcher_chart = new Highcharts.Chart({
+		chart: {
+			renderTo: c.get(0),
+			type: 'bar',
+		},
+		title: {
+			text: null,
+		},
+		legend: {
+			enabled: false
+		},
+		tooltip: {
+			formatter: function() {
+				if (this.y < 0.0) {
+					var strval = '-$';
+				} else {
+					var strval = '$';
+				}
+				strval += Math.abs(this.y).toFixed(2);
+				return this.x + ': <b>' + strval + '</b>';
+			}
+		},
+		xAxis: {
+			categories: ['ERA', 'WHIP', 'W', 'K', 'S']
+		},
+		yAxis: {
+			title: {
+				text: null
+			},
+			labels: {
+				formatter: function() {
+					if (this.value < 0.0) {
+						var prefix = '-$';
+					} else {
+						var prefix = '$';
+					}
+					return prefix + Math.abs(this.value);
+				}
+			}
+		},
+		series: [{
+			data: [pitcher_totals.ERA_dollar,
+			       pitcher_totals.WHIP_dollar,
+			       pitcher_totals.W_dollar,
+			       pitcher_totals.K_dollar,
+			       pitcher_totals.S_dollar]
+		}]
+	});
+	
 });
 
 </script>
 <style type="text/css">
-	.bold {
-		font-weight:900;
+	.left-border {
+		border-left-style: solid;
+		border-left-width: 1px;
+		padding-left: 5px;
+		text-align: left;
+	}
+	.right-border {
+		border-right-style: solid;
+		border-right-width: 1px;
+		padding-right: 5px;
+		text-align: right;
+	}
+
+	th.left-border.right-border {
+		text-align:center;
 	}
 </style>
 </head>
 <body>
-<h1>{{ name }}</h1>
-<table>
-<tr><th colspan="6">Hitting Summary</th></tr>
-<tr><td>Players</td><td colspan="5">{{ hitting_totals.player_count }}</td></tr>
-<tr><td>Salary</td><td colspan="5">{{ hitting_totals.salary }}</td></tr>
-<tr><td>Average Salary</td><td colspan="5">{{ hitting_totals.avg_salary|floatformat:2 }}</td></tr>
-<tr><th>BA</th><th>Runs</th><th>HR</th><th>RBI</th><th>SB</th></tr>
-<tr>
-<td>{{ hitting_totals.BA|floatformat }}</td>
-<td>{{ hitting_totals.Runs|floatformat }}</td>
-<td>{{ hitting_totals.HR|floatformat }}</td>
-<td>{{ hitting_totals.RBI|floatformat }}</td>
-<td>{{ hitting_totals.SB|floatformat }}</td>
-</tr>
-</table>
-<table>
-<tr><th colspan="6">Pitching Summary</th></tr>
-<tr><td>Players</td><td colspan="5">{{ pitching_totals.player_count }}</td></tr>
-<tr><td>Salary</td><td colspan="5">{{ pitching_totals.salary }}</td></tr>
-<tr><td>Average Salary</td><td colspan="5">{{ pitching_totals.avg_salary|floatformat:2 }}</td></tr>
-<tr><th>ERA</th><th>WHIP</th><th>W</th><th>K</th><th>S</th></tr>
-<tr>
-<td>{{ pitching_totals.ERA|floatformat }}</td>
-<td>{{ pitching_totals.WHIP|floatformat }}</td>
-<td>{{ pitching_totals.W|floatformat }}</td>
-<td>{{ pitching_totals.K|floatformat }}</td>
-<td>{{ pitching_totals.S|floatformat }}</td>
-</tr>
-</table>
-<table>
-<tr><th>Name</th><th>Salary</th><th>BA</th><th>Runs</th><th>HR</th><th>RBI</th><th>SB</th><th>Total</th></tr>
-{% for hitter in hitters %}
-	<tr>
-	<td><a href="/player/{{ hitter.id }}/">{{ hitter.name }}</a></td>
-	<td>{{ hitter.salary }}</td>
-	<td>{{ hitter.hitting_value.ba_val|floatformat:1 }}</td>
-	<td>{{ hitter.hitting_value.r_val|floatformat:1 }}</td>
-	<td>{{ hitter.hitting_value.hr_val|floatformat:1 }}</td>
-	<td>{{ hitter.hitting_value.rbi_val|floatformat:1 }}</td>
-	<td>{{ hitter.hitting_value.sb_val|floatformat:1 }}</td>
-	<td>{{ hitter.hitting_value.total_val|floatformat:1 }}</td>
-	</tr>
-{% endfor %}
-</table>
-<table>
-<tr><th>Name</th><th>Salary</th><th>ERA</th><th>WHIP</th><th>W</th><th>K</th><th>S</th><th>Total</th></tr>
-{% for pitcher in pitchers %}
-	<tr>
-	<td><a href="/player/{{ pitcher.id }}/">{{ pitcher.name }}</a></td>
-	<td>{{ pitcher.salary }}</td>
-	<td>{{ pitcher.pitching_value.era_val|floatformat:1 }}</td>
-	<td>{{ pitcher.pitching_value.whip_val|floatformat:1 }}</td>
-	<td>{{ pitcher.pitching_value.w_val|floatformat:1 }}</td>
-	<td>{{ pitcher.pitching_value.k_val|floatformat:1 }}</td>
-	<td>{{ pitcher.pitching_value.sv_val|floatformat:1 }}</td>
-	<td>{{ pitcher.pitching_value.total_val|floatformat:1 }}</td>
-	</tr>
-{% endfor %}
-</table>
+<div class="container_12">
+	<div class="grid_6">
+		<h1>{{ name }}</h1>
+	</div>
+	<div class="grid_2 prefix_4">
+		<form action="{% url draftapp.views.team team_id=team_id %}" method="get">
+			<table>
+				{{ dataset_form.as_table }}
+				<tr><th></th><td>
+					<input type="submit" value="Submit" />
+				</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="clear"></div>
+	<div class="grid_4">
+		<table id="summary_table">
+		<tr>
+			<th>Positions Filled</th>
+			<td>{{num_players}}</td>
+		</tr>
+		<tr>
+		<th>Positions Remaining</th>
+		<td>{{positions_remaining}}</td>
+		</tr>
+		<tr>
+		<th>Salary Spent</th>
+		<td>{{salary_spent|dollars}}</td>
+		</tr>
+		<tr>
+		<th>Salary Remaining</th>
+		<td>{{salary_remaining|dollars}}</td>
+		</tr>
+		<tr>
+		<th>Remaining Salary Per Position</th>
+		{% if positions_remaining > 0 %}
+			<td>{{avg_salary|dollars}}
+		{% else %}
+			<td>N/A</td>
+		{% endif %}
+		</tr>
+		</table>
+	</div>
+	<div class="grid_4" id="hitter_graph">
+	</div>
+	<div class="grid_4" id="pitcher_graph">
+	</div>
+	<div class="clear"></div>
+	<div class="grid_12">
+		<table>
+			<tr>
+				<th class="left-border">Name</th>
+				<th class="right-border">Salary</th>
+				<th colspan=2 class="left-border right-border">BA (AB)</th>
+				<th colspan=2 class="left-border right-border">R</th>
+				<th colspan=2 class="left-border right-border">HR</th>
+				<th colspan=2 class="left-border right-border">RBI</th>
+				<th colspan=2 class="left-border right-border">SB</th>
+				<th colspan=2 class="left-border right-border">POS</th>
+				<th colspan=2 class="left-border right-border">Total</th>
+			</tr>
+			{% for hitter in hitters %}
+				<tr>
+					<td class="left-border"><a href="/player/{{hitter.id}}/">{{hitter.name}}</a></td>
+					<td class="right-border">{{hitter.salary|dollars}}</td>
+					<td class="left-border">{{hitter.BA|floatformat:3}} ({{hitter.AB}})</td>
+					<td class="right-border">{{hitter.BA_dollar|dollars}}</td>
+					<td class="left-border">{{hitter.R}}</td>
+					<td class="right-border">{{hitter.R_dollar|dollars}}</td>
+					<td class="left-border">{{hitter.HR}}</td>
+					<td class="right-border">{{hitter.HR_dollar|dollars}}</td>
+					<td class="left-border">{{hitter.RBI}}</td>
+					<td class="right-border">{{hitter.RBI_dollar|dollars}}</td>
+					<td class="left-border">{{hitter.SB}}</td>
+					<td class="right-border">{{hitter.SB_dollar|dollars}}</td>
+					<td class="left-border">{{hitter.POS}}</td>
+					<td class="right-border">{{hitter.POS_dollar|dollars}}</td>
+					<td class="right-border">{{hitter.total_dollar|dollars}}</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<th class="left-border"></th>
+				<th class="right-border">{{hitter_totals.salary|dollars}}</th>
+				<th class="left-border">{{hitter_totals.BA|floatformat:3}} ({{hitter_totals.AB}})</th>
+				<th class="right-border">{{hitter_totals.BA_dollar|dollars}}</th>
+				<th class="left-border">{{hitter_totals.R}}</th>
+				<th class="right-border">{{hitter_totals.R_dollar|dollars}}</th>
+				<th class="left-border">{{hitter_totals.HR}}</th>
+				<th class="right-border">{{hitter_totals.HR_dollar|dollars}}</th>
+				<th class="left-border">{{hitter_totals.RBI}}</th>
+				<th class="right-border">{{hitter_totals.RBI_dollar|dollars}}</th>
+				<th class="left-border">{{hitter_totals.SB}}</th>
+				<th class="right-border">{{hitter_totals.SB_dollar|dollars}}</th>
+				<th class="left-border"></th>
+				<th class="right-border">{{hitter_totals.POS_dollar|dollars}}</th>
+				<th class="right-border">{{hitter_totals.total_dollar|dollars}}</th>
+			</tr>
+		</table>
+	</div>
+	<div class="grid_12">
+		<table>
+			<tr>
+				<th class="left-border">Name</th>
+				<th class="right-border">Salary</th>
+				<th colspan=2 class="left-border right-border">ERA (IP)</th>
+				<th colspan=2 class="left-border right-border">WHIP (IP)</th>
+				<th colspan=2 class="left-border right-border">W</th>
+				<th colspan=2 class="left-border right-border">K</th>
+				<th colspan=2 class="left-border right-border">S</th>
+				<th colspan=2 class="left-border right-border">POS</th>
+				<th colspan=2 class="left-border right-border">Total</th>
+			</tr>
+			{% for pitcher in pitchers %}
+				<tr>
+					<td class="left-border"><a href="/player/{{pitcher.id}}/">{{pitcher.name}}</a></td>
+					<td class="right-border">{{pitcher.salary|dollars}}</td>
+					<td class="left-border">{{pitcher.ERA|floatformat:3}} ({{pitcher.IP|floatformat:1}})</td>
+					<td class="right-border">{{pitcher.ERA_dollar|dollars}}</td>
+					<td class="left-border">{{pitcher.WHIP|floatformat:3}} ({{pitcher.IP|floatformat:1}})</td>
+					<td class="right-border">{{pitcher.WHIP_dollar|dollars}}</td>
+					<td class="left-border">{{pitcher.W}}</td>
+					<td class="right-border">{{pitcher.W_dollar|dollars}}</td>
+					<td class="left-border">{{pitcher.K}}</td>
+					<td class="right-border">{{pitcher.K_dollar|dollars}}</td>
+					<td class="left-border">{{pitcher.S}}</td>
+					<td class="right-border">{{pitcher.S_dollar|dollars}}</td>
+					<td class="left-border">{{pitcher.POS}}</td>
+					<td class="right-border">{{pitcher.POS_dollar|dollars}}</td>
+					<td class="right-border">{{pitcher.total_dollar|dollars}}</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<th class="left-border"></th>
+				<th class="right-border">{{pitcher_totals.salary|dollars}}</th>
+				<th class="left-border">{{pitcher_totals.ERA|floatformat:3}} ({{pitcher_totals.IP|floatformat:1}})</th>
+				<th class="right-border">{{pitcher_totals.ERA_dollar|dollars}}</th>
+				<th class="left-border">{{pitcher_totals.WHIP|floatformat:3}} ({{pitcher_totals.IP|floatformat:1}})</th>
+				<th class="right-border">{{pitcher_totals.WHIP_dollar|dollars}}</th>
+				<th class="left-border">{{pitcher_totals.W}}</th>
+				<th class="right-border">{{pitcher_totals.W_dollar|dollars}}</th>
+				<th class="left-border">{{pitcher_totals.K}}</th>
+				<th class="right-border">{{pitcher_totals.K_dollar|dollars}}</th>
+				<th class="left-border">{{pitcher_totals.S}}</th>
+				<th class="right-border">{{pitcher_totals.S_dollar|dollars}}</th>
+				<th class="left-border"></th>
+				<th class="right-border">{{pitcher_totals.POS_dollar|dollars}}</th>
+				<th class="right-border">{{pitcher_totals.total_dollar|dollars}}</th>
+			</tr>
+		</table>
+	</div>
+	<div class="clear"></div>
+	{% if unknown %}
+	<div class="grid_12">
+		<table>
+			<tr>
+				<th class="left-border">Name</th>
+				<th class="right-border">Salary</th>
+			</tr>
+		{% for unknown_player in unknown %}
+			<tr>
+				<td class="left-border"><a href="/player/{{unknown_player.id}}/">{{unknown_player.name}}</a></td>
+				<td class="right-border">{{unknown_player.salary|dollars}}</td>
+			</tr>
+		{% endfor %}
+			<tr>
+				<th class="left-border"></th>
+				<th class="right-border">{{unknown_totals.salary|dollars}}</th>
+			</tr>
+		</table>
+	</div>
+	{% endif %}
+	<div class="clear"></div>
+</div>
 </body>
 </html>

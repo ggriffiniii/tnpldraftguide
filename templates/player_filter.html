@@ -2,10 +2,16 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/autoSuggest.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/tnpl.css" />
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script type="text/javascript" src="/static/js/statstable.js"></script>
 <script src="/static/js/jquery.form.js"></script>
 <script src="/static/js/jquery.autoSuggest.js"></script>
+<script src="/static/js/highcharts/highcharts.js"></script>
+<script src="/static/js/jquery.jkey-1.2.js"></script>
 <style type="text/css">
         table tr td.highlight {
                 background: -moz-linear-gradient(100% 25% 90deg, #ffffcc, #ffffdd);
@@ -26,29 +32,120 @@
         .active {
                 background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBD4F1), to(#A3C2E5));
         }
+
+	.floatingHeader {
+		position: fixed;
+		top: 0;
+	}
+
 </style>
 <script type="text/javascript">
- $(function() {
-	/* For zebra striping */
-	$("table tr:nth-child(odd)").addClass("odd-row");
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+	var cookies = document.cookie.split(';');
+	for (var i = 0; i < cookies.length; i++) {
+	    var cookie = jQuery.trim(cookies[i]);
+	    // Does this cookie string begin with the name we want?
+	    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+		cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		break;
+	    }
+	}
+    }
+    return cookieValue;
+}
+
+$(function() {
 	/* For cell text alignment */
 	$("table td:first-child, table th:first-child").addClass("first");
 	/* For removing the last border */
 	$("table td:last-child, table th:last-child").addClass("last");
 
-	$("#player_filter_form").submit(function() {
-		$("#player_results").empty();
-		$(this).ajaxSubmit({
-			dataType: 'json',
-			success: function(data) {
-				var table = TNPL.StatsTable($('#player_results'), data);
-			},
-			error: function() {
-				console.log("error");
-			}
-		});
-		return false;
+	$.ajaxSetup({
+		crossDomain: false,
+		beforeSend: function(xhr, settings) {
+			xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+		}
 	});
+
+	function displayTable() {
+		var data = {{js_data|safe}};
+		var dists_container = $("#dists");
+		dists_container.empty()
+		data.distributions.forEach(function(val) {
+			var y = $("<p />").appendTo(dists_container);
+			$("<div />").addClass("clear").appendTo(dists_container);
+			y.addClass("grid_12");
+			y.height(100);
+			var chart = new Highcharts.Chart({
+				chart: {
+					renderTo: y[0],
+					type: 'column',
+				},
+				title: {
+					//text: val.title
+					text: null
+				},
+				plotOptions: {
+					series: {
+						pointPadding: 0,
+						groupPadding: 0,
+						borderWidth: 0,
+						shadow: false
+					},
+					column: {
+						stacking: 'normal',
+					},
+				},
+				legend: {
+					enabled: false,
+				},
+				tooltip: {
+					formatter: function() {
+						var s = '<b>' + this.x + ' ' + val.title + '</b>';
+						$.each(this.points, function(i, point) {
+							s += '<br/><span style="color:' + point.series.color + '">' + point.y + ' ' + point.series.name + '</span>';
+						});
+						return s;
+					},
+					shared: true,
+				},
+				xAxis: {
+					plotLines: [{
+						color: '#ff0000',
+						width: 2,
+						value: val.mean,
+					}],
+					//tickPixelInterval: 30,
+				},
+				yAxis: {
+					title: {
+						text: null
+					},
+					endOnTick: false,
+					tickPixelInterval: 30,
+				},
+				series: [
+					{name: 'Owned Players', data: val.data},
+					{name: 'Free Agents', data: val.free_data},
+				]
+				
+			});
+		});
+		if (data.players_table.length > 0 && 'BA' in data.players_table[0]) {
+			var table = new TNPL.HittingTable($('#player_results'), data.players_table);
+		} else {
+			var table = new TNPL.PitchingTable($('#player_results'), data.players_table);
+		}
+		$(document).jkey('shift+4', function() {
+			console.log("key pressed");
+			table.toggleDollars();
+		});
+
+		$(window).scroll(table.scrollHandler).trigger("scroll");
+	}
+
 
 	$("#search").autoSuggest("/form/player_search", {
 		minChars: 2,
@@ -60,18 +157,31 @@
 			console.log("data: " + data);
 			window.location.href = "/player/" + data.attributes.id + "/";
 		}
-	})
+	});
+
+	displayTable();
 });
 
 </script>
 </head>
 <body>
-<form action="/form/player_filter" method="post" id="player_filter_form">{% csrf_token %}
-{{ filter_form.as_p }}
-<input type="submit" value="Submit" />
-</form>
-<input id="search" type="text" />
-<div id="player_results"></div>
-
+<div class="container_12">
+	<div class="grid_4"><input id="search" type="text" /></div>
+	<div class="grid_2 prefix_6">
+		<form action="/players/" method="get">
+		<table>
+			{{ filter_form.as_table }}
+			<tr>
+				<th></th>
+				<td><input type="submit" value="Submit" /></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+	<div class="clear"></div>
+	<div id="dists"></div>
+	<div class="clear"></div>
+	<div class="grid_12" id="player_results"></div>
+</div>
 </body>
 </html>

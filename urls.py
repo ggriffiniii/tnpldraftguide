@@ -6,10 +6,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^player/(?P<player_id>\d+)/$', 'draftapp.views.player'),
-    url(r'^team/(?P<team_id>\d+)/$$', 'draftapp.views.team'),
+    url(r'^team/(?P<team_id>\d+)/$', 'draftapp.views.team'),
     url(r'^players/$', 'draftapp.views.player_filter'),
     url(r'^teams/$', 'draftapp.views.teams'),
     url(r'^form/player_filter$', 'draftapp.views.player_filter_submit'),
+    url(r'^form/player_dollar_value$', 'draftapp.views.player_dollar_value_submit'),
     url(r'^form/player_ownership$', 'draftapp.views.ownership_form_submit'),
     url(r'^form/player_search$', 'draftapp.views.player_search'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',

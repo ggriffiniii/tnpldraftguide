@@ -8,126 +8,6 @@
 # into your database.
 
 from django.db import models
-from decimal import Decimal
-
-class HittingValue(object):
-    def __init__(self, ab, h, runs, hr, rbi, sb):
-        self.ab = ab
-        self.h = h
-        self.r = runs
-        self.hr = hr
-        self.rbi = rbi
-        self.sb = sb
-
-    _AB_PER_PLAYER = 550
-    _PLAYERS_PER_TEAM = 15
-    _POINTS_PER_CATEGORY = 100
-
-    _RUNS_GOAL = 1217
-    _RBI_GOAL = 1191
-    _HR_GOAL = 321
-    _SB_GOAL = 226
-    _BA_GOAL = Decimal('0.278')
-
-    _RUNS_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _RUNS_GOAL
-    _RBI_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _RBI_GOAL
-    _HR_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _HR_GOAL
-    _SB_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _SB_GOAL
-    _HITS_MUL = _POINTS_PER_CATEGORY / (_BA_GOAL * _AB_PER_PLAYER)
-
-    def ba(self):
-	if self.ab > 0:
-		return Decimal(self.h) / self.ab
-	else:
-		return 0.0
-
-    def r_val(self):
-	return self.r * HittingValue._RUNS_MUL
-
-    def hr_val(self):
-	return self.hr * HittingValue._HR_MUL
-
-    def rbi_val(self):
-	return self.rbi * HittingValue._RBI_MUL
-
-    def sb_val(self):
-	return self.sb * HittingValue._SB_MUL
-
-    def ba_val(self):
-	return (HittingValue._POINTS_PER_CATEGORY+
-                ((self.h-(self.ab*HittingValue._BA_GOAL))
-		 *HittingValue._HITS_MUL))
-
-    def total_val(self):
-	return (self.r_val() + self.hr_val() + self.rbi_val() +
-                self.sb_val() + self.ba_val())
-
-class PitchingValue(object):
-	def __init__(self, w, sv, ipouts, h, er, bb, k):
-		self.w = w
-		self.sv = sv
-		self.ipouts = ipouts
-		self.h = h
-		self.er = er
-		self.bb = bb
-		self.k = k
-
-	_IP_PER_PLAYER = 165
-	_PLAYERS_PER_TEAM = 10
-	_POINTS_PER_CATEGORY = 100
-
-	_WINS_GOAL = 123
-	_SAVES_GOAL = 105
-	_K_GOAL = 1609
-	_ERA_GOAL = Decimal('3.35')
-	_WHIP_GOAL = Decimal('1.175')
-
-	_WINS_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _WINS_GOAL
-	_SAVES_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _SAVES_GOAL
-	_K_MUL = Decimal(_PLAYERS_PER_TEAM * _POINTS_PER_CATEGORY) / _K_GOAL
-	_WH_MUL = _POINTS_PER_CATEGORY / (_WHIP_GOAL * _IP_PER_PLAYER)
-	_ER_MUL = _POINTS_PER_CATEGORY / (_ERA_GOAL * (_IP_PER_PLAYER / 9))
-
-	def ip(self):
-		return Decimal(self.ipouts) / 3
-
-	def wh(self):
-		return self.h + self.bb
-
-	def era(self):
-		if self.ipouts > 0:
-			return Decimal(self.er) / self.ipouts * 27
-		else:
-			return Decimal(0)
-
-	def whip(self):
-		if self.ipouts > 0:
-			return (Decimal(self.h) + Decimal(self.bb)) / self.ipouts * 3
-		else:
-			return Decimal(0)
-
-	def w_val(self):
-		return self.w * PitchingValue._WINS_MUL
-
-	def sv_val(self):
-		return self.sv * PitchingValue._SAVES_MUL
-
-	def k_val(self):
-		return self.k * PitchingValue._K_MUL
-
-	def whip_val(self):
-		return (PitchingValue._POINTS_PER_CATEGORY+
-			((((self.ipouts/3)*PitchingValue._WHIP_GOAL)-self.wh())
-			 *PitchingValue._WH_MUL))
-
-	def era_val(self):
-		return (PitchingValue._POINTS_PER_CATEGORY+
-			((((self.ipouts/27)*PitchingValue._ERA_GOAL)-self.er)
-			 *PitchingValue._ER_MUL))
-
-	def total_val(self):
-		return (self.w_val() + self.sv_val() + self.k_val() +
-			self.whip_val() + self.era_val())
 
 
 class Player(models.Model):
@@ -332,17 +212,23 @@ class TNPLOwnership(models.Model):
     def __unicode__(self):
         return "%s (%s) $%.2f" % (self.playerid, self.team, self.salary)
 
-class TNPLBattingProj(models.Model):
-    playerid = models.OneToOneField(Player, db_column='playerID', to_field='playerid')
-    ab = models.IntegerField(null=True, db_column='AB', blank=True)
-    r = models.IntegerField(null=True, db_column='R', blank=True)
-    h = models.IntegerField(null=True, db_column='H', blank=True)
-    hr = models.IntegerField(null=True, db_column='HR', blank=True)
-    rbi = models.IntegerField(null=True, db_column='RBI', blank=True)
-    sb = models.IntegerField(null=True, db_column='SB', blank=True)
+class BattingProj(models.Model):
+    playerid = models.ForeignKey(Player, db_column='playerID', to_field='playerid') 
+    type = models.CharField(max_length='16', db_column='TYPE')
+    ab = models.IntegerField(null=True, db_column='AB', blank=True) 
+    r = models.IntegerField(null=True, db_column='R', blank=True) 
+    h = models.IntegerField(null=True, db_column='H', blank=True) 
+    
+    
+    hr = models.IntegerField(null=True, db_column='HR', blank=True) 
+    rbi = models.IntegerField(null=True, db_column='RBI', blank=True) 
+    sb = models.IntegerField(null=True, db_column='SB', blank=True) 
+    class Meta:
+        db_table = u'BattingProj'
 
-class TNPLPitchingProj(models.Model):
-    playerid = models.OneToOneField(Player, db_column='playerID', to_field='playerid')
+class PitchingProj(models.Model):
+    playerid = models.ForeignKey(Player, db_column='playerID', to_field='playerid') 
+    type = models.CharField(max_length='16', db_column='TYPE')
     w = models.IntegerField(null=True, db_column='W', blank=True) 
     sv = models.IntegerField(null=True, db_column='SV', blank=True) 
     ipouts = models.IntegerField(null=True, db_column='IPouts', blank=True) 
@@ -350,4 +236,5 @@ class TNPLPitchingProj(models.Model):
     er = models.IntegerField(null=True, db_column='ER', blank=True) 
     bb = models.IntegerField(null=True, db_column='BB', blank=True) 
     so = models.IntegerField(null=True, db_column='SO', blank=True) 
-
+    class Meta:
+        db_table = u'PitchingProj'
