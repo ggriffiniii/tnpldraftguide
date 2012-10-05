@@ -1,10 +1,9 @@
 import os
 import sys
-path = '/www/tnpldraft'
-if path not in sys.path:
-    sys.path.append(path)
+sys.path.append('/www')
+sys.path.append('/www/tnpldraft')
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'tnpldraft.apache_settings'
 
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
