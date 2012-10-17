@@ -24,6 +24,9 @@ def get_dataset_choices():
 		choices.append((str(year), str(year)));
 
 	cursor = connection.cursor()
+	choices.append(('avg_2', '2 Year Avg'))
+	choices.append(('avg_3', '3 Year Avg'))
+	choices.append(('avg_5', '5 Year Avg'))
 	cursor.execute('SELECT DISTINCT(TYPE) from BattingProj;')
 	for row in cursor:
 		type = row[0]

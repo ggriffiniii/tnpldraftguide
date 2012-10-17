@@ -265,7 +265,7 @@ class HittingQuery(object):
                         SUM(HR) as HR,
                         SUM(RBI) as RBI,
                         SUM(SB) as SB
-                from Batting
+                FROM Batting
                 WHERE yearID = %s
                 GROUP BY playerID) AS BattingTotals
         USING(playerID) LEFT OUTER JOIN (
@@ -277,7 +277,7 @@ class HittingQuery(object):
                         SUM(g_3b) AS g_3b,
                         SUM(g_ss) AS g_ss,
                         SUM(g_of) AS g_of
-                from Appearances
+                FROM Appearances
                 WHERE yearID = %s
                 GROUP BY playerID) AS AppearancesTotals
         USING (playerID) LEFT OUTER JOIN
@@ -317,7 +317,7 @@ class HittingQuery(object):
                         SUM(g_3b) AS g_3b,
                         SUM(g_ss) AS g_ss,
                         SUM(g_of) AS g_of
-                from Appearances
+                FROM Appearances
                 WHERE yearID = %s
                 GROUP BY playerID) AS AppearancesTotals
         USING (playerID) LEFT OUTER JOIN
@@ -328,7 +328,67 @@ class HittingQuery(object):
         WHERE BattingProj.TYPE = %s;'''
 
         avg_query = '''
-        '''
+        SELECT
+                Master.lahmanid,
+                Master.nameFirst,
+                Master.nameLast,
+                draftapp_tnplteam.name,
+                draftapp_tnplteam.id,
+                draftapp_tnplownership.salary,
+                BattingAverages.AB,
+                BattingAverages.H,
+                BattingAverages.R,
+                BattingAverages.HR,
+                BattingAverages.RBI,
+                BattingAverages.SB,
+                AppearancesTotals.g_c,
+                AppearancesTotals.g_1b,
+                AppearancesTotals.g_2b,
+                AppearancesTotals.g_3b,
+                AppearancesTotals.g_ss,
+                AppearancesTotals.g_of
+        FROM Master
+        JOIN (
+		SELECT
+			playerID,
+			AVG(BattingTotals.AB) as AB,
+			AVG(BattingTotals.H) as H,
+			AVG(BattingTotals.R) as R,
+			AVG(BattingTotals.HR) as HR,
+			AVG(BattingTotals.RBI) as RBI,
+			AVG(BattingTotals.SB) as SB
+		FROM (
+			SELECT
+				playerID,
+				yearID,
+				SUM(AB) as AB,
+				SUM(H) as H,
+				SUM(R) as R,
+				SUM(HR) as HR,
+				SUM(RBI) as RBI,
+				SUM(SB) as SB
+			FROM Batting
+			GROUP BY playerID,yearID) AS BattingTotals
+		WHERE BattingTotals.yearID > %s AND
+		      BattingTotals.yearID <= %s
+		GROUP BY playerID) AS BattingAverages
+        USING(playerID) LEFT OUTER JOIN (
+                SELECT
+                        playerID,
+                        SUM(g_c) AS g_c,
+                        SUM(g_1b) AS g_1b,
+                        SUM(g_2b) AS g_2b,
+                        SUM(g_3b) AS g_3b,
+                        SUM(g_ss) AS g_ss,
+                        SUM(g_of) AS g_of
+                FROM Appearances
+                WHERE yearID = %s
+                GROUP BY playerID) AS AppearancesTotals
+        USING (playerID) LEFT OUTER JOIN
+        draftapp_tnplownership
+        USING (playerID) LEFT OUTER JOIN
+        draftapp_tnplteam
+        ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id)'''
 
         def get_cursor(self, dataset):
                 cursor = connection.cursor()
@@ -336,7 +396,11 @@ class HittingQuery(object):
                         proj_type = dataset[5:]
                         cursor.execute(HittingQuery.projection_query, (PREV_YEAR, proj_type))
                 elif dataset.startswith('avg_'):
-                        pass
+			n_years = int(dataset[4:])
+			cursor.execute(HittingQuery.avg_query,
+				       (PREV_YEAR - n_years,
+					PREV_YEAR,
+					PREV_YEAR))
                 else:
                         year = int(dataset)
                         #cursor.execute(HittingQuery.year_query, (year, PREV_YEAR))
@@ -371,7 +435,7 @@ class PitchingQuery(object):
                         SUM(ER) AS ER,
                         SUM(BB) AS BB,
                         SUM(SO) AS SO
-                from Pitching
+                FROM Pitching
                 WHERE yearID = %s
                 GROUP BY playerID) AS PitchingTotals
         USING(playerID) LEFT OUTER JOIN draftapp_tnplownership
@@ -401,13 +465,62 @@ class PitchingQuery(object):
         ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id)
         WHERE PitchingProj.TYPE = %s'''
 
+	avg_query = '''
+        SELECT
+                Master.lahmanid,
+                Master.nameFirst,
+                Master.nameLast,
+                draftapp_tnplteam.name,
+                draftapp_tnplteam.id,
+                draftapp_tnplownership.salary,
+                PitchingAverages.W,
+                PitchingAverages.SV,
+                PitchingAverages.IPouts,
+                PitchingAverages.H,
+                PitchingAverages.ER,
+                PitchingAverages.BB,
+                PitchingAverages.SO
+        FROM Master
+        JOIN (
+		SELECT
+			playerID,
+			AVG(PitchingTotals.W) AS W,
+			AVG(PitchingTotals.SV) AS SV,
+			AVG(PitchingTotals.IPouts) AS IPouts,
+			AVG(PitchingTotals.H) AS H,
+			AVG(PitchingTotals.ER) AS ER,
+			AVG(PitchingTotals.BB) AS BB,
+			AVG(PitchingTotals.SO) AS SO
+		FROM (
+			SELECT
+				playerID,
+				yearID,
+				SUM(W) AS W,
+				SUM(SV) AS SV,
+				SUM(IPouts) AS IPouts,
+				SUM(H) AS H,
+				SUM(ER) AS ER,
+				SUM(BB) AS BB,
+				SUM(SO) AS SO
+			FROM Pitching
+			GROUP BY playerID,yearID) AS PitchingTotals
+		WHERE PitchingTotals.yearID > %s AND
+		      PitchingTotals.yearID <= %s
+		GROUP BY playerID) as PitchingAverages
+        USING(playerID) LEFT OUTER JOIN draftapp_tnplownership
+        USING (playerID)
+        LEFT OUTER JOIN draftapp_tnplteam
+        ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id)'''
+
         def get_cursor(self, dataset):
                 cursor = connection.cursor()
                 if dataset.startswith('proj_'):
                         proj_type = dataset[5:]
                         cursor.execute(PitchingQuery.projection_query, (proj_type,))
                 elif dataset.startswith('avg_'):
-                        pass
+			n_years = int(dataset[4:])
+			cursor.execute(PitchingQuery.avg_query,
+				       (PREV_YEAR - n_years, PREV_YEAR))
                 else:
                         year = int(dataset)
                         cursor.execute(PitchingQuery.year_query, (year,))
@@ -889,7 +1002,7 @@ class PopulationStats(object):
 			SELECT
 				COUNT(playerID),
 				SUM(salary)
-			from draftapp_tnplownership
+			FROM draftapp_tnplownership
 			GROUP BY team_id''')
 		for row in cursor:
 			num_players = int(row[0])
