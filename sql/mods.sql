@@ -1,6 +1,8 @@
 CREATE USER 'tnpldraft'@'localhost' IDENTIFIED BY 'tnpldraft';
 GRANT ALL PRIVILEGES ON tnpldraft.* TO 'tnpldraft'@'localhost';
 use tnpldraft;
+
+DELETE FROM Master where lahmanID = 460;
 ALTER TABLE Master MODIFY playerID VARCHAR(10) UNIQUE KEY;
 ALTER TABLE Master MODIFY lahmanID INT(11) PRIMARY KEY;
 ALTER TABLE Appearances ADD id INTEGER PRIMARY KEY AUTO_INCREMENT;

@@ -265,7 +265,9 @@ def hitter(request, player):
 		seasons.append(season)
 
 	if most_recent_teamid is not None:
-		team = Teams.objects.get(teamid=most_recent_teamid, yearid=seasons[-1]['year']).name
+		print most_recent_teamid
+		print seasons[-1]['year']
+		team = Teams.objects.get(teamid=most_recent_teamid, yearid=seasons[0]['year']).name
 		
 	else:
 		team = None
