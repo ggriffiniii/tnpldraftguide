@@ -299,6 +299,11 @@ function dollarString(dollar_val) {
         th.left-border.right-border {
                 text-align:center;
         }
+
+	.eligible {
+		background: rgb(0,255,0);
+	}
+
 </style>
 </head>
 <body>
@@ -314,10 +319,25 @@ function dollarString(dollar_val) {
 </h2>
 Bats: {{ bats }} Throws: {{ throws }}</br>
 Age: {{ age }} ({{ birthdate }})</br>
-Position:
-{% for pos in eligibility %}
- {{ pos }}&nbsp;
+<table>
+<tr>
+{% for app in appearances %}
+	<th>{{app.pos}}</th>
 {% endfor %}
+</tr><tr>
+{% for app in appearances %}
+	{% if app.eligible %}
+		<td class="eligible">
+	{% else %}
+		<td>
+	{% endif %}
+	{% if app.games %}
+		{{ app.games }}
+	{% endif %}
+	</td>
+{% endfor %}
+</tr>
+</table>
 </br>
 </div>
 <div class="grid_4 prefix_2">

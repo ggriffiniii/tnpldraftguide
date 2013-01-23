@@ -169,7 +169,7 @@ var TNPL = (function() {
 			} else {
 				var team_link = $('<a />')
 					.attr('href',
-					      '/team/' + playerinfo.tnpl_team_id + '/')
+					      '/team/' + playerinfo.tnpl_team_id + '/' + window.location.search)
 					.text(playerinfo.tnpl_team);
 				$('<td />').append(team_link).appendTo(row);
 				$('<td />')

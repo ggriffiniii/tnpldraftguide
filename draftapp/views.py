@@ -222,27 +222,38 @@ def player(request, player_id):
 def hitter(request, player):
 	name = "%s %s" % (player.namefirst, player.namelast)
 
-	eligibility = set(['U'])
+	apps = {
+		'C': 0,
+		'1B': 0,
+		'2B': 0,
+		'3B': 0,
+		'SS': 0,
+		'OF': 0,
+	}
 	try:
 		appearances = player.appearances_set.get(yearid=draftapp.stats.PREV_YEAR)
-		if (appearances.g_c > 20):
-			eligibility.add('C')
-		if (appearances.g_1b > 20):
-			eligibility.add('1B')
-			eligibility.add('CI')
-		if (appearances.g_2b > 20):
-			eligibility.add('2B')
-			eligibility.add('MI')
-		if (appearances.g_3b > 20):
-			eligibility.add('3B')
-			eligibility.add('CI')
-		if (appearances.g_ss > 20):
-			eligibility.add('SS')
-			eligibility.add('MI')
-		if (appearances.g_of > 20):
-			eligibility.add('OF')
+		apps = {
+			'C': appearances.g_c,
+			'1B': appearances.g_1b,
+			'2B': appearances.g_2b,
+			'3B': appearances.g_3b,
+			'SS': appearances.g_ss,
+			'OF': appearances.g_of,
+		}
 	except ObjectDoesNotExist:
 		pass
+
+	appearances = (
+		{ 'pos': 'C', 'eligible': apps['C'] >= 20, 'games': apps['C'] },
+		{ 'pos': '1B', 'eligible': apps['1B'] >= 20, 'games': apps['1B'] },
+		{ 'pos': '2B', 'eligible': apps['2B'] >= 20, 'games': apps['2B'] },
+		{ 'pos': '3B', 'eligible': apps['3B'] >= 20, 'games': apps['3B'] },
+		{ 'pos': 'SS', 'eligible': apps['SS'] >= 20, 'games': apps['SS'] },
+		{ 'pos': 'OF', 'eligible': apps['OF'] >= 20, 'games': apps['OF'] },
+		{ 'pos': 'MI', 'eligible': apps['SS'] >= 20 or apps['2B'] >= 20, 'games': max(apps['SS'], apps['2B']) },
+		{ 'pos': 'CI', 'eligible': apps['1B'] >= 20 or apps['3B'] >= 20, 'games': max(apps['1B'], apps['3B']) },
+		{ 'pos': 'U', 'eligible': True }
+	)
 
 	# Get batting seasons
 	query = 'SELECT yearID, teamID, SUM(AB), SUM(H), SUM(R), SUM(HR), SUM(RBI), SUM(SB) from Batting where playerID = %s GROUP BY yearID ORDER BY yearID DESC'
@@ -271,18 +282,6 @@ def hitter(request, player):
 		
 	else:
 		team = None
-
-	def pos_sort_key(item):
-		if item == 'C': return 0
-		if item == '1B': return 5
-		if item == '2B': return 10
-		if item == '3B': return 15
-		if item == 'SS': return 20
-		if item == 'OF': return 25
-		if item == 'CI': return 30
-		if item == 'MI': return 35
-		if item == 'U': return 40
-	eligibility = sorted(eligibility, key=pos_sort_key)
 
 	birthdate = datetime.date(player.birthyear, player.birthmonth, player.birthday)
 	today = datetime.date.today()
@@ -314,6 +313,7 @@ def hitter(request, player):
 
 	return render_to_response('hitter.html', {'name': name,
 						  'id': player.lahmanid,
+						  'appearances': appearances,
 			                	  'seasons': simplejson.dumps(seasons),
 						  'projections': simplejson.dumps(projections),
 						  'bats': player.bats,
@@ -321,7 +321,6 @@ def hitter(request, player):
 						  'birthdate': birthdate,
 						  'age': age,
 						  'team': team,
-						  'eligibility': eligibility,
 						  'ownership_form': ownership_form}, context_instance=RequestContext(request))
 
 def pitcher(request, player):
