@@ -56,7 +56,7 @@ var TNPL = (function() {
 		create();
 
 		function create() {
-			self.displayed_rows = 250;
+			self.displayed_rows = 500;
 			self.show_dollars = true;
 			self.sortkeys = {'BA_dollar': true,
 					 'R_dollar': true,
@@ -130,87 +130,110 @@ var TNPL = (function() {
 		}
 
 		function recreateRows() {
-			self.tbody.empty();
-			var nrows = Math.min(self.displayed_rows,
-					     self.data.length);
-			for (var idx = 0; idx < nrows; idx++) {
-				var val = self.data[idx];
-				var row = $('<tr />');
-				if (idx % 2 == 0) {
-					row.addClass('odd-row');
-				}
-				addCellsToRow(row, val, idx);
-				row.appendTo(self.tbody);
-			}
-			if (nrows < self.data.length) {
-				var row = $('<tr />');
-				var td = $('<td />')
-					.attr('colspan', 11)
-					.css('text-align', 'center')
-					.text('Click for next 50 entries')
-					.click(function() {
-						self.displayed_rows += 50;
-						recreateRows();
-					}).appendTo(row);
-				row.appendTo(self.tbody);
-			}
+			var tbody = self.tbody[0];
+			var rowSel = d3.select(tbody).selectAll('tr')
+				.data(self.data.slice(0, self.displayed_rows));
+			rowSel.enter()
+				.append('tr');
+			rowSel.exit()
+				.remove();
+			rowSel
+				.classed('odd-row', function(d,i) { return i % 2 == 1; })
+				.call(addCellsToRow);
 		}
 
-		function addCellsToRow(row, playerinfo, idx) {
-			$('<td />').appendTo(row).text(idx + 1);
-			var player_link = $('<a />')
-				.attr('href',
-				      '/player/' + playerinfo.player_id + '/')
-				.text(playerinfo.name);
-			$('<td />').append(player_link).appendTo(row);
-			if (playerinfo.tnpl_team == null) {
-				$('<td />').addClass('highlight').appendTo(row);
-				$('<td />').addClass('highlight').appendTo(row);
-			} else {
-				var team_link = $('<a />')
-					.attr('href',
-					      '/team/' + playerinfo.tnpl_team_id + '/' + window.location.search)
-					.text(playerinfo.tnpl_team);
-				$('<td />').append(team_link).appendTo(row);
-				$('<td />')
-					.text('$' + playerinfo.tnpl_salary.toFixed(2))
-					.appendTo(row);
-			}
-			var ba_td = $('<td />').appendTo(row);
-			if (self.show_dollars) {
-				var pre = '$';
-				if (playerinfo.BA_dollar < 0.0) {
-					pre = '-$';
-				}
-				var dollar_val = Math.abs(playerinfo.BA_dollar);
-				ba_td.text(pre + dollar_val.toFixed(2));
-			} else {
-				ba_td.text('' + playerinfo.BA.toFixed(3) + ' (' +
-					   playerinfo.AB + ')');
-			}
-			['R', 'HR', 'RBI', 'SB', 'POS'].forEach(function(val) {
-				var td = $('<td />').appendTo(row);
-				if (self.show_dollars) {
-					var key = val + '_dollar';
-					var pre = '$';
-					if (playerinfo[key] < 0.0) {
-						pre = '-$';
+		function addCellsToRow(selection) {
+			selection.each(function(d,i) {
+				var row = d3.select(this);
+				var tdSel = row.selectAll('td')
+					.data(function(d) {
+						var cols = [];
+						var total_val = d.BA_dollar + d.R_dollar + d.HR_dollar + d.RBI_dollar + d.SB_dollar + d.POS_dollar;
+						cols.push({type: 'rank', value: i+1});
+						cols.push({type: 'player', name: d.name, id: d.player_id});
+						cols.push({type: 'team', name: d.tnpl_team, id: d.tnpl_team_id});
+						cols.push({type: 'salary', value: d.tnpl_salary});
+						cols.push({type: 'BA', dollar_value: d.BA_dollar, value: d.BA, ab: d.AB});
+						cols.push({type: 'R', dollar_value: d.R_dollar, value: d.R});
+						cols.push({type: 'HR', dollar_value: d.HR_dollar, value: d.HR});
+						cols.push({type: 'RBI', dollar_value: d.RBI_dollar, value: d.RBI});
+						cols.push({type: 'SB', dollar_value: d.SB_dollar, value: d.SB});
+						cols.push({type: 'POS', dollar_value: d.POS_dollar, value: d.POS});
+						cols.push({type: 'value', value: total_val});
+						return cols;
+					});
+				tdSel.enter()
+					.append('td');
+				tdSel.exit()
+					.remove();
+				tdSel.each(function(d) {
+					var td = d3.select(this);
+					if (d.type === 'rank') {
+						td.text(d.value);
+					} else if (d.type === 'player') {
+						var aSel = td.selectAll('a').data([d]);
+						aSel.enter().append('a');
+						aSel.exit().remove();
+						aSel
+							.attr('href', '/player/' + d.id + '/')
+							.text(d.name);
+					} else if (d.type === 'team') {
+						var anchorData = [];
+						if (d.id === null || d.name === null) {
+							td.classed('highlight', true);
+						} else {
+							anchorData = [d];
+							td.classed('highlight', false);
+						}
+						var aSel = td.selectAll('a').data(anchorData);
+						aSel.enter().append('a');
+						aSel.exit().remove();
+						aSel
+							.attr('href', function(d) { return '/team/' + d.id + '/' + window.location.search; })
+							.text(function(d) { return d.name; });
+					} else if (d.type === 'salary') {
+						if (d.value === null) {
+							td
+								.classed('highlight', true)
+								.text('');
+						} else {
+							td
+								.classed('highlight', false)
+								.text('$' + d.value.toFixed(2));
+						}
+					} else if (d.type === 'BA') {
+						if (self.show_dollars) {
+							var pre = '$';
+							if (d.dollar_value < 0.0) {
+								pre = '-$';
+							}
+							var dollar_val = Math.abs(d.dollar_value);
+							td.text(pre + dollar_val.toFixed(2));
+						} else {
+							td.text('' + d.value.toFixed(3) + ' (' + d.ab + ')');
+						}
+					} else if (['R', 'HR', 'RBI', 'SB', 'POS'].indexOf(d.type) >= 0) {
+						if (self.show_dollars) {
+							var pre = '$';
+							if (d.dollar_value < 0.0) {
+								pre = '-$';
+							}
+							var dollar_val = Math.abs(d.dollar_value);
+							td.text(pre + dollar_val.toFixed(2));
+						} else {
+							td.text(d.value);
+						}
+						
+					} else if (d.type === 'value') {
+						var pre = '$';
+						if (d.value < 0.0) {
+							pre = '-$';
+						}
+						var dollar_val = Math.abs(d.value);
+						td.text(pre + dollar_val.toFixed(2));
 					}
-					var dollar_val = Math.abs(playerinfo[key]);
-					td.text(pre + dollar_val.toFixed(2));
-				} else {
-					td.text(playerinfo[val]);
-				}
+				});	
 			});
-			var dollar_val = playerinfo.BA_dollar +
-					 playerinfo.R_dollar +
-					 playerinfo.HR_dollar +
-					 playerinfo.RBI_dollar +
-					 playerinfo.SB_dollar +
-					 playerinfo.POS_dollar;
-			var $dollar_val = $('<td />')
-				.appendTo(row)
-				.text('$' + dollar_val.toFixed(2));
 		}
 
 		function sort() {
@@ -286,7 +309,7 @@ var TNPL = (function() {
 		create();
 
 		function create() {
-			self.displayed_rows = 250;
+			self.displayed_rows = 500;
 			self.show_dollars = true;
 			self.sortkeys = {'ERA_dollar': true,
 					 'WHIP_dollar': true,
@@ -360,100 +383,112 @@ var TNPL = (function() {
 		}
 
 		function recreateRows() {
-			self.tbody.empty();
-			var nrows = Math.min(self.displayed_rows,
-					     self.data.length);
-			for (var idx = 0; idx < nrows; idx++) {
-				var val = self.data[idx];
-				var row = $('<tr />');
-				if (idx % 2 == 0) {
-					row.addClass('odd-row');
-				}
-				addCellsToRow(row, val, idx);
-				row.appendTo(self.tbody);
-			}
-			if (nrows < self.data.length) {
-				var row = $('<tr />');
-				var td = $('<td />')
-					.attr('colspan', 11)
-					.css('text-align', 'center')
-					.text('Click for next 50 entries')
-					.click(function() {
-						self.displayed_rows += 50;
-						recreateRows();
-					}).appendTo(row);
-				row.appendTo(self.tbody);
-			}
+			var tbody = self.tbody[0];
+			var rowSel = d3.select(tbody).selectAll('tr')
+				.data(self.data.slice(0, self.displayed_rows));
+			rowSel.enter()
+				.append('tr');
+			rowSel.exit()
+				.remove();
+			rowSel
+				.classed('odd-row', function(d,i) { return i % 2 == 1; })
+				.call(addCellsToRow);
 		}
 
-		function addCellsToRow(row, playerinfo, idx) {
-			$('<td />').appendTo(row).text(idx + 1);
-			var player_link = $('<a />')
-				.attr('href',
-				      '/player/' + playerinfo.player_id + '/')
-				.text(playerinfo.name);
-			$('<td />').append(player_link).appendTo(row);
-			if (playerinfo.tnpl_team == null) {
-				$('<td />').addClass('highlight').appendTo(row);
-				$('<td />').addClass('highlight').appendTo(row);
-			} else {
-				var team_link = $('<a />')
-					.attr('href',
-					      '/team/' + playerinfo.tnpl_team_id + '/')
-					.text(playerinfo.tnpl_team);
-				$('<td />').append(team_link).appendTo(row);
-				$('<td />')
-					.text('$' + playerinfo.tnpl_salary.toFixed(2))
-					.appendTo(row);
-			}
-			var era_td = $('<td />').appendTo(row);
-			if (self.show_dollars) {
-				var pre = '$';
-				if (playerinfo.ERA_dollar < 0.0) {
-					pre = '-$';
-				}
-				var dollar_val = Math.abs(playerinfo.ERA_dollar);
-				era_td.text(pre + dollar_val.toFixed(2));
-			} else {
-				era_td.text('' + playerinfo.ERA.toFixed(3) + ' (' +
-					   playerinfo.IP.toFixed(1) + ')');
-			}
-			var whip_td = $('<td />').appendTo(row);
-			if (self.show_dollars) {
-				var pre = '$';
-				if (playerinfo.WHIP_dollar < 0.0) {
-					pre = '-$';
-				}
-				var dollar_val = Math.abs(playerinfo.WHIP_dollar);
-				whip_td.text(pre + dollar_val.toFixed(2));
-			} else {
-				whip_td.text('' + playerinfo.WHIP.toFixed(3) + ' (' +
-					   playerinfo.IP.toFixed(1) + ')');
-			}
-			['W', 'K', 'S', 'POS'].forEach(function(val) {
-				var td = $('<td />').appendTo(row);
-				if (self.show_dollars) {
-					var key = val + '_dollar';
-					var pre = '$';
-					if (playerinfo[key] < 0.0) {
-						pre = '-$';
+		function addCellsToRow(selection) {
+			selection.each(function(d,i) {
+				var row = d3.select(this);
+				var tdSel = row.selectAll('td')
+					.data(function(d) {
+						var cols = [];
+						var total_val = d.ERA_dollar + d.WHIP_dollar + d.W_dollar + d.K_dollar + d.S_dollar + d.POS_dollar;
+						cols.push({type: 'rank', value: i+1});
+						cols.push({type: 'player', name: d.name, id: d.player_id});
+						cols.push({type: 'team', name: d.tnpl_team, id: d.tnpl_team_id});
+						cols.push({type: 'salary', value: d.tnpl_salary});
+						cols.push({type: 'ERA', dollar_value: d.ERA_dollar, value: d.ERA, ip: d.IP});
+						cols.push({type: 'WHIP', dollar_value: d.WHIP_dollar, value: d.WHIP, ip: d.IP});
+						cols.push({type: 'W', dollar_value: d.W_dollar, value: d.W});
+						cols.push({type: 'K', dollar_value: d.K_dollar, value: d.K});
+						cols.push({type: 'S', dollar_value: d.S_dollar, value: d.S});
+						cols.push({type: 'POS', dollar_value: d.POS_dollar, value: d.POS});
+						cols.push({type: 'value', value: total_val});
+						return cols;
+					});
+				tdSel.enter()
+					.append('td');
+				tdSel.exit()
+					.remove();
+				tdSel.each(function(d) {
+					var td = d3.select(this);
+					if (d.type === 'rank') {
+						td.text(d.value);
+					} else if (d.type === 'player') {
+						var aSel = td.selectAll('a').data([d]);
+						aSel.enter().append('a');
+						aSel.exit().remove();
+						aSel
+							.attr('href', '/player/' + d.id + '/')
+							.text(d.name);
+					} else if (d.type === 'team') {
+						var anchorData = [];
+						if (d.id === null || d.name === null) {
+							td.classed('highlight', true);
+						} else {
+							anchorData = [d];
+							td.classed('highlight', false);
+						}
+						var aSel = td.selectAll('a').data(anchorData);
+						aSel.enter().append('a');
+						aSel.exit().remove();
+						aSel
+							.attr('href', function(d) { return '/team/' + d.id + '/' + window.location.search; })
+							.text(function(d) { return d.name; });
+					} else if (d.type === 'salary') {
+						if (d.value === null) {
+							td
+								.classed('highlight', true)
+								.text('');
+						} else {
+							td
+								.classed('highlight', false)
+								.text('$' + d.value.toFixed(2));
+						}
+					} else if (d.type === 'ERA' || d.type === 'WHIP') {
+						if (self.show_dollars) {
+							var pre = '$';
+							if (d.dollar_value < 0.0) {
+								pre = '-$';
+							}
+							var dollar_val = Math.abs(d.dollar_value);
+							td.text(pre + dollar_val.toFixed(2));
+						} else {
+							td.text('' + d.value.toFixed(3) + ' (' + d.ip.toFixed(1) + ')');
+						}
+					} else if (['W', 'K', 'S', 'POS'].indexOf(d.type) >= 0) {
+						if (self.show_dollars) {
+							var pre = '$';
+							if (d.dollar_value < 0.0) {
+								pre = '-$';
+							}
+							var dollar_val = Math.abs(d.dollar_value);
+							td.text(pre + dollar_val.toFixed(2));
+						} else {
+							td.text(d.value);
+						}
+						
+					} else if (d.type === 'value') {
+						var pre = '$';
+						if (d.value < 0.0) {
+							pre = '-$';
+						}
+						var dollar_val = Math.abs(d.value);
+						td.text(pre + dollar_val.toFixed(2));
 					}
-					var dollar_val = Math.abs(playerinfo[key]);
-					td.text(pre + dollar_val.toFixed(2));
-				} else {
-					td.text(playerinfo[val]);
-				}
+				});	
 			});
-			var dollar_val = playerinfo.ERA_dollar +
-					 playerinfo.WHIP_dollar +
-					 playerinfo.W_dollar +
-					 playerinfo.K_dollar +
-					 playerinfo.S_dollar +
-					 playerinfo.POS_dollar;
-			var $dollar_val = $('<td />')
-				.appendTo(row)
-				.text('$' + dollar_val.toFixed(2));
 		}
+
 
 		function sort() {
 			self.data.sort(cmp);
