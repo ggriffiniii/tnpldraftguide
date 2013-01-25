@@ -9,6 +9,7 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.db.models import Q
 from django.template import Context, loader, RequestContext
 from draftapp.models import *
+import copy
 import draftapp.stats
 import operator
 from django.db import connection
@@ -455,6 +456,7 @@ def team(request, team_id):
 				'id': player_id,
 				'name': player_name,
 				'salary': salary,
+				'positions': set('U')
 			}
 			unknown.append(x)
 		elif player.get_position() == 'P':
@@ -479,6 +481,7 @@ def team(request, team_id):
 				'POS': 'P',
 				'POS_dollar': player.pos_dollar(stats),
 				'total_dollar': player.adjusted_dollar(stats),
+				'positions': set(['P']),
 			}
 			pitchers.append(x)
 		else:
@@ -501,6 +504,7 @@ def team(request, team_id):
 				'POS': player.get_position(),
 				'POS_dollar': player.pos_dollar(stats),
 				'total_dollar': player.adjusted_dollar(stats),
+				'positions': player.positions,
 			}
 			hitters.append(x)
 
@@ -534,6 +538,28 @@ def team(request, team_id):
 		salary_remaining = draftapp.stats.SALARY_PER_TEAM - salary_spent
 		positions_remaining = draftapp.stats.NUM_PLAYERS - num_players
 		avg_salary = salary_remaining / positions_remaining
+
+	# Determine what positions are still draftable
+	valid_lineups = dict([(x, []) for x in ('P', 'C', '1B', '2B', '3B', 'SS', 'MI', 'CI', 'OF', 'U')])
+	def get_all_lineups(lineup, players):
+		if len(players) == 0:
+			lineup_copy = lineup.copy()
+			for k,v in lineup_copy.iteritems():
+				lineup_copy[k] = v[:]
+			for pos in [k for (k,v) in lineup_copy.iteritems() if len(v) < draftapp.stats.POS_COUNT[k]]:
+				valid_lineups[pos].append(lineup_copy)
+			return
+		for pos in players[0]['positions']:
+			if draftapp.stats.POS_COUNT[pos] - len(lineup[pos]) == 0:
+				continue
+			lineup[pos].append(players[0])
+			get_all_lineups(lineup, players[1:])
+			lineup[pos].pop()
+
+	empty_lineup = dict([(x, []) for x in ('P', 'C', '1B', '2B', '3B', 'SS', 'MI', 'CI', 'OF', 'U')])
+	get_all_lineups(empty_lineup, pitchers + hitters)
+	draftable_positions = set([k for (k,v) in valid_lineups.iteritems() if len(v) > 0])
+	print "Draftable positions: ", draftable_positions
 
 	return render_to_response('team.html', {'name': name,
 						'team_id': team.id,

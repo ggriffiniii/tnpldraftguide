@@ -6,20 +6,21 @@ from django.db import connection
 PREV_YEAR = 2012
 NUM_TEAMS = 13
 
-NUM_C = 2
-NUM_1B = 1
-NUM_2B = 1
-NUM_3B = 1
-NUM_SS = 1
-NUM_OF = 5
-NUM_CI = 1
-NUM_MI = 1
-NUM_U = 2
-NUM_P = 10
+POS_COUNT = {
+	'C': 2,
+	'1B': 1,
+	'2B': 1,
+	'3B': 1,
+	'SS': 1,
+	'OF': 5,
+	'CI': 1,
+	'MI': 1,
+	'U': 2,
+	'P': 10,
+}
 
-NUM_HITTERS = (NUM_C + NUM_1B + NUM_2B + NUM_3B + NUM_SS +
-	       NUM_OF + NUM_CI + NUM_MI + NUM_U)
-NUM_PLAYERS = NUM_HITTERS + NUM_P
+NUM_PLAYERS = sum(POS_COUNT.itervalues())
+NUM_HITTERS = NUM_PLAYERS - POS_COUNT['P']
 SALARY_PER_TEAM = 130
 MIN_BID = 0.5
 
@@ -724,7 +725,7 @@ class PopulationStats(object):
 			w_sum += pitcher.w
 			k_sum += pitcher.k
 			s_sum += pitcher.s
-			if entries == NUM_P * NUM_TEAMS:
+			if entries == POS_COUNT['P'] * NUM_TEAMS:
 				break
 
 		self.era_mean = er_sum / (ipouts_sum / 27.0)
@@ -781,7 +782,7 @@ class PopulationStats(object):
 			w_var_sum += math.pow(pitcher.w - self.w_mean, 2)
 			k_var_sum += math.pow(pitcher.k - self.k_mean, 2)
 			s_var_sum += math.pow(pitcher.s - self.s_mean, 2)
-			if entries == NUM_P * NUM_TEAMS:
+			if entries == POS_COUNT['P'] * NUM_TEAMS:
 				break
 
 		self.er_sd = math.sqrt(er_var_sum / entries)
@@ -826,18 +827,7 @@ class PopulationStats(object):
 
 	def calculate_replacement_values(self):
 		self.rv = {}
-		self.pos_remaining = {
-			'C': NUM_C * NUM_TEAMS,
-			'1B': NUM_1B * NUM_TEAMS,
-			'2B': NUM_2B * NUM_TEAMS,
-			'3B': NUM_3B * NUM_TEAMS,
-			'SS': NUM_SS * NUM_TEAMS,
-			'OF': NUM_OF * NUM_TEAMS,
-			'CI': NUM_CI * NUM_TEAMS,
-			'MI': NUM_MI * NUM_TEAMS,
-			'U': NUM_U * NUM_TEAMS,
-			'P': NUM_P * NUM_TEAMS,
-		}
+		self.pos_remaining = dict([(k, v * NUM_TEAMS) for (k,v) in POS_COUNT.iteritems()])
 		self.available_flex_positions = (self.pos_remaining['CI'] +
 						 self.pos_remaining['MI'] +
 						 self.pos_remaining['U'])

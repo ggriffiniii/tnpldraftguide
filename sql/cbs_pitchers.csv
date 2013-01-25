@@ -1,0 +1,2436 @@
+Player,Team,W,S,K,INN,HA,BBI,ER,Rank,
+"Kershaw, Clayton SP LAD ",Pinetar 9,19,0,238,230.0,180,59,62,3
+"Verlander, Justin SP DET",LongBallerz,19,0,237,240.0,195,64,72,5
+"Price, David SP TB ",Pinetar 9,18,0,225,225.0,190,60,69,8
+"Strasburg, Stephen SP WAS ",Vortex,17,0,240,200.0,162,56,65,15
+"Hamels, Cole SP PHI ",LongBallerz,17,0,220,225.0,196,50,73,16
+"Lee, Cliff SP PHI",Vortex,15,0,215,230.0,210,33,77,22
+"Sabathia, CC SP NYY ",Free Agent,18,0,222,235.0,218,52,84,24
+"Kimbrel, Craig RP ATL ",2nd Wind,3,43,113,65.0,38,17,12,29
+"Hernandez, Felix SP SEA",RodeKill,15,0,225,235.0,200,63,84,31
+"Greinke, Zack SP LAD ",Renegades,16,0,215,220.0,183,54,83,32
+"Cain, Matt SP SF",Free Agent,15,0,188,220.0,181,54,70,33
+"Weaver, Jered SP LAA",Back Bay Bums,17,0,172,215.0,178,55,71,39
+"Wainwright, Adam SP STL",2nd Wind,18,0,191,215.0,198,57,70,40
+"Dickey, R.A. SP TOR ",2nd Wind,16,0,200,220.0,189,56,78,41
+"Sale, Chris SP CHW ",RodeKill,16,0,210,205.0,180,59,71,45
+"Bumgarner, Madison SP SF",Renegades,16,0,201,210.0,190,51,73,50
+"Shields, James SP KC ",Vortex,16,0,220,230.0,215,56,87,51
+"Gallardo, Yovani SP MIL",Vortex,18,0,210,205.0,181,73,76,55
+"Gonzalez, Gio SP WAS",Fever Pitch,18,0,207,205.0,176,80,74,56
+"Scherzer, Max SP DET",LongBallerz,17,0,223,195.0,180,65,74,66
+"Darvish, Yu SP TEX ",Renegades,15,0,238,210.0,171,89,83,69
+"Papelbon, Jonathan RP PHI",Free Agent,4,40,87,69.0,57,18,20,70
+"Cueto, Johnny SP CIN ",Fever Pitch,16,0,165,215.0,203,57,70,77
+"Latos, Mat SP CIN",Free Agent,15,0,191,210.0,182,63,83,84
+"Kennedy, Ian SP ARI ",Dead Parrot's Society,16,0,200,220.0,214,51,91,85
+"Motte, Jason RP STL ",Amigos,4,39,78,70.0,52,19,20,86
+"Halladay, Roy SP PHI ",McDs 3 Fleas,14,0,189,230.0,216,56,87,92
+"Medlen, Kris RP ATL ",Pinetar 9,15,0,152,180.0,168,34,61,93
+"Peavy, Jake SP CHW",West Seattle Bombers,13,0,191,220.0,199,54,86,94
+"Rodney, Fernando RP TB",Back Bay Bums,3,39,70,72.0,54,19,20,95
+"Johnson, Josh SP TOR",Dead Parrot's Society,13,0,178,200.0,173,62,72,102
+"Samardzija, Jeff SP CHC ",West Seattle Bombers,11,0,203,205.0,182,62,81,117
+"Wilhelmsen, Tom RP SEA",West Seattle Bombers,3,39,74,72.0,57,26,23,118
+"Perkins, Glen RP MIN",McDs 3 Fleas,4,34,72,68.0,56,17,21,119
+"Garza, Matt SP CHC ",2nd Wind,12,0,196,205.0,189,64,79,124
+"Wilson, C.J. SP LAA ",Dead Parrot's Society,16,0,184,210.0,189,84,85,125
+"Nathan, Joe RP TEX",West Seattle Bombers,3,35,71,63.0,50,15,19,126
+"Romo, Sergio RP SF",Pinetar 9,4,30,65,56.0,42,11,13,127
+"Haren, Dan SP WAS ",Amigos,14,0,163,210.0,204,51,84,135
+"Kuroda, Hiroki SP NYY",LongBallerz,14,0,158,215.0,212,53,82,136
+"Axford, John RP MIL ",Back Bay Bums,2,38,93,72.0,60,33,24,137
+"Rivera, Mariano RP NYY ",Back Bay Bums,2,39,54,61.0,49,16,16,138
+"Holland, Greg RP KC",Vortex,3,34,85,65.0,47,30,22,139
+"Soriano, Rafael RP WAS ",Dead Parrot's Society,2,39,54,56.3,41,19,16,140
+"Fiers, Mike SP MIL",Pinetar 9,11,0,199,195.0,178,56,83,150
+"Moore, Matt SP TB",LongBallerz,13,0,179,185.0,160,76,71,151
+"Johnson, Jim RP BAL",McDs 3 Fleas,3,39,42,67.0,59,16,21,152
+"Cishek, Steve RP MIA ",Free Agent,4,32,72,68.0,55,26,22,153
+"Morrow, Brandon SP TOR",Free Agent,13,0,173,190.0,171,70,74,161
+"Fister, Doug SP DET ",Amigos,13,0,163,210.0,216,42,84,162
+"Chapman, Aroldis RP CIN ",Pinetar 9,11,0,197,160.0,139,68,61,163
+"Minor, Mike SP ATL",RodeKill,13,0,163,195.0,174,56,84,164
+"Marcum, Shaun SP MIL ",Free Agent,12,0,160,190.0,174,51,76,165
+"Bailey, Homer SP CIN",Amigos,13,0,175,210.0,210,49,89,166
+"Niese, Jonathon SP NYM ",RodeKill,12,0,167,200.0,189,56,79,167
+"Hughes, Phil SP NYY ",Amigos,14,0,160,195.0,183,52,85,168
+"Betancourt, Rafael RP COL",McDs 3 Fleas,2,33,65,64.0,55,11,21,169
+"Hanrahan, Joel RP BOS ",Fever Pitch,3,35,71,65.0,51,29,23,170
+"Balfour, Grant RP OAK",Back Bay Bums,3,34,64,70.0,53,27,25,171
+"Ogando, Alexi RP TEX",Free Agent,13,0,132,170.0,154,42,65,181
+"Miley, Wade SP ARI",Vortex,14,0,151,200.0,198,49,81,182
+"Sanchez, Anibal SP DET ",Pinetar 9,12,0,171,195.0,190,54,77,183
+"Estrada, Marco SP MIL ",Amigos,11,0,181,185.0,174,49,78,184
+"Zimmermann, Jordan SP WAS",Pinetar 9,12,0,158,190.0,172,53,78,185
+"Milone, Tommy SP OAK",Dead Parrot's Society,13,0,149,200.0,209,33,80,186
+"Griffin, A.J. SP OAK",Vortex,12,0,146,175.0,168,35,70,187
+"Anderson, Brett SP OAK",Pinetar 9,13,0,132,175.0,171,41,63,188
+"Pettitte, Andy SP NYY",Free Agent,13,0,154,190.0,177,59,75,189
+"Buchholz, Clay SP BOS ",Back Bay Bums,14,0,146,205.0,202,57,80,190
+"Grilli, Jason RP PIT ",Free Agent,2,33,83,65.0,48,29,23,191
+"Putz, J.J. RP ARI ",McDs 3 Fleas,2,31,62,55.0,42,13,15,192
+"Janssen, Casey RP TOR ",Amigos,3,31,63,64.0,56,14,22,193
+"Perez, Chris RP CLE ",Dead Parrot's Society,2,35,59,60.0,47,19,21,194
+"Chen, Wei-Yin SP BAL",Back Bay Bums,14,0,156,200.0,196,51,86,201
+"Garcia, Jaime SP STL ",RodeKill,12,0,152,185.0,188,43,70,202
+"Iwakuma, Hisashi SP SEA",Vortex,13,0,148,185.0,174,58,72,203
+"Carpenter, Chris SP STL ",Free Agent,12,0,158,215.0,213,53,87,204
+"Worley, Vance SP MIN ",Free Agent,12,0,158,180.0,169,56,71,205
+"Burnett, A.J. SP PIT",McDs 3 Fleas,12,0,185,205.0,195,71,87,215
+"Lohse, Kyle SP STL ",2nd Wind,13,0,132,205.0,200,43,85,216
+"Dempster, Ryan SP BOS ",A Cloud of Smoak,13,0,167,195.0,186,65,82,217
+"Cobb, Alex SP TB",RodeKill,11,0,156,185.0,174,49,75,218
+"Cahill, Trevor SP ARI",Free Agent,12,0,170,210.0,197,72,86,219
+"Vogelsong, Ryan SP SF",Back Bay Bums,13,0,152,195.0,185,65,78,220
+"Hammel, Jason SP BAL ",Free Agent,12,0,155,170.0,155,57,69,221
+"Billingsley, Chad SP LAD ",A Cloud of Smoak,12,0,173,195.0,186,67,81,222
+"Hellickson, Jeremy SP TB ",2nd Wind,12,0,134,185.0,168,60,70,223
+"Reed, Addison RP CHW",McDs 3 Fleas,2,32,63,60.0,51,17,23,224
+"Lester, Jon SP BOS ",2nd Wind,13,0,173,205.0,202,73,85,232
+"Maholm, Paul SP ATL",LongBallerz,14,0,139,195.0,191,59,82,233
+"Floyd, Gavin SP CHW",Fever Pitch,12,0,167,200.0,194,62,87,243
+"McCarthy, Brandon SP ARI ",Back Bay Bums,12,0,130,185.0,190,37,73,244
+"McDonald, James SP PIT",Dead Parrot's Society,12,0,164,180.0,169,60,79,245
+"Gee, Dillon SP NYM ",Amigos,10,0,154,180.0,170,48,75,246
+"Hudson, Tim SP ATL",McDs 3 Fleas,14,0,112,210.0,199,58,87,247
+"Lincecum, Tim SP SF",Free Agent,12,0,193,185.0,169,84,83,248
+"Street, Huston RP SD",Renegades,2,27,54,52.0,41,13,17,249
+"Madson, Ryan RP LAA ",2nd Wind,3,27,55,56.0,50,15,19,250
+"League, Brandon RP LAD",Free Agent,3,29,50,68.0,63,25,23,251
+"Parker, Jarrod SP OAK",Renegades,12,0,167,200.0,188,73,86,264
+"Rodriguez, Wandy SP PIT",West Seattle Bombers,13,0,148,205.0,208,62,84,265
+"Harrison, Matt SP TEX ",RodeKill,12,0,138,210.0,210,56,87,266
+"Holland, Derek SP TEX",2nd Wind,10,0,163,190.0,180,59,83,267
+"Hanson, Tommy SP LAA ",Free Agent,11,0,165,175.0,160,66,78,268
+"Arroyo, Bronson SP CIN",Dead Parrot's Society,13,0,116,200.0,205,42,87,269
+"Jansen, Kenley RP LAD ",RodeKill,4,6,105,68.0,43,26,20,270
+"Broxton, Jonathan RP CIN",A Cloud of Smoak,2,32,51,60.0,56,21,22,271
+"Marmol, Carlos RP CHC ",A Cloud of Smoak,2,30,86,70.0,54,48,28,272
+"Ryu, Hyun-Jin SP LAD ",Free Agent,12,0,152,190.0,186,65,80,329
+"Nicasio, Juan SP COL",Free Agent,11,0,151,160.0,153,53,70,335
+"Lilly, Ted SP LAD ",Fever Pitch,10,0,127,165.0,147,46,72,337
+"Ramirez, Erasmo SP SEA",Renegades,11,0,136,180.0,188,40,76,338
+"Buehrle, Mark SP TOR",Free Agent,14,0,122,215.0,232,45,95,340
+"Santana, Johan SP NYM ",A Cloud of Smoak,9,0,151,170.0,156,53,74,341
+"Colon, Bartolo SP OAK ",West Seattle Bombers,12,0,108,190.0,203,32,78,342
+"Lynn, Lance SP STL ",A Cloud of Smoak,10,0,156,165.0,150,62,73,344
+"Jackson, Edwin SP CHC ",Dead Parrot's Society,11,0,156,195.0,190,63,88,346
+"Beckett, Josh SP LAD",West Seattle Bombers,10,0,148,185.0,181,53,82,349
+"Vargas, Jason SP LAA ",Free Agent,12,0,133,210.0,211,56,94,350
+"Happ, J.A. SP TOR ",RodeKill,11,0,165,175.0,166,70,80,352
+"Niemann, Jeff SP TB ",Back Bay Bums,9,0,127,150.0,136,43,63,354
+"Cashner, Andrew RP SD ",A Cloud of Smoak,10,0,140,155.0,142,62,63,357
+"Oswalt, Roy SP TEX",Free Agent,9,0,115,136.7,131,33,53,360
+"Miller, Shelby RP STL ",A Cloud of Smoak,9,0,155,160.0,148,62,68,363
+"Straily, Dan SP OAK",Back Bay Bums,9,0,147,170.0,150,62,76,364
+"Capuano, Chris SP LAD",Dead Parrot's Society,10,0,152,190.0,192,51,87,365
+"Nova, Ivan SP NYY",RodeKill,11,0,154,180.0,178,60,83,366
+"Harvey, Matt SP NYM ",McDs 3 Fleas,8,0,174,180.0,165,74,79,369
+"McAllister, Zach SP CLE",Free Agent,10,0,138,175.0,171,49,80,370
+"De La Rosa, Jorge SP COL",Free Agent,11,0,145,170.0,159,72,74,372
+"Norris, Bud SP HOU ",Renegades,9,0,184,190.0,184,70,91,373
+"Santana, Ervin SP KC",2nd Wind,10,0,151,200.0,194,67,90,374
+"Arrieta, Jake SP BAL",Free Agent,9,0,158,175.0,169,60,79,375
+"Corbin, Patrick SP ARI",Free Agent,10,0,126,160.0,158,44,70,377
+"Danks, John SP CHW ",LongBallerz,11,0,144,200.0,203,64,89,378
+"Diamond, Scott SP MIN ",Fever Pitch,11,0,109,200.0,209,44,84,379
+"Stauffer, Tim SP SD ",Renegades,11,0,115,170.0,168,51,72,380
+"Richard, Clayton SP SD",Free Agent,13,0,117,215.0,229,57,94,382
+"Detwiler, Ross SP WAS ",Dead Parrot's Society,11,0,117,175.0,178,51,73,385
+"Smyly, Drew SP DET ",Free Agent,9,0,140,160.0,151,57,69,388
+"Valverde, Jose RP DET ",Free Agent,2,32,55,70.0,57,30,30,389
+"Doubront, Felix SP BOS",Free Agent,10,0,172,180.0,172,74,86,390
+"Leake, Mike SP CIN",Amigos,11,0,127,190.0,200,46,85,392
+"Baker, Scott SP CHC ",McDs 3 Fleas,9,0,146,175.0,168,47,86,394
+"Davis, Wade RP KC ",Free Agent,11,0,150,190.0,186,74,87,395
+"Marshall, Sean RP CIN",Free Agent,6,5,81,70.3,60,19,19,396
+"Harrell, Lucas SP HOU",Free Agent,10,0,145,195.0,188,76,86,397
+"Wilson, Brian RP SF ",West Seattle Bombers,2,29,48,49.0,41,22,16,398
+"Collmenter, Josh RP ARI",Free Agent,8,0,90,122.3,114,25,48,400
+"Myers, Brett RP CLE ",A Cloud of Smoak,10,0,144,200.0,208,56,93,402
+"Gonzalez, Miguel SP BAL ",Fever Pitch,9,0,138,180.0,167,64,83,404
+"Clippard, Tyler RP WAS ",Fever Pitch,4,2,100,84.0,57,32,26,405
+"Veras, Jose RP HOU ",Free Agent,3,24,76,68.0,54,39,28,407
+"Wood, Travis SP CHC",Free Agent,9,0,140,180.0,167,60,88,410
+"Bauer, Trevor SP CLE ",LongBallerz,8,0,166,170.0,154,81,77,412
+"Masterson, Justin SP CLE ",West Seattle Bombers,12,0,156,200.0,206,76,98,415
+"Bass, Anthony SP SD",Free Agent,10,0,136,175.0,173,64,80,418
+"Turner, Jacob SP MIA",Fever Pitch,9,0,121,175.0,181,45,78,419
+"Nolasco, Ricky SP MIA",Free Agent,11,0,136,200.0,222,47,96,421
+"Soria, Joakim RP TEX ",Free Agent,2,24,44,42.0,38,11,13,422
+"Casilla, Santiago RP SF ",West Seattle Bombers,5,11,52,56.7,43,24,14,424
+"Capps, Matt RP MIN",A Cloud of Smoak,3,24,37,56.0,56,11,21,425
+"Humber, Philip SP HOU",Free Agent,9,0,134,180.0,184,54,84,427
+"Venters, Jonny RP ATL ",Free Agent,5,2,86,76.7,58,37,19,429
+"Feldman, Scott SP CHC",Free Agent,9,0,130,175.0,181,49,82,430
+"Britton, Zach SP BAL",Amigos,10,0,142,170.0,172,72,76,431
+"Frieri, Ernesto RP LAA",Pinetar 9,3,4,94,68.0,42,32,21,434
+"Westbrook, Jake SP STL",2nd Wind,12,0,107,185.0,194,62,82,435
+"Rondon, Bruce P DET ",Free Agent,2,21,61,60.0,45,29,23,436
+"Kendrick, Kyle SP PHI",LongBallerz,10,0,113,175.0,184,49,79,438
+"Blanton, Joe SP LAA",RodeKill,8,0,152,185.0,198,41,95,440
+"Quintana, Jose SP CHW",A Cloud of Smoak,10,0,119,185.0,195,56,83,441
+"Rogers, Mark SP MIL",Free Agent,7,0,151,160.0,144,75,73,442
+"Alvarez, Henderson SP MIA",Free Agent,10,0,108,195.0,210,46,88,443
+"Volquez, Edinson SP SD ",Free Agent,10,0,168,180.0,168,100,86,444
+"Adams, Mike RP PHI ",Free Agent,5,1,64,64.3,49,18,15,445
+"Liriano, Francisco SP CHW ",Free Agent,8,0,166,170.0,155,85,83,447
+"Francisco, Frank RP NYM ",Free Agent,1,24,59,55.0,50,22,21,448
+"Carrasco, Carlos SP CLE ",Free Agent,9,0,125,170.0,176,57,76,450
+"Hernandez, David RP ARI",Free Agent,5,6,82,72.3,56,31,28,451
+"Romero, Ricky SP TOR",Free Agent,11,0,144,190.0,188,87,91,452
+"Jimenez, Ubaldo SP CLE ",Free Agent,10,0,163,195.0,189,95,96,460
+"Chacin, Jhoulys SP COL",Free Agent,10,0,116,160.0,157,68,72,461
+"Benoit, Joaquin RP DET",Free Agent,3,2,74,64.0,45,17,19,463
+"Guthrie, Jeremy SP KC",Free Agent,10,0,118,205.0,216,59,97,464
+"Chen, Bruce SP KC ",Free Agent,10,0,127,185.0,191,53,96,466
+"Belisle, Matt RP COL",Free Agent,7,1,73,81.3,84,16,30,467
+"Pavano, Carl SP MIN ",Free Agent,8,0,105,210.0,232,35,96,471
+"Saunders, Joe SP BAL ",LongBallerz,10,0,112,190.0,200,51,93,472
+"Dotel, Octavio RP DET",Free Agent,4,9,66,58.7,46,20,24,473
+"Phelps, David RP NYY",Free Agent,4,0,96,99.7,81,38,37,476
+"Zito, Barry SP SF",Free Agent,12,0,119,185.0,190,76,90,482
+"Gregerson, Luke RP SD",Free Agent,3,4,65,68.7,54,19,21,483
+"Porcello, Rick SP DET ",Free Agent,11,0,112,180.0,208,44,86,484
+"Harang, Aaron SP LAD",Vortex,9,0,128,180.0,183,74,81,486
+"Lackey, John SP BOS ",Free Agent,9,0,130,185.0,194,58,92,488
+"Paxton, James P SEA",Free Agent,7,0,105,115.0,96,56,52,489
+"Lyles, Jordan SP HOU",Free Agent,8,0,134,180.0,194,48,90,490
+"Uehara, Koji RP BOS",Free Agent,1,5,61,48.3,32,6,13,493
+"Aceves, Alfredo RP BOS ",Back Bay Bums,5,9,52,70.0,58,26,29,495
+"Peralta, Joel RP TB",Free Agent,2,3,65,61.3,41,15,20,496
+"Mendoza, Luis SP KC",Free Agent,11,0,108,180.0,193,60,87,497
+"Narveson, Chris SP MIL ",Free Agent,8,0,130,165.0,165,64,80,498
+"Eovaldi, Nate SP MIA",Free Agent,8,0,123,170.0,174,64,78,501
+"Mujica, Edward RP STL ",Free Agent,4,1,61,70.3,60,11,25,502
+"Pineda, Michael SP NYY ",McDs 3 Fleas,6,0,79,85.0,72,28,37,503
+"Hochevar, Luke SP KC ",Free Agent,10,0,151,200.0,210,67,110,504
+"Storen, Drew RP WAS ",Free Agent,3,3,59,65.0,51,17,20,506
+"Ross, Robbie RP TEX ",Free Agent,6,0,47,65.0,55,23,16,507
+"Thornton, Matt RP CHW",Free Agent,4,5,66,61.7,55,19,22,508
+"Robertson, David RP NYY ",Free Agent,3,1,84,63.0,50,29,17,509
+"Garcia, Freddy SP NYY ",Free Agent,10,0,91,137.0,145,42,67,510
+"Kelly, Joe SP STL",Free Agent,8,0,83,110.0,112,39,46,511
+"Rodriguez, Francisco RP MIL",Free Agent,4,4,73,67.0,59,26,23,512
+"Francis, Jeff SP COL",Free Agent,9,0,105,160.0,189,34,75,520
+"Rosenthal, Trevor RP STL",Free Agent,4,0,68,70.0,55,24,24,525
+"Beavan, Blake SP SEA",Free Agent,9,0,86,185.0,202,31,93,526
+"Crain, Jesse RP CHW",Free Agent,4,1,64,60.3,44,27,18,527
+"Morales, Franklin RP BOS ",Amigos,6,0,80,85.0,76,31,37,528
+"Karstens, Jeff SP PIT ",Free Agent,6,0,78,125.0,129,24,56,529
+"Oliver, Darren RP TOR ",Free Agent,3,2,54,56.3,48,14,14,531
+"Farnsworth, Kyle RP TB ",Free Agent,3,8,46,49.7,41,15,17,533
+"Downs, Scott RP LAA",Free Agent,4,3,38,53.7,43,15,14,536
+"Takahashi, Hisanori RP PIT ",Free Agent,5,3,73,80.0,74,27,35,537
+"Correia, Kevin SP MIN ",Free Agent,9,0,99,185.0,203,47,90,539
+"Cook, Ryan RP OAK",Free Agent,3,7,44,40.7,26,18,12,540
+"Lewis, Colby SP TEX ",Free Agent,5,0,73,85.0,77,23,37,542
+"Zambrano, Carlos SP MIA",Free Agent,9,0,104,136.0,132,67,64,543
+"O'Flaherty, Eric RP ATL ",Free Agent,3,0,50,58.3,48,19,10,544
+"Beachy, Brandon SP ATL ",Pinetar 9,5,0,69,80.0,68,27,33,546
+"O'Day, Darren RP BAL",Free Agent,4,0,44,48.7,36,10,14,547
+"Skaggs, Tyler SP ARI",A Cloud of Smoak,6,0,75,105.0,101,31,47,549
+"Salas, Fernando RP STL",Free Agent,2,8,55,54.7,45,21,20,554
+"Gorzelanny, Tom RP MIL ",Free Agent,5,1,92,104.3,101,44,44,555
+"Villanueva, Carlos RP TOR ",Amigos,5,0,86,95.0,88,33,44,556
+"Hendriks, Liam SP MIN ",Free Agent,9,0,110,180.0,200,50,92,557
+"Sanchez, Jonathan SP COL",Free Agent,6,0,117,119.7,101,72,57,558
+"Jurrjens, Jair SP ATL ",Free Agent,7,0,90,150.0,156,48,69,562
+"Richards, Garrett RP LAA",Free Agent,8,0,123,170.0,170,76,84,564
+"McPherson, Kyle RP PIT ",Free Agent,5,0,69,90.0,92,19,39,565
+"Lannan, John SP PHI ",Free Agent,10,0,92,165.0,170,64,82,566
+"Bedard, Erik SP HOU ",Free Agent,5,0,100,110.0,102,50,50,569
+"Santos, Sergio RP TOR ",Free Agent,2,11,51,40.0,33,20,16,571
+"Huff, David SP CLE",Fever Pitch,6,0,89,135.0,142,36,65,575
+"Bastardo, Antonio RP PHI ",Free Agent,3,3,59,43.0,29,20,17,576
+"Lopez, Wilton RP COL ",Free Agent,2,2,53,69.0,65,12,24,583
+"Stults, Eric SP SD",Fever Pitch,8,0,78,135.0,144,42,65,587
+"Ayala, Luis RP BAL",Free Agent,4,0,45,65.3,66,17,18,590
+"Smith, Joe RP CLE",Free Agent,4,0,43,58.0,45,23,18,591
+"Bailey, Andrew RP BOS ",LongBallerz,2,6,47,49.0,40,15,19,593
+"Luebke, Cory SP SD ",McDs 3 Fleas,4,0,58,70.0,65,19,28,594
+"Ziegler, Brad RP ARI ",Free Agent,4,0,42,62.7,54,23,18,595
+"Bard, Daniel SP BOS ",Free Agent,3,1,63,69.0,50,32,28,596
+"Collins, Tim RP KC",Free Agent,4,0,76,68.3,54,41,26,597
+"Santiago, Hector RP CHW",Free Agent,6,0,115,140.0,133,70,68,598
+"Williams, Jerome RP LAA ",Free Agent,5,0,73,110.0,115,31,48,601
+"Parnell, Bobby RP NYM ",Free Agent,3,4,53,54.3,55,18,18,602
+"Arredondo, Jose RP CIN",Free Agent,5,0,55,57.0,46,32,20,603
+"Lyon, Brandon RP TOR",Free Agent,4,8,41,50.7,50,19,22,604
+"Boggs, Mitchell RP STL ",Free Agent,3,1,53,67.0,59,23,23,605
+"Lopez, Javier RP SF",Free Agent,4,3,35,49.0,43,20,14,607
+"Cecil, Brett RP TOR",Free Agent,7,0,85,119.3,122,40,62,609
+"Burnett, Sean RP LAA",Free Agent,2,3,51,58.7,55,18,18,612
+"Pestano, Vinnie RP CLE",Free Agent,1,2,56,45.7,33,18,13,613
+"Melancon, Mark RP PIT ",Free Agent,3,7,43,47.0,43,15,21,614
+"Cloyd, Tyler SP PHI",Free Agent,4,0,63,80.0,81,18,35,615
+"Loe, Kameron RP MIL",Free Agent,4,1,54,66.3,66,17,27,616
+"Brothers, Rex RP COL",Free Agent,4,0,71,54.0,48,28,21,617
+"Hunter, Tommy SP BAL ",Free Agent,8,0,63,115.3,129,25,59,619
+"Braden, Dallas SP OAK ",A Cloud of Smoak,4,0,43,70.3,66,16,27,620
+"Affeldt, Jeremy RP SF",Free Agent,3,3,52,58.3,53,24,20,621
+"Breslow, Craig RP BOS ",Free Agent,2,2,59,65.7,58,24,23,623
+"Ramirez, Ramon RP NYM",Free Agent,2,3,55,67.3,55,29,24,624
+"McClellan, Kyle RP TEX ",Free Agent,4,1,49,78.7,72,25,32,627
+"Logan, Boone RP NYY ",Free Agent,5,0,51,45.7,42,20,17,628
+"Garland, Jon SP LAD",Free Agent,5,0,55,84.7,77,36,34,630
+"Friedrich, Christian SP COL ",Free Agent,4,0,83,100.0,98,31,49,631
+"Hensley, Clay RP SF",Free Agent,4,3,55,64.3,55,30,28,632
+"Rauch, Jon RP NYM",Free Agent,4,3,41,55.7,54,13,24,634
+"Bell, Heath RP ARI",Free Agent,3,3,65,68.0,65,29,28,646
+"Ondrusek, Logan RP CIN ",Free Agent,5,1,40,58.3,52,26,22,648
+"De Vries, Cole SP MIN",Free Agent,5,0,57,90.0,92,22,43,652
+"Herrera, Kelvin RP KC",Free Agent,2,2,38,43.3,40,10,12,654
+"Locke, Jeff SP PIT",Free Agent,4,0,71,85.0,80,33,39,655
+"Lindstrom, Matt RP ARI ",Free Agent,2,8,40,51.3,55,16,19,658
+"Hudson, Daniel SP ARI ",Amigos,4,0,51,65.0,64,17,28,659
+"Watson, Tony RP PIT",Free Agent,4,0,45,47.3,36,22,19,660
+"Sipp, Tony RP ARI ",Free Agent,3,1,59,60.0,47,29,26,661
+"Belisario, Ronald RP LAD ",Free Agent,4,1,36,42.0,33,16,17,663
+"Stammen, Craig RP WAS ",Free Agent,4,0,61,75.7,75,27,32,664
+"Guerra, Javy RP LAD ",Free Agent,1,10,25,30.7,27,14,8,665
+"Cordero, Francisco RP HOU",Free Agent,5,3,44,60.7,59,25,28,667
+"Walden, Jordan RP ATL",Free Agent,3,1,46,38.3,32,17,13,668
+"Pomeranz, Drew SP COL",Free Agent,6,0,103,125.0,127,56,65,669
+"Camp, Shawn RP CHC",Free Agent,4,2,44,72.0,76,20,29,671
+"Blackley, Travis SP OAK",Free Agent,5,0,76,110.0,114,34,55,674
+"Simon, Alfredo RP CIN",Free Agent,4,6,57,75.3,82,28,36,676
+"McGee, Jake RP TB",Free Agent,3,0,35,29.3,22,9,9,679
+"Duensing, Brian RP MIN ",Free Agent,5,0,77,120.0,133,33,57,680
+"LeCure, Sam RP CIN",Free Agent,2,0,57,61.0,51,23,25,685
+"LeBlanc, Wade RP MIA",Free Agent,5,0,68,98.0,104,33,46,688
+"Furbush, Charlie RP SEA",Free Agent,4,0,60,66.0,62,23,33,689
+"Albers, Matt RP CLE ",Free Agent,4,0,54,67.0,62,29,29,691
+"Delabar, Steve RP TOR",Free Agent,2,0,50,36.7,26,15,15,694
+"Guerrier, Matt RP LAD",Free Agent,3,1,34,50.3,41,18,20,696
+"Marquis, Jason SP SD ",Free Agent,7,0,92,150.0,171,50,75,697
+"Jones, Nate RP CHW",Free Agent,4,0,32,36.0,34,16,10,702
+"Padilla, Vicente RP BOS ",Free Agent,3,1,48,51.3,48,15,24,703
+"Lindblom, Josh RP TEX ",Free Agent,2,0,49,50.3,41,22,18,705
+"Vincent, Nick RP SD",Free Agent,2,0,28,26.3,19,7,5,706
+"Avilan, Luis RP ATL",Free Agent,1,0,33,36.0,27,10,8,707
+"Hoover, J.J. RP CIN",Free Agent,1,1,31,30.7,17,13,7,708
+"Blevins, Jerry RP OAK ",Free Agent,2,1,42,47.3,41,19,16,712
+"Hutchison, Drew SP TOR ",Free Agent,5,0,49,58.7,59,20,30,714
+"Odorizzi, Jake SP KC ",Free Agent,4,0,59,85.0,77,37,40,715
+"Coleman, Louis RP KC",Free Agent,0,0,64,55.3,42,26,20,716
+"Martinez, Cristhian RP ATL ",Free Agent,2,0,48,59.0,55,15,25,717
+"Isringhausen, Jason RP LAA",Free Agent,3,4,38,46.0,40,22,21,720
+"Pineiro, Joel SP BAL",Free Agent,6,0,51,99.3,112,24,49,721
+"Crow, Aaron RP KC",Free Agent,2,1,43,42.3,36,18,15,722
+"Layne, Tom RP SD",Free Agent,2,2,25,16.7,9,3,6,725
+"Hernandez, Roberto SP TB ",Free Agent,7,0,76,140.0,155,47,71,727
+"Millwood, Kevin SP SEA ",Free Agent,5,0,92,135.3,150,43,69,728
+"Kuo, Hong-Chih RP SEA",Free Agent,1,4,36,29.0,18,14,12,730
+"Oviedo, Juan RP TB ",Free Agent,2,2,42,43.0,40,14,18,735
+"Badenhop, Burke RP MIL ",Free Agent,2,1,47,64.7,63,19,27,737
+"Tillman, Chris SP BAL ",LongBallerz,5,0,48,67.3,65,27,34,739
+"Moscoso, Guillermo RP KC",Free Agent,4,0,41,59.7,57,20,28,740
+"Henderson, Jim RP MIL",Free Agent,1,3,45,30.7,26,13,12,741
+"Russell, James RP CHC ",Free Agent,3,1,47,62.0,66,16,28,743
+"Duffy, Danny SP KC ",Amigos,4,0,73,80.0,73,40,42,744
+"Meek, Evan RP TEX",Free Agent,2,1,32,37.7,31,16,12,749
+"Frasor, Jason RP TEX ",Free Agent,2,1,58,55.7,54,25,23,750
+"Alburquerque, Al RP DET",Free Agent,2,0,28,19.0,9,12,3,751
+"Atchison, Scott RP BOS",Free Agent,2,0,31,47.3,44,11,17,753
+"Johnson, Steve RP BAL ",Free Agent,3,0,54,65.0,57,29,31,755
+"Masset, Nick RP CIN ",Free Agent,2,1,49,49.0,47,21,19,756
+"Young, Chris SP NYM",Free Agent,2,0,39,53.0,47,19,20,757
+"Saito, Takashi RP ARI ",Free Agent,2,0,34,31.0,26,10,11,763
+"Hultzen, Danny SP SEA",A Cloud of Smoak,3,0,54,55.0,44,30,27,764
+"Acosta, Manny RP NYM ",Free Agent,3,2,45,44.7,43,19,22,765
+"Perez, Rafael RP CLE ",Free Agent,4,0,24,44.0,45,16,15,766
+"Wood, Kerry RP CHC",Free Agent,2,3,37,35.3,29,20,14,767
+"Choate, Randy RP STL",Free Agent,2,0,36,36.0,28,16,13,768
+"Hughes, Jared RP PIT",Free Agent,1,1,30,43.3,37,13,14,772
+"Perez, Martin SP TEX ",McDs 3 Fleas,5,0,62,90.0,91,38,46,773
+"Coke, Phil RP DET ",Free Agent,4,1,58,75.7,85,28,35,774
+"Aardsma, David RP NYY",Free Agent,0,10,17,17.0,11,9,7,776
+"Burton, Jared RP MIN",Free Agent,1,2,20,23.3,16,6,6,777
+"Sanchez, Eduardo RP STL",Free Agent,2,2,24,22.7,12,14,8,779
+"Webb, Ryan RP MIA ",Free Agent,3,0,40,56.7,61,20,21,782
+"Stutes, Michael RP PHI ",Free Agent,3,0,32,34.0,28,16,14,784
+"Contreras, Jose RP PHI",Free Agent,2,3,28,28.0,26,9,12,785
+"Chamberlain, Joba RP NYY ",Free Agent,2,1,41,40.3,40,12,18,793
+"Wright, Jamey RP TB",Free Agent,3,0,43,64.7,63,28,26,794
+"Rodriguez, Henry RP WAS ",Free Agent,2,4,45,41.0,33,27,20,795
+"Durbin, Chad RP ATL",Free Agent,3,0,57,66.0,67,27,31,797
+"Tolleson, Shawn RP LAD",Free Agent,3,0,39,37.7,30,20,18,800
+"Owings, Micah RP SD",Free Agent,4,0,29,35.3,31,18,16,802
+"Thatcher, Joe RP SD ",Free Agent,1,0,31,25.7,20,9,7,804
+"Coffey, Todd RP LAD ",Free Agent,3,0,40,47.0,46,17,22,807
+"Pauley, David RP TOR",Free Agent,3,0,34,60.3,60,19,26,809
+"Slowey, Kevin SP CLE ",Free Agent,4,0,50,71.7,83,11,40,810
+"Jenks, Bobby RP BOS",Free Agent,1,9,26,22.7,25,10,12,811
+"Sanches, Brian RP KC",Free Agent,2,0,37,44.0,36,22,17,812
+"Patton, Troy RP BAL ",Free Agent,1,0,24,28.7,24,6,8,814
+"Reynolds, Matt RP ARI",Free Agent,2,0,39,42.0,41,13,18,815
+"Moylan, Peter RP ATL ",Free Agent,3,1,21,25.7,23,14,8,817
+"Paulino, Felipe SP KC ",Free Agent,2,0,50,55.0,49,24,26,821
+"Villarreal, Brayan RP DET ",Free Agent,2,0,40,35.3,30,19,14,823
+"Volstad, Chris SP KC ",Free Agent,7,0,93,150.7,170,51,86,824
+"Kelley, Shawn RP SEA",Free Agent,2,0,27,27.3,25,10,9,830
+"Mattheus, Ryan RP WAS",Free Agent,2,0,18,32.7,28,11,10,831
+"Valdes, Raul RP PHI",Free Agent,2,0,35,34.0,30,13,15,832
+"Resop, Chris RP OAK ",Free Agent,2,1,50,54.7,56,22,25,833
+"Delgado, Randall SP ARI ",Free Agent,2,0,47,64.0,59,28,28,834
+"Doolittle, Sean RP OAK",Free Agent,1,0,30,23.7,20,6,8,835
+"Kontos, George RP SF",Free Agent,1,0,25,24.7,19,8,7,836
+"Carpenter, Chris RP BOS ",Free Agent,0,0,127,8.0,10,40,4,838
+"Bray, Bill RP WAS ",Free Agent,2,0,27,28.3,21,14,11,840
+"Loup, Aaron RP TOR",Free Agent,0,0,21,30.7,26,2,9,841
+"Silva, Carlos SP BOS",Free Agent,3,0,27,37.7,40,8,18,842
+"Strop, Pedro RP BAL",Free Agent,2,1,30,33.0,28,19,12,843
+"Gonzalez, Mike RP MIL ",Free Agent,1,1,40,38.0,33,17,16,844
+"Matusz, Brian RP BAL ",Free Agent,2,0,47,55.0,52,24,25,846
+"Horst, Jeremy RP PHI",Free Agent,1,0,24,23.3,20,10,4,847
+"Dunn, Mike RP MIA",Free Agent,2,0,47,42.0,38,26,17,848
+"Thompson, Rich RP TOR ",Free Agent,1,0,25,25.7,21,8,8,849
+"Mota, Guillermo RP SF",Free Agent,1,1,46,51.7,48,20,24,850
+"Lincoln, Brad RP TOR ",Free Agent,3,0,47,62.7,67,18,33,851
+"Byrdak, Tim RP NYM",Free Agent,2,0,37,35.7,31,19,15,852
+"Rzepczynski, Marc RP STL",Free Agent,2,0,50,57.3,56,24,27,853
+"Ray, Chris RP CLE",Free Agent,3,1,18,29.3,27,12,13,855
+"Jepsen, Kevin RP LAA",Free Agent,2,1,35,39.0,38,17,17,856
+"Luetge, Lucas RP SEA",Free Agent,2,2,38,40.7,37,24,18,858
+"Moyer, Jamie SP BAL",Free Agent,4,0,33,55.0,59,13,31,859
+"Qualls, Chad RP PIT",Free Agent,4,4,40,62.0,74,18,36,861
+"Pryor, Stephen RP SEA",Free Agent,3,0,27,23.0,22,13,10,862
+"Cruz, Juan RP PHI ",Free Agent,2,1,29,30.0,28,17,11,864
+"Wade, Cory RP TOR ",Free Agent,2,0,23,26.3,26,5,12,866
+"Brach, Brad RP SD",Free Agent,1,0,43,36.7,30,20,16,867
+"Keuchel, Dallas SP HOU",Free Agent,4,0,42,90.0,98,25,46,868
+"White, Alex SP HOU ",Free Agent,5,0,73,110.0,118,48,59,871
+"Shaw, Bryan RP CLE ",Free Agent,1,1,32,44.0,45,16,16,872
+"Gregg, Kevin RP BAL",Free Agent,2,2,49,54.0,53,31,25,873
+"Batista, Miguel RP ATL ",Free Agent,2,1,41,65.0,59,35,28,874
+"Rapada, Clay RP NYY",Free Agent,2,0,20,21.3,16,10,9,876
+"Wheeler, Dan RP KC ",Free Agent,1,1,29,36.7,33,10,18,877
+"Miller, Jim RP NYY",Free Agent,1,0,24,28.0,21,16,8,879
+"Hernandez, Livan RP MIL",Free Agent,3,0,29,50.0,53,14,25,881
+"Moseley, Dustin SP SD",Free Agent,2,0,34,63.3,63,22,28,883
+"Downs, Darin RP DET",Free Agent,2,0,20,20.7,18,9,8,888
+"Matsuzaka, Daisuke SP BOS ",Free Agent,4,0,67,79.0,76,39,48,891
+"Sanabia, Alex SP MIA",Free Agent,2,0,18,27.7,29,6,11,893
+"Edgin, Josh RP NYM",Free Agent,1,0,30,25.7,19,10,13,894
+"De La Rosa, Rubby RP BOS",Free Agent,2,0,30,30.7,27,16,14,898
+"Wright, Wesley RP HOU ",Free Agent,1,0,31,32.3,29,12,14,900
+"Heilman, Aaron RP SEA",Free Agent,3,2,29,35.7,40,12,21,901
+"Linebrink, Scott RP STL",Free Agent,2,0,31,37.3,39,13,17,904
+"Teaford, Everett RP KC",Free Agent,2,0,32,52.7,52,18,25,911
+"Gomes, Brandon RP TB",Free Agent,2,0,24,27.3,25,14,11,914
+"Mijares, Jose RP SF",Free Agent,1,0,38,46.0,46,20,18,915
+"Bueno, Francisley RP KC",Free Agent,1,0,7,17.3,16,2,3,917
+"Thayer, Dale RP SD",Free Agent,1,2,18,23.3,24,4,11,919
+"Mortensen, Clayton RP BOS",Free Agent,1,0,26,35.3,31,15,14,920
+"Schwimer, Michael RP PHI",Free Agent,2,0,26,24.3,22,12,12,923
+"Roenicke, Josh RP MIN",Free Agent,2,0,28,41.3,39,21,17,924
+"Tateyama, Yoshinori RP TEX",Free Agent,2,0,30,30.7,28,8,20,926
+"Elbert, Scott RP LAD ",Free Agent,0,1,21,22.3,18,10,6,927
+"Hawkins, LaTroy RP LAA",Free Agent,2,0,23,35.3,39,10,15,928
+"Storey, Mickey RP TOR",Free Agent,0,0,34,30.3,27,10,13,929
+"Tazawa, Junichi RP BOS",Free Agent,0,0,16,15.7,13,2,3,931
+"Burnett, Alex RP MIN",Free Agent,3,0,35,56.7,58,23,29,933
+"Beato, Pedro RP BOS",Free Agent,2,0,26,39.3,35,16,20,938
+"Boxberger, Brad RP SD",Free Agent,0,0,33,27.7,22,18,8,939
+"Mikolas, Miles RP SD",Free Agent,2,0,23,32.3,32,15,13,940
+"Hill, Rich RP BOS",Free Agent,1,0,12,10.7,8,5,1,942
+"Perez, Luis RP TOR ",Free Agent,2,0,31,35.7,37,14,18,949
+"Rodriguez, Francisco RP LAA",Free Agent,0,0,73,20.3,20,26,10,952
+"Wood, Blake RP CLE ",Free Agent,2,0,31,39.7,40,18,19,955
+"Fien, Casey RP MIN",Free Agent,1,0,11,12.7,10,3,4,958
+"Kirkman, Michael RP TEX",Free Agent,1,0,25,26.3,20,13,13,961
+"Scribner, Evan RP OAK",Free Agent,1,0,20,24.7,24,8,10,963
+"Perry, Ryan RP WAS",Free Agent,2,1,24,36.0,35,15,19,964
+"McClendon, Mike RP MIL ",Free Agent,2,0,12,16.3,17,5,7,965
+"Peralta, Wily SP MIL",Free Agent,1,0,12,14.7,12,6,4,966
+"Swarzak, Anthony RP MIN",Free Agent,2,0,39,66.3,72,19,34,968
+"Gomez, Jeanmar SP PIT ",Free Agent,5,0,37,69.0,80,24,40,974
+"Below, Duane RP DET",Free Agent,1,0,22,37.7,38,10,17,978
+"Lowe, Mark RP TEX",Free Agent,1,0,27,32.7,33,13,14,979
+"Robertson, Tyler RP MIN",Free Agent,2,0,26,25.0,21,14,15,981
+"Harden, Rich SP MIN ",Free Agent,3,0,55,58.3,59,31,35,982
+"Litsch, Jesse SP TOR",Free Agent,2,0,27,40.7,41,14,22,984
+"Zumaya, Joel RP MIN",Free Agent,1,0,11,12.7,11,4,4,985
+"Corpas, Manny RP CHC ",Free Agent,1,3,25,36.3,39,13,19,986
+"Balester, Collin RP TEX",Free Agent,1,0,25,25.0,22,12,12,987
+"Neshek, Pat RP OAK",Free Agent,1,0,15,17.7,12,12,6,988
+"Axelrod, Dylan SP CHW",Free Agent,2,0,30,34.7,37,15,18,989
+"Smith, Will SP KC",Free Agent,6,0,59,89.7,111,33,53,990
+"Cramer, Bobby RP OAK",Free Agent,1,0,6,10.7,9,2,3,996
+"Buchholz, Taylor RP NYM",Free Agent,1,0,12,12.7,11,4,5,997
+"Gutierrez, Juan RP KC",Free Agent,0,5,23,25.0,26,11,14,999
+"Rodriguez, Fernando RP HOU",Free Agent,1,0,45,41.0,40,21,22,1000
+"Howell, J.P. RP LAD ",Free Agent,1,0,23,27.0,23,13,13,1001
+"Feliz, Neftali SP TEX ",Free Agent,1,0,23,28.0,25,13,13,1003
+"Diekman, Jacob RP PHI",Free Agent,1,0,35,27.3,25,20,12,1005
+"Marte, Luis RP DET",Free Agent,1,0,11,13.0,12,5,4,1008
+"Hefner, Jeremy SP NYM",Free Agent,2,0,31,46.7,55,9,26,1009
+"Dessens, Elmer RP NYM",Free Agent,1,0,5,15.7,14,5,4,1010
+"Hawksworth, Blake RP LAD",Free Agent,2,0,35,47.7,53,17,25,1012
+"Figueroa, Nelson SP ARI",Free Agent,2,0,30,40.7,43,17,21,1013
+"Lowe, Derek SP NYY",Free Agent,5,0,43,95.0,112,33,50,1014
+"Laffey, Aaron SP NYM ",Free Agent,3,0,35,70.0,76,29,34,1015
+"Bergesen, Brad RP ARI",Free Agent,4,0,53,100.3,114,30,57,1016
+"Morton, Charlie SP PIT ",Free Agent,2,0,32,55.0,61,20,26,1017
+"Ohman, Will RP CIN",Free Agent,0,0,37,40.7,39,15,20,1019
+"Lewis, Jensen RP ARI",Free Agent,1,0,10,12.0,9,6,4,1020
+"Fife, Stephen SP LAD",Free Agent,0,0,20,26.7,25,12,8,1023
+"Norberto, Jordan RP OAK",Free Agent,1,0,22,26.3,20,17,12,1024
+"Bush, Dave RP PHI",Free Agent,3,0,43,70.7,82,25,37,1025
+"Spence, Josh RP NYY",Free Agent,0,0,20,20.0,14,12,7,1026
+"Aumont, Phillippe RP PHI",Free Agent,0,2,14,14.7,10,9,6,1027
+"Eyre, Willie RP BAL",Free Agent,1,0,5,9.3,6,2,4,1031
+"Tejeda, Robinson RP CLE",Free Agent,1,0,19,22.7,22,10,10,1033
+"Feliciano, Pedro RP NYM ",Free Agent,1,0,19,21.0,22,10,8,1036
+"Gonzalez, Edgar RP HOU",Free Agent,2,0,10,13.3,14,4,8,1037
+"Herrmann, Frank RP CLE",Free Agent,1,0,24,40.0,44,10,19,1038
+"Peacock, Brad SP OAK",Free Agent,1,0,2,6.0,4,3,0,1044
+"Jennings, Dan RP MIA",Free Agent,1,0,8,19.0,18,11,4,1045
+"Escalona, Sergio RP HOU ",Free Agent,1,0,8,9.3,8,4,3,1048
+"Slaten, Doug RP PIT",Free Agent,1,0,18,23.3,23,12,9,1049
+"Pelfrey, Mike SP MIN ",Free Agent,4,0,49,95.0,108,35,51,1051
+"Schlereth, Daniel RP BAL ",Free Agent,1,0,23,25.0,23,15,11,1052
+"Gaudin, Chad RP MIA",Free Agent,2,0,40,47.7,52,20,27,1056
+"Cassevah, Bobby RP LAA",Free Agent,1,0,11,21.7,19,11,8,1058
+"Bautista, Denny RP SEA",Free Agent,1,0,15,11.3,8,9,5,1059
+"Hill, Shawn RP TOR",Free Agent,1,0,5,8.0,8,2,2,1060
+"Eppley, Cody RP NYY",Free Agent,1,0,19,27.3,28,11,12,1062
+"Park, Chan Ho RP PIT",Free Agent,1,0,17,21.3,22,6,11,1063
+"Bonderman, Jeremy SP SEA ",Free Agent,3,0,37,57.0,62,20,35,1065
+"Deduno, Samuel SP MIN",Free Agent,2,0,21,28.3,26,19,14,1066
+"Parra, Manny RP MIL",Free Agent,2,0,63,60.3,66,33,34,1068
+"Wall, Josh RP LAD",Free Agent,1,0,4,5.7,3,1,3,1070
+"French, Luke SP SEA",Free Agent,2,0,12,29.3,29,10,16,1072
+"Capps, Carter RP SEA",Free Agent,0,0,28,25.0,25,11,11,1074
+"Runzler, Dan RP SF",Free Agent,1,0,22,21.3,20,13,10,1076
+"Werner, Andrew SP OAK",Free Agent,2,0,35,40.3,45,14,25,1077
+"Ottavino, Adam RP COL",Free Agent,2,0,31,33.7,38,14,20,1079
+"Herndon, David RP NYY ",Free Agent,1,0,25,39.0,44,14,17,1081
+"Mitre, Sergio RP NYY",Free Agent,0,0,15,30.7,27,10,13,1082
+"De Los Santos, Fautino RP MIL",Free Agent,1,0,15,12.0,11,7,6,1085
+"Mazzaro, Vin RP PIT",Free Agent,4,0,38,65.0,74,28,37,1087
+"Kohn, Michael RP LAA ",Free Agent,1,1,10,11.3,10,8,5,1088
+"Kintzler, Brandon RP MIL",Free Agent,1,0,13,13.0,14,5,6,1089
+"Wieland, Joe SP SD ",Free Agent,0,0,24,27.7,26,9,14,1091
+"Duchscherer, Justin SP BAL",Free Agent,1,0,6,9.3,9,4,3,1092
+"Penny, Brad RP SF",Free Agent,5,0,40,88.3,109,27,49,1093
+"Ramos, Cesar RP TB",Free Agent,0,0,23,27.3,24,13,12,1094
+"Escalona, Edgmer RP COL",Free Agent,0,0,12,18.0,15,6,7,1095
+"Okajima, Hideki RP NYY",Free Agent,2,0,13,18.0,22,8,9,1096
+"Bowden, Michael RP CHC",Free Agent,0,0,21,25.0,24,11,10,1102
+"Sherrill, George RP KC ",Free Agent,2,0,21,24.7,28,12,14,1106
+"Gearrin, Cory RP ATL",Free Agent,0,0,22,19.3,17,8,10,1109
+"Burres, Brian RP SF",Free Agent,2,0,18,31.0,33,13,17,1111
+"Rosenberg, B.J. RP PHI",Free Agent,1,0,24,25.0,18,14,17,1112
+"Dillard, Tim RP MIL",Free Agent,0,0,28,32.7,36,9,16,1113
+"Jenkins, Chad RP TOR",Free Agent,1,0,16,32.0,32,11,16,1116
+"Allen, Cody RP CLE",Free Agent,0,0,27,29.0,29,15,12,1118
+"Rodriguez, Steven RP LAD",Free Agent,0,0,6,6.7,3,4,1,1120
+"Archer, Chris SP TB",Free Agent,0,0,18,14.7,12,6,8,1123
+"Scahill, Rob RP COL",Free Agent,0,0,4,8.7,7,3,1,1124
+"Hampson, Justin RP NYM",Free Agent,0,0,4,10.0,6,5,2,1125
+"Carrasco, D.J. RP NYM",Free Agent,1,0,32,43.7,47,17,23,1129
+"Rodriguez, Aneury SP HOU ",Free Agent,0,0,35,45.7,42,17,26,1132
+"Sweeney, Brian RP ARI",Free Agent,0,0,5,12.3,11,2,4,1133
+"Seddon, Chris RP CLE",Free Agent,1,0,11,19.0,19,8,9,1134
+"Flores, Randy RP SD",Free Agent,1,0,7,10.3,11,5,4,1135
+"Barnes, Scott RP CLE",Free Agent,0,0,16,19.0,17,7,9,1136
+"Germano, Justin SP TOR",Free Agent,1,0,29,39.3,43,11,23,1137
+"Veal, Donnie RP CHW",Free Agent,0,0,6,4.3,2,1,1,1138
+"Cingrani, Tony RP CIN ",Free Agent,0,0,9,5.0,4,2,1,1139
+"Wuertz, Michael RP OAK ",Free Agent,1,2,24,24.3,24,16,15,1142
+"Reyes, Dennys RP BAL",Free Agent,1,0,9,13.3,12,8,6,1143
+"Chatwood, Tyler SP COL",Free Agent,6,0,58,103.3,120,52,57,1144
+"Ramos, A.J. RP MIA",Free Agent,0,0,13,9.3,8,4,4,1145
+"Berken, Jason SP CHC",Free Agent,1,0,32,43.0,52,16,20,1147
+"Carreno, Joel RP TOR ",Free Agent,0,0,15,18.7,16,9,8,1152
+"Nieve, Fernando RP CLE",Free Agent,1,0,13,14.0,12,7,9,1153
+"Browning, Barret RP STL",Free Agent,1,0,11,19.3,18,7,11,1154
+"Tomlin, Josh SP CLE ",Free Agent,1,0,13,25.0,28,6,13,1156
+"Monasterios, Carlos RP LAD",Free Agent,1,0,17,29.3,33,10,14,1160
+"MacDougal, Mike RP LAD",Free Agent,1,0,20,27.0,29,16,11,1161
+"Purcey, David RP PHI",Free Agent,1,0,18,22.7,20,14,12,1162
+"Hagadone, Nick RP CLE ",Free Agent,1,0,18,18.0,15,10,12,1164
+"De Fratus, Justin RP PHI",Free Agent,0,0,6,7.3,4,4,2,1166
+"Braddock, Zach RP BAL ",Free Agent,0,0,20,17.0,15,10,8,1168
+"Nippert, Dustin RP TEX",Free Agent,1,0,16,19.0,20,11,9,1170
+"Mahay, Ron RP CIN",Free Agent,0,0,8,11.3,11,3,4,1173
+"Scheppers, Tanner RP TEX",Free Agent,1,1,30,32.3,47,9,16,1175
+"Bell, Trevor RP DET",Free Agent,1,0,21,31.7,39,10,15,1176
+"Talbot, Mitch SP CLE ",Free Agent,4,0,41,74.3,86,32,42,1177
+"Atilano, Luis SP WAS",Free Agent,2,0,13,28.7,32,11,16,1178
+"Enright, Barry RP LAA",Free Agent,2,0,23,46.7,51,15,27,1179
+"Varvaro, Anthony RP ATL",Free Agent,0,0,16,15.0,12,9,7,1181
+"Garcia, Christian RP WAS ",Free Agent,0,0,5,4.3,3,1,1,1182
+"Adcock, Nate RP KC",Free Agent,0,0,29,47.3,50,20,20,1183
+"Carpenter, David P LAA",Free Agent,1,0,28,39.7,42,17,21,1184
+"Beimel, Joe RP TEX",Free Agent,1,0,13,23.3,27,8,11,1187
+"Kinney, Josh RP SEA",Free Agent,0,0,19,16.7,16,7,9,1188
+"Sonnanstine, Andy RP CHC",Free Agent,1,0,21,39.0,41,13,21,1189
+"Sosa, Henry SP HOU",Free Agent,1,0,13,17.7,18,8,10,1192
+"Galarraga, Armando SP HOU ",Free Agent,2,0,40,70.3,73,30,39,1193
+"Demel, Sam RP HOU",Free Agent,1,1,16,21.3,25,9,12,1195
+"De La Cruz, Frankie RP CHC",Free Agent,0,0,4,6.7,5,2,2,1196
+"Thornburg, Tyler RP MIL",Free Agent,0,0,20,22.0,24,7,11,1197
+"Threets, Erick RP OAK",Free Agent,0,0,2,4.0,3,1,0,1199
+"Maronde, Nick RP LAA",Free Agent,0,0,7,6.0,6,3,1,1200
+"Wang, Chien-Ming SP WAS",Free Agent,2,0,13,31.7,39,9,17,1201
+"Torres, Carlos RP COL",Free Agent,2,0,18,22.3,24,12,15,1204
+"Kluber, Corey SP CLE",Free Agent,1,0,30,33.7,41,10,20,1205
+"Miller, Justin RP SEA",Free Agent,0,0,10,8.0,7,3,4,1206
+"Mateo, Marcos RP CHC ",Free Agent,0,0,17,15.0,15,6,8,1207
+"Blackburn, Nick SP MIN ",Free Agent,4,0,53,120.0,149,27,67,1208
+"Thomas, Brad RP DET",Free Agent,2,0,12,26.7,31,12,14,1211
+"Delcarmen, Manny RP NYY",Free Agent,1,0,13,17.3,15,11,10,1213
+"Sosa, Jorge RP MIA",Free Agent,1,0,6,12.3,13,6,6,1214
+"Vasquez, Esmerling SP MIN",Free Agent,1,0,30,38.7,35,23,22,1218
+"Donnelly, Brendan RP PIT",Free Agent,1,0,9,10.3,9,8,6,1222
+"Noesi, Hector SP SEA",Free Agent,1,0,38,54.3,57,20,32,1223
+"Devine, Joey RP OAK",Free Agent,0,0,7,7.7,6,4,3,1224
+"Maine, Scott RP TOR",Free Agent,1,0,16,15.7,17,8,10,1225
+"Troncoso, Ramon RP CHW",Free Agent,1,0,16,25.7,31,7,14,1226
+"Ortiz, Ramon RP TOR ",Free Agent,1,0,15,21.0,21,9,13,1229
+"Russell, Adam RP BAL",Free Agent,0,0,10,16.0,15,8,6,1230
+"Chapman, Jaye RP CHC",Free Agent,0,0,12,12.0,8,10,5,1233
+"Kimball, Cole RP WAS",Free Agent,0,0,6,7.0,4,6,2,1236
+"Omogrosso, Brian RP CHW",Free Agent,0,0,6,7.0,7,3,2,1236
+"Wells, Randy RP TEX",Free Agent,1,0,18,35.0,40,11,18,1238
+"Smith, Jordan RP CIN",Free Agent,1,0,13,20.7,26,6,11,1241
+"Kilby, Brad RP OAK",Free Agent,0,0,3,2.7,2,0,1,1242
+"Miller, Andrew RP BOS ",Free Agent,3,0,43,46.0,52,29,29,1243
+"Bowers, Cedrick RP OAK",Free Agent,0,0,6,4.7,4,2,2,1244
+"Abreu, Juan RP TOR",Free Agent,0,0,6,3.3,3,2,1,1247
+"Koehler, Tom RP MIA",Free Agent,0,0,13,13.3,15,2,8,1251
+"O'Connor, Mike RP NYY",Free Agent,0,0,4,3.3,2,2,1,1252
+"Miller, Trever RP CHC",Free Agent,0,0,11,19.0,18,9,8,1255
+"Wells, Kip SP SD ",Free Agent,2,0,19,37.3,41,20,19,1256
+"Schlichting, Travis RP OAK",Free Agent,0,0,5,7.7,7,3,3,1258
+"Vizcaino, Arodys RP CHC ",Free Agent,0,0,8,8.7,8,4,4,1260
+"Jeffress, Jeremy RP TOR",Free Agent,1,0,11,13.0,13,10,7,1262
+"McCutchen, Daniel RP BAL",Free Agent,2,0,28,50.7,57,21,28,1264
+"Sanchez, Romulo RP TB",Free Agent,0,0,2,1.3,0,1,0,1265
+"Pinto, Renyel RP STL",Free Agent,0,0,5,5.7,5,3,2,1268
+"Pena, Tony RP LAA ",Free Agent,2,0,24,40.3,44,18,24,1269
+"Villarreal, Pedro RP CIN",Free Agent,0,0,1,1.0,0,0,0,1270
+"Reynolds, Greg RP TEX ",Free Agent,1,0,6,10.7,13,3,7,1271
+"Morris, Bryan RP PIT",Free Agent,0,0,2,1.7,1,1,0,1273
+"Infante, Gregory RP CHW",Free Agent,0,0,2,1.7,1,1,0,1273
+"Mills, Brad SP LAA",Free Agent,1,0,14,15.3,15,8,11,1275
+"Rogers, Esmil RP TOR",Free Agent,4,0,71,78.0,96,34,52,1276
+"Freeman, Sam RP STL",Free Agent,0,0,18,20.0,17,10,12,1280
+"Ruffin, Chance RP SEA",Free Agent,0,0,9,8.7,9,4,4,1281
+"Romero, J.C. RP BAL",Free Agent,1,1,18,24.3,26,16,13,1284
+"Dolis, Rafael RP CHC",Free Agent,1,1,8,13.0,13,8,9,1286
+"Hamburger, Mark RP HOU",Free Agent,0,0,3,4.0,2,2,2,1288
+"Martin, J.D. SP TB",Free Agent,0,0,10,16.0,19,4,7,1289
+"Castillo, Alberto RP LAD",Free Agent,1,0,6,7.3,9,4,5,1292
+"Putnam, Zach RP CHC",Free Agent,0,0,4,4.7,6,0,2,1294
+"Phillips, Zach RP BAL",Free Agent,0,0,4,4.7,4,2,2,1294
+"Moskos, Daniel RP CHW",Free Agent,0,0,6,12.0,14,4,4,1299
+"Figueroa, Pedro RP OAK",Free Agent,0,0,5,7.3,5,5,3,1302
+"Pomeranz, Stu RP BAL ",Free Agent,0,0,3,6.0,7,1,2,1303
+"Septimo, Leyson RP CHW",Free Agent,0,0,5,4.7,3,2,3,1304
+"Marte, Damaso RP NYY",Free Agent,0,0,4,6.0,3,4,3,1305
+"Gray, Jeff RP CHW ",Free Agent,2,0,18,36.7,41,16,21,1306
+"Cedeno, Xavier RP HOU",Free Agent,0,0,18,16.3,18,7,9,1307
+"Jones, Hunter RP CLE",Free Agent,0,0,1,0.7,0,0,0,1309
+"Beliveau, Jeff RP TEX",Free Agent,1,0,17,17.7,21,12,9,1311
+"Cabrera, Alberto RP CHC",Free Agent,0,0,14,10.7,8,9,6,1314
+"Perez, Juan RP TOR ",Free Agent,0,0,9,6.0,4,6,3,1315
+"Ortega, Jose RP DET",Free Agent,0,0,2,1.3,2,0,0,1319
+"Carlson, Jesse RP BOS",Free Agent,0,0,3,4.7,4,2,2,1321
+"Ross, Tyson SP SD",Free Agent,2,0,34,49.7,56,23,29,1322
+"Outman, Josh RP COL ",Free Agent,1,0,25,33.0,36,14,20,1325
+"Egbert, Jack RP NYM",Free Agent,0,0,0,0.7,0,0,0,1328
+"Wellemeyer, Todd SP CHC",Free Agent,1,0,14,19.7,19,12,12,1330
+"Bundy, Dylan RP BAL ",Amigos,0,0,0,1.7,1,1,0,1331
+"Bulger, Jason RP MIN",Free Agent,0,0,11,11.0,10,8,5,1334
+"Robertson, Nate SP SEA ",Free Agent,2,0,21,33.7,38,14,22,1339
+"Tomko, Brett RP CIN",Free Agent,0,0,7,8.7,8,5,4,1340
+"Duke, Zach RP WAS",Free Agent,4,0,46,83.0,108,25,48,1341
+"Manuel, Robert RP BOS",Free Agent,0,0,2,4.3,3,2,2,1342
+"Savery, Joe RP PHI",Free Agent,0,0,9,14.0,14,4,8,1344
+"Kelly, Casey SP SD",Free Agent,2,0,26,29.0,39,10,20,1348
+"Perdomo, Luis RP MIN",Free Agent,0,0,3,6.0,5,4,2,1350
+"Leroux, Chris RP PIT",Free Agent,0,0,19,19.7,22,8,11,1356
+"Heath, Deunte RP CHW",Free Agent,0,0,1,2.0,1,1,1,1359
+"Severino, Atahualpa RP KC",Free Agent,0,0,2,1.7,2,0,1,1361
+"Wolf, Ross RP HOU",Free Agent,0,0,3,4.3,4,2,2,1363
+"Rosales, Leo RP ARI",Free Agent,1,0,4,5.3,8,3,4,1364
+"Ely, John RP HOU ",Free Agent,1,0,31,38.3,41,17,24,1365
+"Fulchino, Jeff RP WAS",Free Agent,1,0,26,27.3,30,15,17,1366
+"Olsen, Scott SP PIT",Free Agent,1,0,18,27.0,31,9,17,1367
+"Carlyle, Buddy RP ATL",Free Agent,0,0,4,4.0,2,4,2,1368
+"Hughes, Dusty RP ATL",Free Agent,1,0,15,23.0,26,11,13,1369
+"Putkonen, Luke RP DET",Free Agent,0,1,10,16.0,19,8,7,1370
+"Garrison, Steve RP SEA",Free Agent,0,0,0,0.3,0,0,0,1373
+"MacLane, Evan RP STL",Free Agent,0,0,0,0.3,0,0,0,1373
+"Igarashi, Ryota RP NYY",Free Agent,2,0,24,24.3,27,17,17,1375
+"Waldrop, Kyle RP MIN",Free Agent,0,0,6,16.0,18,6,6,1376
+"Chacin, Gustavo RP HOU",Free Agent,1,0,10,12.7,17,7,7,1380
+"Hamren, Erik RP SD",Free Agent,0,0,5,6.0,5,4,3,1381
+"Drabek, Kyle SP TOR ",Free Agent,3,0,37,55.7,57,36,33,1383
+"Slama, Anthony RP MIN",Free Agent,0,0,3,2.3,2,2,1,1384
+"Ekstrom, Mike RP COL",Free Agent,0,0,7,11.0,11,4,6,1385
+"Brummett, Tyson RP PHI",Free Agent,0,0,2,0.7,2,0,0,1387
+"Walters, P.J. SP MIN",Free Agent,1,0,23,32.3,35,12,21,1389
+"Bonine, Eddie RP ARI",Free Agent,1,0,9,22.7,28,7,12,1390
+"Brackman, Andrew RP CIN",Free Agent,0,0,0,0.7,0,1,0,1391
+"Stoner, Tobi RP NYM",Free Agent,0,0,0,0.7,1,0,0,1391
+"Jimenez, Cesar RP PHI",Free Agent,0,0,4,3.3,3,2,2,1393
+"Weinhardt, Robbie RP DET",Free Agent,1,0,7,10.3,15,3,7,1443
+"Torres, Alex RP TB",Free Agent,0,0,3,2.7,3,2,1,1444
+"Chico, Matt SP LAD",Free Agent,0,0,1,1.7,2,0,1,1445
+"Marquez, Jeff RP SEA",Free Agent,0,0,1,1.7,2,0,1,1445
+"Carson, Robert RP NYM",Free Agent,0,0,5,13.3,13,4,7,1447
+"Baez, Danys RP PHI",Free Agent,2,0,15,28.0,33,12,18,1448
+"Riske, David RP BAL",Free Agent,0,0,5,7.7,8,3,4,1449
+"Ceda, Jose RP MIA ",Free Agent,0,0,10,9.7,8,8,5,1450
+"Misch, Pat RP PHI ",Free Agent,0,0,9,15.0,18,3,8,1455
+"Hatcher, Chris RP MIA",Free Agent,0,0,3,5.0,6,2,2,1456
+"Ray, Robert RP MIA",Free Agent,0,0,1,1.3,1,2,0,1458
+"Hacker, Eric RP SF ",Free Agent,0,0,5,7.3,9,3,3,1463
+"Vazquez, Javier SP MIA ",Free Agent,0,0,0,0.0,0,0,0,1464
+"Rhodes, Arthur RP STL",Free Agent,0,0,0,0.0,0,0,0,1464
+"Benson, Kris SP ARI",Free Agent,0,0,0,0.0,0,0,0,1464
+"Lidge, Brad RP WAS",Free Agent,0,0,0,0.0,0,0,0,1464
+"Wakefield, Tim SP BOS",Free Agent,0,0,0,0.0,0,0,0,1464
+"Moehler, Brian SP HOU",Free Agent,0,0,0,0.0,0,0,0,1464
+"Strickland, Scott RP MIA",Free Agent,0,0,0,0.0,0,0,0,1464
+"Davies, Kyle SP KC",Free Agent,0,0,0,0.0,0,0,0,1464
+"Hampton, Mike SP ARI",Free Agent,0,0,0,0.0,0,0,0,1464
+"Sheets, Ben SP ATL",LongBallerz,0,0,0,0.0,0,0,0,1464
+"Kazmir, Scott SP CLE ",Free Agent,0,0,0,0.0,0,0,0,1464
+"Wolf, Randy SP BAL ",Free Agent,0,0,0,0.0,0,0,0,1464
+"Franklin, Ryan RP STL",Free Agent,0,0,0,0.0,0,0,0,1464
+"Lopez, Rodrigo RP PHI ",Free Agent,0,0,0,0.0,0,0,0,1464
+"Fuentes, Brian RP STL",Free Agent,0,0,0,0.0,0,0,0,1464
+"Colome, Jesus RP TEX",Free Agent,0,0,5,5.7,5,4,3,1481
+"Rincon, Juan RP LAD",Free Agent,0,0,1,0.7,1,1,0,1488
+"Smith, Chris RP SEA",Free Agent,0,0,1,1.0,1,0,1,1489
+"Parrish, John RP KC",Free Agent,0,0,1,2.0,1,2,1,1493
+"Villar, Henry RP HOU",Free Agent,0,0,1,2.0,2,1,1,1493
+"Link, Jon RP BAL",Free Agent,0,0,1,3.0,4,1,1,1496
+"Teheran, Julio SP ATL ",Back Bay Bums,0,0,8,13.0,13,4,8,1498
+"Ramirez, Edwar RP OAK",Free Agent,0,0,3,3.7,3,3,2,1501
+"Stinson, Josh RP MIL",Free Agent,0,0,6,11.3,10,6,6,1510
+"English, Jesse RP WAS",Free Agent,0,0,1,2.3,3,1,1,1511
+"Magnuson, Trystan RP TOR",Free Agent,0,0,6,7.3,8,2,5,1512
+"Whelan, Kevin RP NYY",Free Agent,0,0,0,0.7,0,2,0,1514
+"Bergmann, Jason RP BOS",Free Agent,0,0,1,0.7,1,0,1,1516
+"Eveland, Dana RP BAL ",Free Agent,2,0,19,38.7,44,17,23,1517
+"Dumatrait, Phil RP MIN",Free Agent,0,0,14,20.7,22,12,9,1518
+"Cordero, Chad RP TOR",Free Agent,0,0,2,3.3,3,2,2,1519
+"Reineke, Chad SP CIN",Free Agent,0,0,2,3.3,2,3,2,1519
+"Boyer, Blaine RP KC",Free Agent,1,0,10,21.3,24,10,12,1524
+"Rodriguez, Rafael RP ARI",Free Agent,0,0,1,1.7,2,1,1,1525
+"Tucker, Ryan RP LAD",Free Agent,0,0,1,1.7,2,1,1,1525
+"Hendrickson, Mark RP BAL ",Free Agent,1,0,20,28.7,37,9,17,1528
+"Machi, Jean RP SF",Free Agent,0,0,4,6.7,7,1,5,1533
+"Cortes, Dan RP SEA",Free Agent,0,0,3,5.3,5,3,3,1535
+"Oliveros, Lester RP MIN",Free Agent,0,0,7,11.3,11,6,6,1536
+"James, Justin RP MIL",Free Agent,0,0,2,1.3,2,1,1,1538
+"Dickson, Brandon RP STL",Free Agent,0,0,6,7.3,10,2,4,1540
+"Meredith, Cla RP WAS",Free Agent,0,0,2,5.0,6,1,3,1541
+"Hinshaw, Alex RP TOR",Free Agent,0,0,12,9.3,9,7,6,1543
+"Richmond, Scott RP TOR ",Free Agent,0,0,1,1.0,2,0,1,1545
+"Gaub, John SP STL",Free Agent,0,0,1,1.0,1,1,1,1545
+"Fox, Matt RP SEA",Free Agent,0,0,0,2.3,3,1,1,1547
+"Olson, Garrett RP NYM",Free Agent,0,0,12,14.0,16,6,8,1549
+"Rosa, Carlos RP ARI",Free Agent,0,0,3,6.7,7,4,3,1550
+"Brazoban, Yhency RP ARI",Free Agent,0,0,4,3.0,4,2,2,1551
+"Palmer, Matt RP SD ",Free Agent,1,0,9,17.0,20,9,10,1562
+"Gordon, Brian RP NYY",Free Agent,0,0,2,5.3,6,2,3,1564
+"Herrera, Danny RP NYM",Free Agent,0,0,6,11.0,15,3,5,1565
+"Betances, Dellin SP NYY",Free Agent,0,0,1,1.3,0,3,1,1566
+"Green, Sean RP TEX",Free Agent,0,0,6,7.0,7,5,4,1568
+"Martinez, Joe RP CLE ",Free Agent,0,0,3,7.0,9,3,3,1570
+"Parker, Blake RP CHC",Free Agent,0,0,2,2.0,3,2,1,1571
+"McGowan, Dustin SP TOR ",Free Agent,0,0,7,7.0,7,4,5,1572
+"Font, Wilmer RP TEX",Free Agent,0,0,0,1.0,0,2,1,1575
+"Carignan, Andrew RP OAK ",Free Agent,0,0,6,8.0,8,6,4,1576
+"Hottovy, Tommy RP TOR ",Free Agent,0,0,4,6.7,8,4,3,1577
+"Ring, Royce RP COL",Free Agent,0,0,1,0.7,1,1,1,1578
+"Todd, Jess RP STL",Free Agent,0,0,3,2.0,3,1,2,1579
+"Fisher, Carlos RP CIN",Free Agent,0,0,13,15.3,16,8,9,1580
+"Wilson, Justin RP PIT ",Free Agent,0,0,7,4.7,10,3,1,1581
+"Marinez, Jhan RP CHW",Free Agent,0,0,1,1.7,2,2,1,1582
+"Marte, Victor RP STL",Free Agent,2,0,18,22.7,30,10,17,1583
+"Viola, Pedro RP BAL",Free Agent,0,0,2,1.7,2,1,2,1584
+"Wagner, Neil RP TOR",Free Agent,0,0,2,2.7,3,2,2,1585
+"Ambriz, Hector RP HOU",Free Agent,0,0,20,22.7,27,9,13,1586
+"Rusin, Chris SP CHC",Free Agent,2,0,21,29.7,38,11,21,1587
+"Beck, Chad RP TOR",Free Agent,0,0,6,9.0,11,2,6,1589
+"James, Chuck RP NYM",Free Agent,0,0,4,5.3,6,2,4,1591
+"Tankersley, Taylor RP NYM",Free Agent,0,0,2,4.0,4,2,3,1592
+"Tobin, Mason RP TEX",Free Agent,0,0,0,2.7,2,2,2,1593
+"Stetter, Mitch RP LAA",Free Agent,0,0,3,3.7,5,1,3,1594
+"Houser, James RP MIA",Free Agent,0,0,0,0.3,1,0,1,1595
+"Surkamp, Eric SP SF ",Free Agent,1,0,6,13.3,16,8,8,1598
+"Albaladejo, Jonathan RP ARI ",Free Agent,0,0,3,4.7,5,3,3,1599
+"Beltre, Omar RP TEX",Free Agent,0,0,3,2.3,3,2,2,1600
+"Mock, Garrett SP ARI",Free Agent,0,0,1,1.0,1,2,1,1601
+"Geltz, Steven RP LAA",Free Agent,0,0,1,2.0,2,3,1,1602
+"Taylor, Andrew RP LAA",Free Agent,0,0,0,0.7,1,1,1,1604
+"Ascanio, Jose RP LAD",Free Agent,0,0,2,2.0,3,1,2,1605
+"Valdez, Merkin RP OAK",Free Agent,0,0,2,2.0,3,1,2,1605
+"Thompson, Brad RP MIN",Free Agent,0,0,3,6.7,8,1,5,1607
+"Daley, Matt RP NYY",Free Agent,0,0,8,9.7,12,4,6,1608
+"Familia, Jeurys RP NYM",Free Agent,0,0,10,12.3,10,9,8,1609
+"Asencio, Jairo RP MIL",Free Agent,0,0,12,17.0,18,8,10,1610
+"DiFelice, Mark RP MIL",Free Agent,0,0,2,1.3,2,1,2,1612
+"Manship, Jeff RP MIN",Free Agent,1,0,12,18.0,23,6,13,1613
+"Accardo, Jeremy RP OAK",Free Agent,1,0,18,27.3,32,12,17,1614
+"Maloney, Matt RP MIN",Free Agent,1,0,10,16.7,24,3,12,1615
+"Mulvey, Kevin RP ARI",Free Agent,0,0,0,1.0,2,1,1,1616
+"Stevens, Jeff RP NYM",Free Agent,0,0,6,8.3,8,6,5,1617
+"Abad, Fernando RP WAS ",Free Agent,0,0,22,28.3,33,11,16,1618
+"Richardson, Dustin RP ATL",Free Agent,0,0,4,4.3,5,5,2,1619
+"Mendez, Adalberto SP MIA",Free Agent,0,0,4,8.3,9,4,5,1620
+"Bisenius, Joe RP WAS",Free Agent,0,0,2,1.7,2,2,2,1621
+"Zagurski, Mike RP PIT",Free Agent,0,0,16,16.0,16,9,11,1623
+"Carpenter, Drew RP TOR",Free Agent,0,0,9,9.0,10,4,7,1624
+"Diamond, Thomas RP CHC",Free Agent,0,0,12,9.7,11,6,7,1625
+"Cabrera, Fernando RP LAA",Free Agent,0,0,0,0.3,1,1,1,1626
+"Mitchell, D.J. RP SEA",Free Agent,0,0,2,4.7,7,3,2,1627
+"Mathieson, Scott RP PHI",Free Agent,0,0,2,2.3,5,2,1,1629
+"Stange, Daniel RP SD",Free Agent,0,0,1,1.3,1,2,2,1630
+"Caridad, Esmailin RP CHC",Free Agent,0,0,1,1.3,1,2,2,1630
+"Gervacio, Sammy RP HOU",Free Agent,0,0,1,1.3,1,2,2,1630
+"Mickolio, Kam RP ARI",Free Agent,0,0,4,3.3,5,2,3,1633
+"Johnson, Alan SP COL",Free Agent,0,0,2,2.0,3,2,2,1634
+"Augenstein, Bryan RP TB",Free Agent,0,0,2,2.0,4,1,2,1634
+"Sinkbeil, Brett RP MIA",Free Agent,0,0,0,0.7,1,2,1,1636
+"Korecky, Bobby RP TOR",Free Agent,0,0,0,1.0,1,1,2,1637
+"West, Sean SP MIA",Free Agent,0,0,3,3.0,5,1,3,1638
+"Gabino, Armando RP BAL",Free Agent,0,0,1,1.7,3,1,2,1639
+"Gallagher, Sean RP CIN",Free Agent,1,0,14,19.3,21,14,12,1640
+"Valdez, Jose RP HOU",Free Agent,0,0,8,8.7,10,5,6,1641
+"Socolovich, Miguel RP CHC",Free Agent,0,0,12,16.3,15,9,11,1642
+"Kroenke, Zach RP ARI",Free Agent,0,0,2,3.7,5,2,3,1644
+"Joaquin, Waldis RP WAS",Free Agent,0,0,2,3.7,4,3,3,1644
+"Sborz, Jay RP ATL",Free Agent,0,0,0,0.3,1,0,2,1646
+"Ramirez, Horacio RP LAA",Free Agent,0,0,2,4.7,8,1,3,1647
+"Shields, Scot RP LAA",Free Agent,0,0,13,15.3,15,11,9,1648
+"Loux, Shane RP SF",Free Agent,1,0,9,25.3,32,9,14,1649
+"Broderick, Brian RP STL",Free Agent,0,0,2,6.0,8,2,4,1650
+"Taschner, Jack RP LAD",Free Agent,0,0,6,6.7,8,4,5,1651
+"Vargas, Claudio RP TOR",Free Agent,0,0,6,6.7,9,3,5,1651
+"Grabow, John RP LAD",Free Agent,1,0,19,29.3,34,14,18,1653
+"Delaney, Rob RP MIA",Free Agent,0,0,1,2.0,2,3,2,1654
+"Rupe, Josh RP BAL",Free Agent,0,0,5,8.0,10,4,5,1655
+"Majewski, Gary RP HOU",Free Agent,0,0,0,0.7,2,0,2,1656
+"Lincoln, Mike RP CIN",Free Agent,0,0,4,6.7,8,3,5,1657
+"Coello, Robert RP TOR",Free Agent,0,0,5,4.0,5,3,4,1658
+"Thompson, Aaron RP MIN",Free Agent,0,0,0,2.7,4,2,2,1659
+"Chavez, Jesse RP OAK",Free Agent,2,0,28,31.7,38,13,26,1660
+"Cleto, Maikel RP STL",Free Agent,0,0,10,6.7,10,3,6,1661
+"Ortiz, Russ RP LAD",Free Agent,0,0,2,2.3,3,2,3,1662
+"Farquhar, Danny RP SEA",Free Agent,0,0,0,1.0,2,1,2,1663
+"Bonser, Boof RP NYM",Free Agent,0,0,6,8.3,11,3,6,1664
+"Lewis, Rommie RP ARI",Free Agent,0,0,7,8.0,11,3,6,1665
+"Judy, Josh RP CIN",Free Agent,0,0,5,7.0,9,2,6,1666
+"Suppan, Jeff SP SD",Free Agent,2,0,19,44.0,55,17,25,1668
+"VandenHurk, Rick RP PIT",Free Agent,0,0,9,9.7,11,6,7,1669
+"Petit, Yusmeiro SP SF",Free Agent,0,0,1,4.7,7,4,2,1670
+"Figaro, Alfredo RP MIL",Free Agent,0,0,2,5.0,6,3,4,1671
+"Banks, Josh SP SF",Free Agent,0,0,0,1.3,3,1,2,1672
+"Gonzalez, Enrique RP DET",Free Agent,0,0,5,11.7,11,8,7,1673
+"Ramirez, Elvin RP NYM",Free Agent,0,0,11,10.7,12,10,6,1674
+"Nelson, Joe RP SEA",Free Agent,0,0,3,2.7,5,2,3,1676
+"Berg, Justin RP CHC",Free Agent,0,0,7,17.3,19,9,9,1677
+"Bass, Brian RP PHI",Free Agent,0,0,2,2.3,3,3,3,1678
+"Jakubauskas, Chris SP ARI",Free Agent,1,0,17,24.3,32,10,16,1679
+"Crawford, Evan RP TOR",Free Agent,0,0,5,8.0,10,4,6,1680
+"Ohlendorf, Ross SP WAS ",Free Agent,2,0,48,65.3,76,28,42,1681
+"Paterson, Joe RP ARI",Free Agent,0,0,14,18.3,22,9,11,1682
+"Maine, John SP COL ",Free Agent,0,0,13,13.3,16,8,9,1683
+"White, Sean RP COL",Free Agent,0,0,5,11.3,15,4,7,1684
+"Otero, Dan RP SF",Free Agent,0,0,8,12.3,19,2,8,1685
+"Thompson, Daryl RP MIN",Free Agent,0,0,0,1.3,3,2,2,1686
+"Hand, Brad SP MIA",Free Agent,0,0,20,32.0,30,20,18,1687
+"Bullington, Bryan SP KC",Free Agent,0,0,10,14.3,17,6,10,1688
+"Lindsay, Shane RP LAD",Free Agent,0,0,2,2.0,4,2,3,1689
+"Colon, Roman RP KC",Free Agent,0,0,1,3.3,6,2,3,1690
+"Ni, Fu-Te RP DET",Free Agent,0,0,7,7.7,9,6,6,1691
+"Pendleton, Lance RP HOU",Free Agent,0,0,6,9.3,10,6,7,1692
+"Sampson, Chris RP HOU",Free Agent,0,0,5,10.0,14,3,7,1693
+"Maya, Yunesky SP WAS",Free Agent,0,0,9,19.7,23,7,12,1694
+"Jackson, Steven RP LAD",Free Agent,0,0,2,3.7,6,2,4,1695
+"Mathis, Doug RP BOS",Free Agent,0,0,3,7.3,10,4,5,1696
+"Thomas, Justin RP NYY",Free Agent,0,0,4,7.0,11,3,5,1697
+"Mata, Frank RP MIA",Free Agent,0,0,3,5.7,8,3,5,1698
+"Perez, Oliver RP SEA",Free Agent,0,0,20,25.3,27,17,14,1699
+"Bruney, Brian RP CHW ",Free Agent,1,0,11,12.7,16,11,10,1700
+"Godfrey, Graham SP OAK ",Free Agent,0,0,12,23.0,29,8,13,1701
+"Lerew, Anthony SP KC",Free Agent,0,0,6,8.7,11,3,8,1702
+"Oliver, Andrew SP PIT",Free Agent,0,0,8,10.7,12,7,8,1703
+"Atkins, Mitch RP WAS",Free Agent,0,0,6,7.0,11,3,6,1704
+"Billings, Bruce RP OAK",Free Agent,0,0,4,3.3,6,3,4,1705
+"Buente, Jay RP TB",Free Agent,0,0,4,5.3,8,5,4,1706
+"Fick, Chuckie RP HOU",Free Agent,0,0,17,24.7,27,18,12,1707
+"Ledezma, Wil RP LAD",Free Agent,0,0,9,8.7,12,4,8,1708
+"Mejia, Jenrry SP NYM",Free Agent,0,0,10,18.3,22,10,10,1709
+"Texeira, Kanekoa RP CIN",Free Agent,0,0,11,22.7,29,9,12,1710
+"Proctor, Scott RP NYY ",Free Agent,1,0,12,15.3,18,12,12,1711
+"Rivera, Saul RP CLE",Free Agent,0,0,0,1.3,4,1,3,1712
+"Villanueva, Elih SP MIA",Free Agent,0,0,1,1.3,2,2,4,1713
+"Worrell, Mark RP BAL",Free Agent,0,0,2,1.0,3,1,4,1714
+"Grimm, Justin RP TEX ",Free Agent,1,0,13,14.0,22,3,14,1715
+"Penn, Hayden RP PIT",Free Agent,0,0,0,0.7,3,1,3,1716
+"Valdez, Cesar RP PIT",Free Agent,0,0,4,6.7,10,3,6,1717
+"Meyer, Dan RP PHI",Free Agent,0,0,1,3.0,5,4,3,1718
+"Smith, Greg SP COL",Free Agent,0,0,10,13.0,16,8,9,1719
+"Wilk, Adam SP DET ",Free Agent,0,0,8,12.0,18,3,9,1720
+"Wood, Tim RP MIN",Free Agent,0,0,4,12.0,14,8,7,1721
+"De La Rosa, Dane RP TB",Free Agent,0,0,6,6.0,8,2,8,1722
+"Coleman, Casey RP CHC",Free Agent,2,0,39,55.3,65,28,35,1723
+"Schlitter, Brian RP CHC",Free Agent,0,0,2,2.7,6,2,4,1724
+"Harris, William RP COL",Free Agent,1,0,19,17.7,27,6,16,1725
+"Hoey, Jim RP TOR",Free Agent,0,0,7,12.3,17,6,8,1726
+"Stokes, Brian RP TOR",Free Agent,0,0,5,5.7,9,5,5,1727
+"Chulk, Vinnie RP MIL",Free Agent,1,0,10,9.0,17,4,10,1728
+"Buckner, Billy SP LAA",Free Agent,0,0,4,4.3,9,2,5,1729
+"Reyes, Jo-Jo SP LAA ",Free Agent,2,0,30,48.0,62,17,32,1730
+"Sanit, Amauri RP NYY",Free Agent,0,0,2,3.3,6,2,5,1731
+"Rosario, Sandy RP SF ",Free Agent,0,0,1,2.7,7,1,4,1732
+"Lueke, Josh RP TB",Free Agent,0,0,16,18.0,22,8,14,1733
+"Schwinden, Chris SP NYM",Free Agent,0,0,9,14.7,19,4,12,1734
+"Burns, Cory RP TEX",Free Agent,0,0,18,18.0,26,10,11,1735
+"Dyson, Sam RP TOR ",Free Agent,0,0,1,0.7,4,2,3,1736
+"Daigle, Casey RP SF",Free Agent,0,0,2,3.3,8,2,4,1737
+"Willis, Dontrelle SP BAL ",Free Agent,1,0,35,47.0,50,31,28,1738
+"Crotta, Mike RP PIT",Free Agent,0,0,4,5.3,10,2,6,1739
+"Williams, Randy RP BOS",Free Agent,0,0,9,11.0,16,9,7,1741
+"Weber, Thad RP SD",Free Agent,0,0,1,4.0,10,2,4,1742
+"Haeger, Charlie SP BOS",Free Agent,0,0,10,10.0,12,9,9,1743
+"Tallet, Brian RP SD",Free Agent,1,0,21,30.3,35,15,23,1744
+"Redmond, Todd SP CIN",Free Agent,0,0,2,3.3,7,5,4,1745
+"Snell, Ian SP STL",Free Agent,0,0,9,15.3,20,8,11,1746
+"Edlefsen, Steve RP SF",Free Agent,0,0,8,13.3,18,8,10,1747
+"Crosby, Casey SP DET",Free Agent,1,0,9,12.3,15,11,13,1748
+"O'Sullivan, Sean SP SD",Free Agent,2,0,21,47.3,56,19,33,1749
+"McHugh, Collin SP NYM",Free Agent,0,0,17,21.3,27,8,18,1750
+"Cabrera, Edwar SP COL",Free Agent,0,0,5,5.7,9,7,7,1751
+"Carpenter, David RP ATL",Free Agent,0,0,28,30.0,40,17,19,1752
+"Cruz, Rhiner RP HOU",Free Agent,1,0,46,55.0,65,29,37,1753
+"Warren, Adam SP NYY",Free Agent,0,0,1,2.3,8,2,6,1754
+"Cook, Aaron SP PHI ",Free Agent,4,0,43,106.3,130,37,65,1755
+"Weiland, Kyle SP HOU ",Free Agent,0,0,13,21.3,26,10,17,1756
+"Verdugo, Ryan SP KC",Free Agent,0,0,2,1.7,8,2,6,1757
+"Davis, Doug SP CHW",Free Agent,1,0,23,28.0,38,16,22,1758
+"Del Rosario, Enerio RP HOU",Free Agent,0,0,15,27.3,37,14,17,1759
+"Hernandez, Pedro SP MIN",Free Agent,0,0,2,4.0,12,1,8,1760
+"Raley, Brooks SP CHC",Free Agent,1,0,16,24.3,33,11,22,1761
+"Stewart, Zach RP CHW ",Free Agent,2,0,32,51.3,74,11,39,1762
+"Vasquez, Anthony SP SEA",Free Agent,0,0,6,14.7,23,5,14,1763
+"Castillo, Lendy RP CHC",Free Agent,0,0,13,16.0,24,12,14,1764
+"Rowland-Smith, Ryan SP CHC",Free Agent,0,0,16,36.3,47,15,27,1765
+"Capaul, Alex P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Matt A. RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shiell, Jason RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Whitenack, Robert P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gordon, Tom RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brigham, Jake P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leon, Arnold RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Houlton, D.J. RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Price, Bryan P CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Partch, Curtis P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cate, Troy RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bannister, John SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ames, Steven RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Petrini, Chris P BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Peguero, Jailen RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shipman, Andrew RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Magill, Matt P LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Long, Matt RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Waters, Chris SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fleming, Marquis RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barbato, John P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ray, Jason RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rainville, Jay RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wright, Steven P BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Swagerty, Jordan RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"May, Trevor SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Searle, Ryan P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Jason M. RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Parisi, Mike RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Turpen, Daniel RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shinskie, David RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fukumori, Kazuo RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Treinen, Blake P OAK ",Free Agent,0,0,0,0.0,0,0,0,9999
+"McLemore, Mark S. RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stohr, Tyler RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Banks, Demetrius RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Edwards, Bryan RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corcino, Daniel SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bawcom, Logan P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Christopher P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woods, Coty RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Murray, A.J. SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wing, Ryan RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Weathers, David RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santos, Reid RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Novinsky, John RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Tyler J. RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Inman, Will SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kensing, Logan RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gailey, Frank P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"DeSalvo, Matt RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Selik, Cameron SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nabors, Kevin RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Serrano, Jimmy RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Geronimo, Ramon RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simmons, James J. RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lofgren, Chuck SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sosa, Oswaldo SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Erasmo RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramos, Mario RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mitchell, Mike RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Cruz, Jose RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sharpless, Josh RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marshall, Brett SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Musgrove, Joe SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bean, Colter RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosin, Seth RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"McLeary, Marty RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Muecke, Josh RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Kevin P LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Ismael SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Munson, Kevin RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hand, Donovan P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Haines, Talley RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Boyd, Hudson SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Olenberger, Kasey SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cameron, Kevin RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burawa, Daniel RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wlodarczyk, Michael RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Merklinger, Dan SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Denney, Kyle SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Norderum, Jason RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Embree, Alan RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarez, Carlos RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barnette, Tony RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sillman, Mike RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garate, Victor RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santiago, Julio RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarez, Mario SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Van Mil, Loek RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rojas, Luis P SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bucktrot, Keith RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zych, Anthony P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zinicola, Zech RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Borrell, Danny RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Young, Terrell RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jungmann, Taylor SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gomez, Mariano RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wheeler, Zack SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schultz, Bo RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flores, Adalberto P HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zavada, Clay RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maekawa, Katsuhiko RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hoorelbeke, Casey RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maust, David RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martin, Ethan SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barzilla, Philip RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Duff, Grant RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Curreri, Frank RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ruelas, Heriberto RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Koplove, Mike RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Malaska, Mark RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reed, Chris P LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lansford, Jared SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morris, Dallas RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gassner, Dave SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Testa, Joe RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Davidson, Dave RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Neil P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hyatt, Austin SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lawrence, Brian SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tollberg, Brian SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Macdonald, Mike RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gosling, Mike RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Houston, Ryan RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kuwata, Masumi RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castillo, Fabio RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mendoza, Tommy RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yates, Tyler RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Green, Nick A. SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Rosa, Wilkin RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Devenski, Chris RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marte, Jose RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campos, Machado RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Andujar, Christopher P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thorpe, Tracy RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Franco, Martire RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rustich, Brant RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Haley, Trey P CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hennessey, Brad RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Littleton, Wes RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zeid, Joshua P HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fossum, Casey SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cavazos, Andy RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pereira, Nick RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Espinosa, Sergio P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baek, Cha Seung SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vasquez, Luis RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Broshuis, Garrett RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baxter, Allen SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wojciechowski, Asher SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ynoa, Michael SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Peterson, Matt RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Marcelo RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reyes, Jorge SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Matzek, Tyler SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanford, Shawn SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Capellan, Jose F. RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nall, Brandon RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lee, Zach SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Durbin, J.D. SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"McGinley, Blake RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rleal, Sendy RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hayes, Christopher RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Banuelos, Manuel SP NYY ",Fever Pitch,0,0,0,0.0,0,0,0,9999
+"Paulk, Robert RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lugo, Ebelin P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Broadway, Michael SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wassermann, Ehren RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Newby, Kyler RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harrold, Stephen RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Olson, Justin RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Julio P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ridgway, Jeff RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Turley, Nik P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Igawa, Kei SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Weis, Brad RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pope, Justin RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pucetas, Kevin SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bowie, Micah RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cromer, Jason RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sarfate, Dennis RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Serrano, Mark P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bacsik, Mike SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sisco, Andrew RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fleet, Austin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alaniz, Ruben RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fornataro, Eric P STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wayne, Justin RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Waechter, Doug RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shirek, Charlie P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Howard, Dillon SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santos, Jarrett SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kunz, Eddie RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gobble, Jimmy RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hull, Eric RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lara, Juan RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Patton, David RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Salas, Marino RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nin, Sandy SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Julianel, Ben RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Elizardo RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Herges, Matt RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fields, Josh RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mallette, Brian RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Blevins, Steven RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Northcraft, Aaron P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dunning, Jake RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mabeus, Chris RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bowyer, Travis RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Samuel, Francisco RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ventura, Yordano SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carter, Brenton RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Glover, Gary RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Liz, Radhames RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Glen, Willie SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buckel, Cody SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Halsey, Brad SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Malone, Christopher RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Acosta, Kelyn SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Slocum, Brian RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Howard, Ben RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dials, Zachary RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bochy, Brett P SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Norris, Daniel SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fahrner, Evan RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stephenson, Robert P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barnes, Daniel P TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maples, Dillon SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gonzalez, Aguido RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Aldridge, Richard RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Heston, Chris SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Booker, Chris RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snow, Forrest SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gardner, Lee RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Broadway, Lance RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Seanez, Rudy RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Register, Steven RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Klinker, Matt SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sowers, Jeremy SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Matt J. RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bootcheck, Chris RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cullen, Ryan RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roberts, Kevin RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bloom, Kyle SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simons, Zach RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carrasco, Hector RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rheinecker, John SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zarate, Mauro RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rohlicek, Russel RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kasparek, Kenn SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rondon, Jorge RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bradley, Archie SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Traber, Billy RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Astacio, Ezequiel RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Parise, Pete RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ginley, Kyle SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Savage, Will SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Oswaldo P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Calero, Kiko RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Colyer, Steve RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hart, Kevin SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nunez, Vladimir RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Phillips, P.J. RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harben, Adam SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gutierrez, Danny SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bachanov, Jon RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Foppert, Jesse SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kiely, Timothy SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bland, Nate RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Abreu, Winston RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carrillo, Marco RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walton, Sam RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kennard, Jeff RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Sergio SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arenas, Orangel P LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Etherton, Seth SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harikkala, Tim RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Williamson, Joseph P COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Peguero, Tony SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leesman, Charlie SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Moreno, Anthony RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ravin, Joshua P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lambert, Chris RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wechsler, Justin RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Freeman, Justin P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Spiehs, R.D. RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gordon, Derrick RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"DeMark, Mike RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burke, Erick RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arias, Jonathan P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yabu, Keiichi RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Herrera, Yoslan SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baker, Craig RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campbell, Matt RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Mike RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leicester, Jon SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bouknight, Kip SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yates, Kyle RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gardner, Michael RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Egan, Pat RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reichenbach, James RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Herrera, Alex RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McClellan, Zach RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McBeth, Marcus RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Naylor, Drew SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Irwin, Phillip P PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kobayashi, Masa RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wood, Austin P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Webb, Travis P MIL ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Eddy RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roquet, Rocky RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Rosa, Eury P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Novoa, Roberto RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pimentel, Stolmy SP PIT ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hankins, Derek P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Embry, Byron RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bass, Adam RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perrault, Josh M. SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Carlos P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barber, Scott RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guttormson, Rick RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corey, Bryan RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Diaz, Jose RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brown, Andrew RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bush, Paul RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hardy, Blaine RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alexander, Mark RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cedeno, Juan RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kinney, Matt SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Santiago RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simon, Kyle P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ennis, John RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Antonini, Michael SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cole, Gerrit SP PIT",2nd Wind,0,0,0,0.0,0,0,0,9999
+"Stamler, Keith RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ellis, Jonathon RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arbiso, Cory P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"McCrory, Bob RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carmona, Ysmael RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Keisler, Randy SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bayliss, Jonah RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ponson, Sidney SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walker, Taijuan SP SEA",Fever Pitch,0,0,0,0.0,0,0,0,9999
+"Kloess, Brandon RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vega, Marwin SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cova, Rafael SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Eckert, Harold RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mitchell, Andy RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nestor, Scott RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Heckathorn, Kyle SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Duckworth, Brandon SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wood, Alex P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gracey, Scott RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Davidson, Daniel RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pullin, Aaron RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"McClung, Seth RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Taillon, Jameson SP PIT",Dead Parrot's Society,0,0,0,0.0,0,0,0,9999
+"Pugliese, Nick RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kissock, Christopher P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"James, Craig RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Webster, Allen SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cruceta, Francisco RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roe, Chaz SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lee, Chen-Chang RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Komine, Shane SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chick, Travis SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bazzell, Shane RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carter, Anthony RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Ramon RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corcoran, Roy RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Petricka, Jacob SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Caminero, Arquimedes RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Petersen, Jeffrey RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Housman, Jeff RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Towers, Josh RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Timlin, Mike RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santos, Arthur RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Merritt, Roydrick RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marbry, Michael P COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roark, Tanner RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ventura, Ronnie RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yourkin, Matt RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Olmsted, Michael RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McGuire, Deck SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stockman, Phil RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cosart, Jarred SP HOU ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stowell, Bryce RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jung, Sung RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McFarland, T.J. SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bettis, Chad SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ellis, Josh RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Quezada, Jackson RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Moran, Brian P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnston, Andrew RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gausman, Kevin SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanchez, Angel RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bibens-Dirkx, Austin RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pope, Ryan SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Childress, Daylan RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ingram, Jesse RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kenney, Michael RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carvajal, Marcos RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rhoderick, Kevin RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lebron, Luis RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nall, T.J. RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Valiquette, Philippe RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Medina, Ruben P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Gaby SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Montgomery, Mark P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vasquez, Carlos RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vaclavik, Justin RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thompson, Sean SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bostick, Adam SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cody, Christopher RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stoffel, Jason RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snyder, Kyle RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Looper, Braden SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bennett, Jeff RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arias, Wilkins RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ryu, Jae-Kuk RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robertson, Connor RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hamulack, Tim RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Field, Nate RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Steele, Mike RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bradford, Chad RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mazone, Brian SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cyr, Eric RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Keefer, Ryan RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hellweg, Johnny RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schmidt, Jason SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Villacis, Eduardo E. RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Beltran, Francis RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pettyjohn, Adam C. SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Adkins, James RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bryson, Rob RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walrond, Les RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Byrd, Darren P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Valdez, Jose A. RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosario, Francisco A. RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barrera, Henry RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Munter, Scott RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harvey, Kris RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tepera, Ryan SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jenkins, Tyrell SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Merricks, Matt RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rainwater, Josh SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arias, Alberto RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Davis, Erik SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gracesqui, Franklyn RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hudson, Luke SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Estrada, Jesus RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schoening, Brent RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Paukovits, Bryan P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hill, Jeremy RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reed, Brian RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fulmer, Michael SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Escobar, Kelvim SP MIL ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thorne, Jeremy RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walz, T.J. P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bauer, Rick RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rivera, Oscar SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lowry, Noah SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Birkins, Kurt RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lo, Chia-Jen RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pfeiffer, David P LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fernandes, Kyle P BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flannery, Michael RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flinn, Chris RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Carlos E. SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garr, Brennan RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bright, Adam J. RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Fabio SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarez, Abe SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cassel, Justin RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Minix, Travis RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brownlie, Bobby SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castro, Simon SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hinton, Robert RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Richard, Steven RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Justin SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Blanco, Ivan RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Clark, Kirk P HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cox, J.B. RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wright, Matt SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Batista, Frank P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pino, Yohan RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"McNabb, Tim RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tufts, Tyler RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lara, Alexis RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Oneli RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gissell, Chris RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schmidt, Joshua RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Adams, Mike T. RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wordekemper, Eric RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stewart, Cory RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schroder, Chris RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Carlos SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tavarez, Julian RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hatley, Marcus P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"James, Chad SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Adams, Austin SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zimmer, Kyle SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shouse, Brian RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Belfiore, Michael SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pimentel, Elisaul SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Englebrook, Evan RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gonzalez, Rey SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Quezada, Elvys RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Molldrem, Craig RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Clark, Craig SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"de los Santos, Richard RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pena, Ariel SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wada, Tsuyoshi SP BAL ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reed, Evan RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cooney, Brandon P BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santiago, Jose RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martis, Shairon SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castellanos, Jonathan RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Torra, Matt SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ray, Robbie SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fraser, Ryan P NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woerman, Joe SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Adam SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Knigge, Tyler RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reid, Justin RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maurer, Brandon P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Villalona, Bryan RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corcoran, Tim RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Loop, Derrick P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hansen, Craig RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arakawa, Yusuke RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Boscan, Wilfredo P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Adkins, Jon RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bright, Adam RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brocail, Doug RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Matthews, Kevin SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Welker, Duke RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Percival, Troy RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Boothe, Robert RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hembree, Heath RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bukvich, Ryan RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Withrow, Chris SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Orenduff, Justin SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pennington, Todd RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cole, A.J. SP OAK ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rouwenhorst, Jonathon RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Neris, Hector P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schenk, Neil P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hendrickson, Ben SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Batista, Kendy RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thorne, David RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Plexico, Gerald RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Payano, Nelson RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sawatski, Jay RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Aselton, Kyle RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Giolito, Lucas RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flande, Yohan SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bumstead, Mike RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ortega, Anthony SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pollok, Dwayne RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thomas, Kevin SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cisco, Michael P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campillo, Jorge RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smoker, Josh RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Keating, Patrick RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wilkinson, Matthew RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jorgenson, Adam RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Romero, Davis RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Molleken, Dustin RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wilhite, Matt RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bittner, Tim RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Larez, Victor P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rohrbaugh, Robert SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lollis, Matt P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Seaton, Ross SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"McSwain, Samuel RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Spruill, Zeke SP ATL ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bonilla, Henry RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Venditte, Patrick P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santiago, Tomas RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Davis, Jason T. RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hamman, Corey RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hill, Nick RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walker, Jamie RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morla, Ronny SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Beckman, Ryan P PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mulder, Mark SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bajenaru, Jeff RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarez, Manny RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Keppel, Bobby RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stanford, Jason SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hansack, Devern RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Muegge, Danny RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Edgar R. RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanchez, Jesus SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lowery, Devon RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Tyler P COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woodyard, Mark RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rakers, Aaron J. RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mercedes, Simon SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Urckfitz, Patrick RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Jose A. RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fruto, Emiliano RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baez, Federico RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garcia, Jose L. RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Carson P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burnside, Adrian RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barrett, Ricky RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pettibone, Jonathan SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flores, Jose RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meloan, Jon RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bono, Robert SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Eric P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Quinonez, Rudolph RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Abraham, Paul RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Giese, Dan RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wells, Jared RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rhee, Dae-Eun SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tomey, Anthony RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vaquedano, Jose RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santeliz, Clevelan RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rusch, Glendon RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morgan, Adam P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Voss, Jay RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woods, Jake RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jackson, Kyle RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Craig SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rollins, Heath SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pimentel, Carlos P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Silva, Walter SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hovis, Jonathan RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dubee, Michael P PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Geary, Geoff RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cortes, David RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cofield, Kyle SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hobgood, Matthew SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hunton, Jon RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Redding, Tim SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Darrow, Rudy RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cave, Kevin RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Britton, Chris RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Flores, Ron RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garman, Brian P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morlan, Eduardo RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Foltynewicz, Mike SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Greenwood, Nick SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zumwalt, Alec RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ortega, Yonata RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Christensen, Danny SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Desgue, Fernando RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reyes, Anthony SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Coutlangus, Jon RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pinder, Branden RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rasmus, Cory P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Scholl, Chris P LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Erik P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marceaux, Jacob SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tanner, Clayton SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"George, Chris SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mercedes, Roque RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brito, Eude SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leon, Arcenio RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Manon, Julio RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gast, John P STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McConnell, Sam RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Doolittle, Michael P MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Horne, Alan SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Saenz, Chris RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Spoone, Chorye SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simpson, Hayden SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Swindle, R.J. RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jaime, Juan SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cordier, Erik SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mateo, Victor P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Munoz, Arnie RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bush, Matt RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Livingston, Bobby SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Remenowsky, Daniel RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Austen, David RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Currin, Patrick RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tapia, Domingo SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thomas, Daniel RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Whisler, Wesley RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pelland, Tyler SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schlosser, Gus P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Voyles, Brad RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carroll, Scott SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marshall, Jay RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cummings, Jeremy SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thornton, Zach P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosen, Mark RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Avery, Matthew RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pichardo, Kelvin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Astacio, Olivo RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Purke, Matt SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Herron, Tyler RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Portice, Eammon P BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zerpa, Armando RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Curtis, Dan RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hermsen, B.J. P MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kiker, Kasey SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kadokura, Ken SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bellamy, Kyle RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Howard, Adam RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pearson, Jason RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Orta, Ricky RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Everts, Clint SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hensley, Matt RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Olmos, Edgar P MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jackson, Zach SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kussmaul, Ryan P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Geer, Josh SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hurd, John RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lumsden, Tyler SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Whatcott, Jordan P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Birtwell, John RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jennings, Jason RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dingman, Craig RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Koronka, John SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barlow, Scott SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Frontz, Neal RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bushue, Tanner SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Solis, Sammy SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cabrera, Daniel SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sisco, Jake SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carrillo, Cesar SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sartor, Matthew RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ormond, Rodney RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Takahashi, Ken RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Doyle, Jared RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Van Buren, Jermaine RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harker, Brett RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Huntzinger, Brock P BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Taylor, Graham SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robbins, Jake RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Claiborne, Preston P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Aaron SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Diaz, Amalio P LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Paulino, Brenny SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hornbeck, Ben SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Townsend, Wade SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gunderson, Kevin RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Cruz, Julio RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Matt J. RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gonzalez, Luis E. RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Black, Vic P PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Heredia, Luis SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thielbar, Caleb RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snell, Blake SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wilson, Alex RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Speier, Justin RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Milton, Eric SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hirsh, Jason SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bale, John RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nunez, Jhonny RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Holt, Bradley SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Green, Matthew RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stroman, Marcus RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Knight, Brandon SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Valenzuela, Sergio RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Grube, Jarrett SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"James, Brad SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Armas, Tony SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hynes, Colt RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"DePaula, Julio RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Munoz, Luis SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shell, Steven RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"McCoy, Patrick P WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stemle, Steve RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Montgomery, Mike SP KC ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Downs, Brodie RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gabbard, Kason SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bray, Steve RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Klatt, Ryan RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tago, Peter SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pena, Tony RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanchez, Duaner RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rice, Jason RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guevara, Carlos RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rivero, Felipe SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Villone, Ron RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Crouse, Matt P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Ryne RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morris, Cory SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guzman, Angel RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lively, Mitch RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sturge, Justin RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robowski, Ryan P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kleine, Victor RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martin, Adrian RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Warden, Jim Ed RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Andrade, Steve RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Walker, Andrew RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Chase SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Farina, Alan RP TOR ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Carlos RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wild, Jacob RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Trinidad, Polin SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bastardo, Alberto RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brunet, Michael RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jan, Carlos RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burgos, Ambiorix RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Raymond P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Periard, Alex SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lopez, Aquilino RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Puffer, Brandon RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ovalles, Juan RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mann, Brandon P WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Holmberg, David SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Brian RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schultz, Mike RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Valdez, Eddy RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Finch, Brian SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mateo, Julio RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leek, Randy SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mahon, Reid RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Erlin, Robbie SP SD",Vortex,0,0,0,0.0,0,0,0,9999
+"Marti, Yadel SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guerrieri, Taylor P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Muessig, Jeff RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Korpi, Wade P MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tillman, Daniel RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lugo, Ruddy RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vizcaino, Luis RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Peralta, Starling SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burns, Mike SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Graham, Andrew RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gardner, Joe SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Vara, Gilbert RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Luis, Santo SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gaffney, Scott P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stutes, Kyle RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arnett, Eric SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"White, Bill RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Driskill, Travis RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garcia, Rosman RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Asencio, Miguel RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Delgado, Jesus RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Prior, Mark SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brewer, Charles P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martin, Tom RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Parrott, Rhett RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marks, Justin P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Paula, Jose SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ross, Joe P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Spurling, Chris RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ellis, Jordan P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Seibel, Phil SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Soto, Giovanni SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Leach, Brent RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Aguero, Ramon RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Windsor, Jason SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cherry, Rocky RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Edell, Ryan SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Siegrist, Kevin SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dowdy, Justin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rasmussen, Rob SP MIA ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robinson, Dakota RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baumann, George P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ynoa, Michael P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, Jose P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Megrew, Mike RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Odalis SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morrison, Michael P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nicolino, Justin SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"LaFromboise, Robert P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thomas, Jared RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Switzer, Jon RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jackson, Jay SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Poveda, Omar SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"McBride, Macay RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Akin, Brian RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Braun, Ryan RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Henn, Sean RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buzachero, Bubbie RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tyler, Scott SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Colvin, Brody SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roach, Donn P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Osoria, Franquelis RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sandoval, Juan SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rasner, Jacob SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rincon, Ricardo RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gutierrez, Carlos RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buschmann, Matt RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garceau, Shaun RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buch, Ryan P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Estrada, Paul RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Startup, Will RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"McDade, Neal RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Juarez, William RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Eadington, Eric P LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meque, Jacobo RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Blackburn, Clayton SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Banwart, Travis P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rogers, Chad P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Mike RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Camacho, Eddie RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smit, Kyle RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snyder, Ben SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Van Benschoten, John SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mildren, Paul SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Correa, Hector RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Honel, Kris RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"White, Steven SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jimenez, Kelvin RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shackelford, Brian RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tanaka, Ryohei P BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cota, Luis SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lotzkar, Kyle SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hughes, Travis RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Muyco, Dionisio RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martin, Rafael RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Deza, Fredy SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bernero, Adam RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Salas, Juan RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ortegano, Jose SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Peterson, Adam RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"King, Blake RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Knapp, Jason SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dorman, Rich SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mathes, J.R. SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Manzanillo, Santo RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shafer, David RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Trubee, Luke RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"James, Michael RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Scarpetta, Cody SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gothreaux, Jared SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cassidy, Scott RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barham, Donald P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Riordan, Cory SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sisk, Brandon RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Crouthers, Dave RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Derek RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bumatay, Mike RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Michalak, Chris RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gayhart, Jared RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carraway, Andrew SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Salmon, Brad RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cuevas, Jairo SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rohrbough, Cole SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Webb, Brandon SP TEX ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Berlind, Daniel P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meaux, Ryan RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Goocher, Clint RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Concepcion, Gerardo SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Orvella, Chad RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schreiber, Zach RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bailey, Cory RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Melville, Timothy SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sampson, Keyvius SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Butler, Josh RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sequea, Jacobo RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Heaney, Andrew SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Washburn, Jarrod SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Connolly, Jon SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ames, Jeff SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gryboski, Kevin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stanczyk, Ben RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Eaton, Adam SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Montero, Agustin RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buckwalter, Ross P TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Holdzkom, Lincoln RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sosa, Juan RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Childers, Jason RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Anastacio SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ward, Zachary RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Quackenbush, Kevin RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ramirez, J.C. SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Blazek, Michael P STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jang, Pil Joon SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Seidel, R.J. RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Graves, Danny RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Italiano, Craig RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Liberatore, Adam P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hill, Danny RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perkins, Vince RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castro, Fabio RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gulin, Lindsay RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maestri, Alessandro RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Niesen, Eric SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Estes, Shawn SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cardona, Adonys SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Ricardo SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Papelbon, Jeremy RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bierd, Randor RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kim, Byung-Hyun RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zimmermann, Bob RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lamb, John SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Poreda, Aaron RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barthmaier, Jimmy SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sadler, Billy RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Feierabend, Ryan SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Collazo, Willie RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Journell, Jimmy RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reynoso, Paulino RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rowe, Steven RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robles, Mauricio SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Santos RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lentz, Richard RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Butler, Keith P STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fitzgerald, Justin SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snodgress, Scott P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gallo, Mike D. RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sues, Jeff RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wooten, Robert RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tonkin, Michael P MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Jason RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Nathan RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Young, Corey P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Clark, Zach SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kemp, Beau RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kahn, Stephen RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meadows, Daniel P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Montero, Rafael RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Starner, Nathan RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buchter, Ryan P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lobstein, Kyle SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gogal, Jeffrey RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Parker, Zach SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, David RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gronkiewicz, Lee RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reifer, Adam RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chen, Hung-Wen SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Owens, Rudy SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Daniel P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Morillo, Juan RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wacha, Michael SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gil, Francisco P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kown, Andrew RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Main, Michael SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Medina, Yoervis SP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Isenberg, Kurt RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hertzler, Barry RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campos, Jose SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bynum, Mike RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hope, Mason SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Solano, Javier P LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Santos, Victor RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brooks, Richard RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bowles, Brian RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Regilio, Nick RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chapman, Kevin P HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Pedro SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Madrigal, Warner RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Greg RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bonilla, Lisalberto P PHI ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanchez, Humberto SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guerra, Deolis SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barbara, Michael RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stites, Matthew P SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reina, Jesus SP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meszaros, Daniel RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smit, Alexander RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Childers, Matt RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Frazier, Parker P COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Forystek, Brian RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cochran, Tom SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zink, Charlie SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Colome, Alex SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Massaro, Michael RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dohmann, Scott RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gonzalez, Marco RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Dan B. RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hammes, Zach SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cheng, Chi-Hung SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Espineli, Geno RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"House, T.J. P CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simonitsch, Errol SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bucci, Nick P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Kris SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chafin, Andrew SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hyde, Lee RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nelson, Brad RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Jason RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schmoll, Steve RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dickerson, Dale RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lugo, Jose RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nannini, Mike RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Blake P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Day, Dewon RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cannon, Jon SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sharpe, Steven RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ranaudo, Anthony SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wright, Mike P BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Graham, J.R. SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Choi, Hyang-Nam RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Romero, Felix RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Huisman, Justin RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wolfe, Brian RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nix, Michael RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Baker, Brian RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tamayo, Ignacio RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gustafson, Timothy P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Trahern, Dallas SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnson, Jeremy RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Syndergaard, Noah SP NYM ",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ortiz, Joseph P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Elliott, Matthew RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Searles, Jonathan RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gagne, Eric RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jarrett, Sean P COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Deago, Roger SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rivas, Amaury SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cali, Carmen RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Montero, Oscar RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roemer, Wes SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Britton, Drake SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woody, Abraham RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hunter, Brett RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garcia, Angel RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kinsey, Christopher RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Joseph, Donnie RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wright, Chase SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sadowski, Ryan SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nageotte, Clint RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"O'Connor, Brian P. RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jensen, George P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fish, Robert RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Jesse RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Weathers, Casey RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bromberg, David SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Large, Terry RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bell, Rob RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lamm, Mark P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Drake, Oliver SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fiske, Justin RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Matos, Osiris RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hurley, Eric SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mackintosh, Jason RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stoneburner, Graham SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garcia, Harvey RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chiavacci, Ron RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"DeBarr, Nick RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bradley, Jed P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yabuta, Yasuhiko RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hayhurst, Dirk RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rust, Evan RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Buglovsky, Christopher RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ballard, Mike SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Quinowski, David RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Nevarez, Matt RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Whitaker, Craig RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corey, Mark RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stark, Denny RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vaughan, Beau RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ginter, Matt SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rice, Scott RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woodall, Bryan P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fujikawa, Kyuji RP CHC ",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Leon, Jorge RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lopez, Arturo A. RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Plummer, Jarod RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Falkenborg, Brian RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dodson, Stephen RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Youman, Shane SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brown, Brooks RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gilmartin, Sean SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Martinez, Michael RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Harrington, Matt RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Aquino, Greg RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Drese, Ryan SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reid, Ryan RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marshall, Evan RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rivera, Mumba RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Salazar, Danny SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hall, Bo RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hurley, Trevor P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mastny, Thomas RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Songster, Jud RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Zaleski, Matt RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fernandez, Anthony P SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gibson, Kyle SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Moss, Damian RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Woodard, Robert RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"McKiernan, Eddie RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Moreno, Edwin RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mattioni, Nick RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Narron, Sam SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Molina, Nestor SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"West, Matt RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meyers, Brad SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dunn, Scott RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fogg, Josh RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stewart, Scott E. RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Erbe, Brandon SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fernandez, Jose SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Capellan, Jose M. SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Armando SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Escobar, Edwin P SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Beau P MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pelzer, Wynn SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Deschenes, Marc RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bazardo, Yorman RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Friend, Justin RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maxwell, Blake RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miner, Zach SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guardado, Eddie RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"McCullers, Lance RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Powell, Jeremy RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sullivan, Jerry RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Germen, Gonzalez P NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castillo, Jesus SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jackson, Luke SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Musser, Neal RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Benitez, Armando RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rondon, Francisco P NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Serrano, Alex RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pena, Luis RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wood, Mike RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ohka, Tomo SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Diaz, Felix RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vasquez, Jorge RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Crawford, Tristan RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campusano, Ed RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shoemaker, Matt SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Biddle, Jesse SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Oyervidez, Jose RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Wilfrido RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Powers, Daniel RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Waddell, Jason RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lehr, Justin SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Benacka, Mike RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Fernando RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Villafuerte, Brandon RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Madden, Corey RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Foster, John RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rundles, Richard RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rogers, Brian A. RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Asadoorian, Rick RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Loux, Barret SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carter, Lance RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Murphy, Bill RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Urquidez, Jason RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Freed, Mark RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Avery, James SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ray, Ronald RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Torres, Joe RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Snyder, Jason RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vargas, Jose RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Corley, Tyson RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Atlee, Thomas RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Randolph, Stephen RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shortslef, Josh SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Beam, T.J. RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Boleska, Tom P MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lewis, Scott SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Haigwood, Dan SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rasner, Darrell SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Scherer, Matt RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wilkie, Josh RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Speier, Ryan RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bongiovanni, Vincent RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"DiNardo, Lenny SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mosebach, Bobby RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Satterwhite, Cody SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pote, Lou RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Travis SP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shappi, A.J. RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Christiani, Nick P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Felix, Francisco RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chaffee, Matt P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gorski, Darin P NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Doyne, Cory RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Oberholtzer, Brett SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pimentel, Julio SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Duke, Ryan P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Condrey, Clay RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bowman, Josh P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fox, Chad RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"DeHoyos, Gabe RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Thompson, Mike SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bleich, Jeremy SP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gardner, Richie SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gray, Sonny P OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Crick, Kyle RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bateman, Joe RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Moreno, Victor RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Allie, Stetson SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lorin, Brett SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Greg D. RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Souza, Justin SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Orlando SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dolsi, Freddy RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lahey, Tim RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"McKirahan, Andrew P CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bierbrodt, Nick SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Turgeon, Erik P NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Butto, Francisco RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alderson, Tim SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Los Santos, Frank P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Urdaneta, Lino RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bundy, Robert SP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meo, Anthony SP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Province, Christopher RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cox, Bryson RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jones, Geoff RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dove, Dennis RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Cody RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sullivan, Josh SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rueckel, Danny RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Diaz, Joselo RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pinango, Miguel RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Los Santos, Miguel SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Petrick, Billy RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Campbell, Brett B. RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gorgen, Matt RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Houser, Adrian SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rondon, Hector SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Medlock, Calvin RP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dwyer, Chris SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hinckley, Mike RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Contreras, Carlos P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Furnish, Brad RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lujan, John RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tata, Jordan SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Guillon, Ismael P CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lyman, Jeff RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Demaria, Chris N. RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Core, Danny RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Sean H. RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Segovia, Zack RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Adam, Jason SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Huber, Jon RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lopez, Gonzalo RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barone, Daniel SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mazzoni, Cory SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kopp, David RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Murray, Colton P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kohn, Shawn RP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Junge, Eric SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Jong, Jordan RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wimmers, Alex SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burke, Greg RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tucker, Glenn RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Linares, Serguey SP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tabor, Ronald RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Blair, Seth SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tatusko, Ryan SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Elarton, Scott SP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lara, Braulio SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Krebs, Joseph RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosario, Adrian RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Patterson, Scott RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Smith, Carlton RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"McBryde, Jeremy RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Musgrave, Rob RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Wilmin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meyer, Alex P WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rienzo, Andre P CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hernandez, Yoel RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Speigner, Levale RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"De La Cruz, Kelvin SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Newman, Josh RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lanigan, Bobby P MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"McNutt, Trey SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fortunato, Bartolome RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Maldonado, Ivan RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tsao, Chin-Hui RP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Allison, Jeffrey SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Medlen, Casey P MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Seay, Bobby RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Anderson, Brian RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Roehl, Scott RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marimon, Sugar Ray P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Gerbe, Jeff RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Webber, Nicholas RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Carr, Adam RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fried, Max SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alcantara, Raul SP OAK",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vermilyea, Jamie RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tomoro, Denny RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Manning, Charlie RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cotts, Neal RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Castellanos, Hugo RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yates, Kirby P TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rodriguez, Orlando RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bennett, Daniel RP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hoffman, Matt P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hessler, Keith P ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hutchinson, Trevor RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jukich, Ben SP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Norrick, Tyler RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Osuna, Edgar SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Meyer, Matt RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Abbott, James RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarez, Jose SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Clarke, Darren RP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kester, Tim RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Taubenheim, Ty SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Strickland, Hunter P PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Johnston, Mike RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Yan, Johan RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wise, Brendan RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Muniz, Carlos RP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Marek, Stephen SP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Jamison, Neil RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Oye, Matt RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mills, Adam RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Karns, Nathan P WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Casilla, Jose RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosario, Rodrigo SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garrison, Seth P BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Benjamin, Ramon SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chapman, Chance P PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Klein, Daniel P BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Antolin, Dustin P TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Faulk, Kenny P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Spottiswood, William RP ARI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Stertzbach, Von RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Uviedo, Ronald P TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bradley, Bobby RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Valentine, Joe RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mateo, Juan SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cabral, Cesar RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"McCormick, Mark RP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cassel, Jack SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wagner, Ryan RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Clemens, Paul SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Burgos, Hiram SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Reckling, Trevor RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Messenger, Randy RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hagerty, Luke RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Watson, Sean RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Cortez, Renee RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arguello, Douglas SP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Vasquez, Virgil SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tejera, Michael RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Malone, Corwin SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Claussen, Brandon SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Berg, Jeremy P LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Arguelles, Noel SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brasier, Ryan RP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mariot, Michael P KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Robles, Hansel P NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Weiser, Keith SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Justin P TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Knotts, Gary RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"Begg, Chris RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Miller, Jeff RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Garcia, Anderson RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"German, Franklyn RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Dittler, Jake SP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Ungs, Nick SP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tracey, Sean RP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Tovar, Angel RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Villarreal, Oscar RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Huerta, Edgar RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sierra, Eduardo RP LAD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Oramas, Juan SP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Brazelton, Dewon SP STL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Schmidt, Nick RP SD",Free Agent,0,0,0,0.0,0,0,0,9999
+"Shoemaker, Scott RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Whitley, Chase RP NYY",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mullins, Ryan RP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Matumoto, Jo RP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Claggett, Anthony RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barry, Kevin RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Byrd, Paul SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Paredes, Edward RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Romero, Enny SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Kibler, Jon SP DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Alvarado, Carlos A. RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"O'Malley, Ryan J. SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Holliman, Mark SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Chaffee, Ryan SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pressly, Ryan SP MIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mason, Chris SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hale, David P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hines, Carlos RP HOU",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rosenbaum, Dan SP COL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Barnes, Matt SP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Simpson, Allan RP PIT",Free Agent,0,0,0,0.0,0,0,0,9999
+"Overholt, Patrick RP PHI",Free Agent,0,0,0,0.0,0,0,0,9999
+"De Los Santos, Valerio SP NYM",Free Agent,0,0,0,0.0,0,0,0,9999
+"Paronto, Chad RP BOS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Parr, James R. RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Suarez, Albert SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hammond, Steven RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Halama, John SP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Phillips, Heath SP TB",Free Agent,0,0,0,0.0,0,0,0,9999
+"Fultz, Aaron RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sanchez, Aaron SP TOR",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wahpepah, Joshua RP MIL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Laughter, Andrew RP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Lowey, Josh P ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Sturdevant, Tyler RP CLE",Free Agent,0,0,0,0.0,0,0,0,9999
+"Oldham, Thomas RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Magrane, Jim RP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Wallach, Brett SP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Loosen, Matt RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hayes, Drew RP CIN",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rivero, Raul RP BAL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mercedes, Melvin P DET",Free Agent,0,0,0,0.0,0,0,0,9999
+"Rall, Tim RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Trolia, Aaron RP SEA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Liotta, Ray SP KC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hedrick, Justin RP SF",Free Agent,0,0,0,0.0,0,0,0,9999
+"Owens, Henry RP MIA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Pignatiello, Carmen RP CHC",Free Agent,0,0,0,0.0,0,0,0,9999
+"Perez, Beltran SP WAS",Free Agent,0,0,0,0.0,0,0,0,9999
+"Bedrosian, Cam SP LAA",Free Agent,0,0,0,0.0,0,0,0,9999
+"Doyle, Terry SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
+"Mendez, Roman SP TEX",Free Agent,0,0,0,0.0,0,0,0,9999
+"Basner, Ryan RP ATL",Free Agent,0,0,0,0.0,0,0,0,9999
+"Hynick, Brandon SP CHW",Free Agent,0,0,0,0.0,0,0,0,9999
