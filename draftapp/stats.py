@@ -671,8 +671,9 @@ class PopulationStats(object):
 			pitcher.er = int(row[10])
 			pitcher.bb = int(row[11])
 			pitcher.k = int(row[12])
-			self._pitchers.append(pitcher)
 			self._unordered_pitchers[id] = pitcher
+			if pitcher.ipouts > 300 or pitcher.s > 10:
+				self._pitchers.append(pitcher)
 
 	def calculate_hitter_mean(self):
 		entries = 0
