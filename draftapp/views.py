@@ -57,7 +57,7 @@ def player_filter(request):
 		filter_form = PlayerFilterForm(request.GET)
 	else:
 		filter_form = PlayerFilterForm({'position': 'U',
-						'dataset': 'proj_CBS'})
+						'dataset': 'proj_STEAMER'})
 	if filter_form.is_valid():
 		js_data = js_players(**filter_form.cleaned_data)
 
@@ -418,7 +418,7 @@ def team(request, team_id):
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_CBS'})
+		dataset_form = DataSetForm({'dataset': 'proj_STEAMER'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
@@ -586,7 +586,7 @@ def teams(request):
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_CBS'})
+		dataset_form = DataSetForm({'dataset': 'proj_STEAMER'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
