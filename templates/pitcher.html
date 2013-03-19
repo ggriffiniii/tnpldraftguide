@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/static/css/tables.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/autoSuggest.css" />
 <link rel="stylesheet" type="text/css" media="all" href="/static/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="/static/css/text.css" />
 <link rel="stylesheet" type="text/css" media="all" href="/static/css/960.css" />
@@ -8,6 +9,7 @@
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script type="text/javascript" src="/static/js/sonic.js"></script>
 <script src="/static/js/jquery.form.js"></script>
+<script src="/static/js/jquery.autoSuggest.js"></script>
 <script type="text/javascript">
 function getCookie(name) {
     var cookieValue = null;
@@ -105,6 +107,7 @@ function dollarString(dollar_val) {
 
 	var seasons = {{seasons|safe}};
 	var projections = {{projections|safe}};
+	var playerid = {{id|escapejs}};
 
 	var seasons_table = $("#seasons_table");
 	seasons.forEach(function(season) {
@@ -194,14 +197,14 @@ function dollarString(dollar_val) {
 	var proj_table = $("#projections_table");
 	projections.forEach(function(proj) {
 		var row = $("<tr />");
-		$("<td />")
+		var type_td = $("<td />")
 			.addClass("left-border")
-			.text(proj['type'])
 			.appendTo(row);
+		type_td.append($("<span />").text(proj['type']));
 		var era = proj['ER'] / (proj['IP'] / 9.0);
 		var era_text = era.toFixed(3) + ' (' +
 			proj['IP'].toFixed(1) + ')';
-		$("<td />")
+		var era_td = $("<td />")
 			.addClass("left-border")
 			.text(era_text)
 			.appendTo(row);
@@ -211,28 +214,28 @@ function dollarString(dollar_val) {
                 var whip = (proj['H'] + proj['BB']) / proj['IP'];
                 var whip_text = whip.toFixed(3) + ' (' +
                                 proj['IP'].toFixed(1) + ')';
-		$("<td />")
+		var whip_td = $("<td />")
 			.addClass("left-border")
 			.text(whip_text)
 			.appendTo(row);
 		var whip_dollar_td = $("<td />")
 			.addClass("right-border")
 			.appendTo(row);
-		$("<td />")
+		var w_td = $("<td />")
 			.addClass("left-border")
 			.text(proj['W'])
 			.appendTo(row);
 		var w_dollar_td = $("<td />")
 			.addClass("right-border")
 			.appendTo(row);
-		$("<td />")
+		var k_td = $("<td />")
 			.addClass("left-border")
 			.text(proj['K'])
 			.appendTo(row);
 		var k_dollar_td = $("<td />")
 			.addClass("right-border")
 			.appendTo(row);
-		$("<td />")
+		var s_td = $("<td />")
 			.addClass("left-border")
 			.text(proj['S'])
 			.appendTo(row);
@@ -242,6 +245,78 @@ function dollarString(dollar_val) {
 		var total_dollar_td = $("<td />")
 			.addClass("right-border")
 			.appendTo(row);
+
+		if (proj.editable) {
+			var edit_link = $('<a />')
+					.css('padding-left', '10px')
+					.attr('href', '#')
+					.text('edit')
+					.appendTo(type_td);
+			edit_link.click(function() {
+				era_td.empty();
+				era_dollar_td.empty();
+				whip_td.empty();
+				whip_dollar_td.empty();
+				w_td.empty();
+				w_dollar_td.empty();
+				k_td.empty();
+				k_dollar_td.empty();
+				s_td.empty();
+				s_dollar_td.empty();
+				total_dollar_td.empty();
+				var era_in = $('<input />')
+						.css('width', '3em')
+						.val(era.toFixed(3));
+				era_td.append(era_in);
+				ip_in = $('<input />')
+						.css('width', '3em')
+						.val(proj['IP'].toFixed(1));
+				era_dollar_td.append(ip_in);
+				var whip_in = $('<input />')
+						.css('width', '3em')
+						.val(whip.toFixed(3));
+				whip_td.append(whip_in);
+				var w_in = $('<input />')
+						.css('width', '2em')
+						.val(proj['W']);
+				w_td.append(w_in);
+				var k_in = $('<input />')
+						.css('width', '2em')
+						.val(proj['K']);
+				k_td.append(k_in);
+				var s_in = $('<input />')
+						.css('width', '2em')
+						.val(proj['S']);
+				s_td.append(s_in);
+				edit_link.text('submit')
+					.unbind('click')
+					.click(function() {
+					var data = {
+						type: proj.type,
+						player: playerid,
+						ERA: era_in.val(),
+						IP: ip_in.val(),
+						WHIP: whip_in.val(),
+						W: w_in.val(),
+						K: k_in.val(),
+						S: s_in.val()
+					};
+					$.ajax({
+						url: "/form/update_pitching_proj",
+						dataType: "json",
+						data: data,
+						type: "POST",
+						success: function(val) {
+							location.reload();
+						},
+						error: function(val) {
+							location.reload();
+						}
+					});
+				});
+			});
+		}
+
 		row.appendTo(proj_table);
 		var era_spinner = startSpinner(era_dollar_td);
 		var whip_spinner = startSpinner(whip_dollar_td);
@@ -275,6 +350,18 @@ function dollarString(dollar_val) {
 			}
 		});
 	});
+        $("#search").autoSuggest("/form/player_search", {
+                minChars: 2,
+                matchCase: false,
+                selectedItemProp: "name",
+                selectedValuesProp: "id",
+                searchObjProps: "name",
+                resultClick: function(data) {
+                        console.log("data: " + data);
+                        window.location.href = "/player/" + data.attributes.id + "/";
+                }
+        });
+
 });
 
 </script>
@@ -299,6 +386,21 @@ function dollarString(dollar_val) {
 </head>
 <body>
 <div class="container_12">
+        <div class="grid_4"><input id="search" type="text" /></div>
+	<div class="grid_4 prefix_4">
+	<form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
+	<table>
+		{{ ownership_form.as_table }}
+		<tr>
+			<th></th>
+			<td><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+	</form>
+	<div id="ownership_form_status" style="display:none;"></div>
+	</div>
+</div>
+<div class="container_12">
 <div class="grid_6">
 <h1>{{ name }}</h1>
 <h2>
@@ -315,18 +417,6 @@ Position:
  {{ pos }}&nbsp;
 {% endfor %}
 </br>
-</div>
-<div class="grid_4 prefix_2">
-<form action="/form/player_ownership" method="post" id="ownership_form">{% csrf_token %}
-<table>
-	{{ ownership_form.as_table }}
-	<tr>
-		<th></th>
-		<td><input type="submit" value="Submit" /></td>
-	</tr>
-</table>
-</form>
-<div id="ownership_form_status" style="display:none;"></div>
 </div>
 <div class="clear"></div>
 <div class="grid_12">

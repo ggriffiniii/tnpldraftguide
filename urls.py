@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^form/player_dollar_value$', 'draftapp.views.player_dollar_value_submit'),
     url(r'^form/player_ownership$', 'draftapp.views.ownership_form_submit'),
     url(r'^form/player_search$', 'draftapp.views.player_search'),
+    url(r'^form/update_batting_proj$', 'draftapp.views.update_batting_proj'),
+    url(r'^form/update_pitching_proj$', 'draftapp.views.update_pitching_proj'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
             {'document_root': '/home/griffin/django/tnpldraft/static'}),
 

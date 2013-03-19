@@ -57,7 +57,7 @@ def player_filter(request):
 		filter_form = PlayerFilterForm(request.GET)
 	else:
 		filter_form = PlayerFilterForm({'position': 'U',
-						'dataset': 'proj_STEAMER'})
+						'dataset': 'proj_MONEYBALLERS'})
 	if filter_form.is_valid():
 		js_data = js_players(**filter_form.cleaned_data)
 
@@ -133,6 +133,66 @@ def js_players(position, dataset):
 
 	return simplejson.dumps({'distributions': dist_data,
 				 'players_table': table_rows})
+
+class UpdateBattingProjForm(forms.Form):
+	player = forms.ModelChoiceField(queryset=Player.objects.all())
+	type = forms.CharField()
+	BA = forms.FloatField(max_value=1.0, min_value=0.0)
+	AB = forms.IntegerField()
+	R = forms.IntegerField()
+	HR = forms.IntegerField()
+	RBI = forms.IntegerField()
+	SB = forms.IntegerField()
+
+def update_batting_proj(request):
+	if request.method == 'POST':
+		form = UpdateBattingProjForm(request.POST)
+		if form.is_valid():
+			data = form.cleaned_data
+			player = data['player']
+			projection = player.battingproj_set.get(type=data['type'])
+			projection.ab = data['AB']
+			projection.r = data['R']
+			projection.h = int(data['BA'] * data['AB'])
+			projection.hr = data['HR']
+			projection.rbi = data['RBI']
+			projection.sb = data['SB']
+			projection.save()
+			return HttpResponse('', mimetype='application/json')
+		else:
+			print form.errors
+	return HttpResponseBadRequest()
+
+class UpdatePitchingProjForm(forms.Form):
+	player = forms.ModelChoiceField(queryset=Player.objects.all())
+	type = forms.CharField()
+	ERA = forms.FloatField(min_value=0.0)
+	IP = forms.FloatField(min_value=0.0)
+	WHIP = forms.FloatField(min_value=0.0)
+	W = forms.IntegerField()
+	K = forms.IntegerField()
+	S = forms.IntegerField()
+
+def update_pitching_proj(request):
+	if request.method == 'POST':
+		form = UpdatePitchingProjForm(request.POST)
+		if form.is_valid():
+			data = form.cleaned_data
+			player = data['player']
+			projection = player.pitchingproj_set.get(type=data['type'])
+			projection.w = data['W']
+			projection.sv = data['S']
+			projection.ipouts = int(round(data['IP'] * 3))
+			projection.h = int(round(projection.ipouts * data['WHIP'] / 3))
+			projection.bb = 0
+			projection.er = int(round(projection.ipouts * data['ERA'] / 27))
+			projection.so = data['K']
+			projection.save()
+			return HttpResponse('', mimetype='application/json')
+		else:
+			print form.errors
+	return HttpResponseBadRequest()
+
 
 class PlayerDollarValueForm(forms.Form):
 	playerid = forms.IntegerField()
@@ -301,6 +361,7 @@ def hitter(request, player):
 	for proj in player.battingproj_set.all():
 		summary = {
 			'type': proj.type,
+			'editable': proj.type == 'MONEYBALLERS',
 			'AB': proj.ab,
 			'H': proj.h,
 			'R': proj.r,
@@ -309,8 +370,20 @@ def hitter(request, player):
 			'SB': proj.sb,
 		}
 		projections.append(summary)
+	def proj_sorter(a):
+	
+		if a['type'] == 'MONEYBALLERS':
+			return 0
+		elif a['type'] == 'STEAMER':
+			return 1
+		elif a['type'] == 'MARCEL':
+			return 2
+		elif a['type'] == 'CBS':
+			return 3
+		else:
+			return 99
 		
-			
+	projections.sort(key=proj_sorter)
 
 	return render_to_response('hitter.html', {'name': name,
 						  'id': player.lahmanid,
@@ -347,7 +420,7 @@ def pitcher(request, player):
 		seasons.append(season)
 		
 	if most_recent_teamid is not None:
-		team = Teams.objects.get(teamid=most_recent_teamid, yearid=seasons[-1]['year']).name
+		team = Teams.objects.get(teamid=most_recent_teamid, yearid=seasons[0]['year']).name
 	else:
 		team = None
 
@@ -366,16 +439,31 @@ def pitcher(request, player):
 
 	projections = []
 	for proj in player.pitchingproj_set.all():
-		summary = {}
-		summary['type'] = proj.type
-		summary['W'] = proj.w
-		summary['S'] = proj.sv
-		summary['IP'] = float(proj.ipouts) / 3.0
-		summary['H'] = proj.h
-		summary['ER'] = proj.er
-		summary['BB'] = proj.bb
-		summary['K'] = proj.so
+		summary = {
+			'type': proj.type,
+			'editable': proj.type == 'MONEYBALLERS',
+			'W': proj.w,
+			'S': proj.sv,
+			'IP': float(proj.ipouts) / 3.0,
+			'H': proj.h,
+			'ER': proj.er,
+			'BB': proj.bb,
+			'K': proj.so,
+		}
 		projections.append(summary)
+	def proj_sorter(a):
+		if a['type'] == 'MONEYBALLERS':
+			return 0
+		elif a['type'] == 'STEAMER':
+			return 1
+		elif a['type'] == 'MARCEL':
+			return 2
+		elif a['type'] == 'CBS':
+			return 3
+		else:
+			return 99
+		
+	projections.sort(key=proj_sorter)
 
 	return render_to_response('pitcher.html', {'name': name,
 						   'id': player.lahmanid,
@@ -418,7 +506,7 @@ def team(request, team_id):
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_STEAMER'})
+		dataset_form = DataSetForm({'dataset': 'proj_MONEYBALLERS'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
@@ -513,17 +601,24 @@ def team(request, team_id):
 		     'HR_dollar', 'RBI', 'RBI_dollar', 'SB', 'SB_dollar',
 		     'POS_dollar', 'total_dollar'):
 		hitter_totals[attr] = sum([x[attr] for x in hitters])
-	hitter_totals['BA'] = float(hitter_totals['H']) / hitter_totals['AB']
+	if hitter_totals['AB'] == 0:
+		hitter_totals['BA'] = 0.0
+	else:
+		hitter_totals['BA'] = float(hitter_totals['H']) / hitter_totals['AB']
 
 	pitcher_totals = {}
 	for attr in ('salary', 'IP', 'ER', 'ERA_dollar', 'H', 'BB',
 		     'WHIP_dollar', 'W', 'W_dollar', 'K', 'K_dollar', 'S',
 		     'S_dollar', 'POS_dollar', 'total_dollar'):
 		pitcher_totals[attr] = sum([x[attr] for x in pitchers])
-	games_pitched = pitcher_totals['IP'] / 9.0
-	pitcher_totals['ERA'] = pitcher_totals['ER'] / games_pitched
-	walks_and_hits = pitcher_totals['H'] + pitcher_totals['BB']
-	pitcher_totals['WHIP'] = walks_and_hits / pitcher_totals['IP']
+	if pitcher_totals['IP'] == 0:
+		pitcher_totals['ERA'] = 0.0
+		pitcher_totals['WHIP'] = 0.0
+	else:
+		games_pitched = pitcher_totals['IP'] / 9.0
+		pitcher_totals['ERA'] = pitcher_totals['ER'] / games_pitched
+		walks_and_hits = pitcher_totals['H'] + pitcher_totals['BB']
+		pitcher_totals['WHIP'] = walks_and_hits / pitcher_totals['IP']
 
 	unknown_totals = {
 		'salary': sum([x['salary'] for x in unknown])
@@ -586,7 +681,7 @@ def teams(request):
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_STEAMER'})
+		dataset_form = DataSetForm({'dataset': 'proj_MONEYBALLERS'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
@@ -602,11 +697,11 @@ def teams(request):
 			Master.lahmanid,
 			draftapp_tnplownership.salary
 		FROM
-			draftapp_tnplownership
-		JOIN
 			draftapp_tnplteam
+		LEFT OUTER JOIN
+			draftapp_tnplownership
 		ON (draftapp_tnplownership.team_id = draftapp_tnplteam.id)
-		JOIN
+		LEFT OUTER JOIN
 			Master
 		USING(playerID);
 	''')
@@ -616,7 +711,10 @@ def teams(request):
 		team_id = row[0]
 		team_name = row[1]
 		player_id = row[2]
-		salary = float(row[3])
+		if row[3] is not None:
+			salary = float(row[3])
+		else:
+			salary = None
 
 		if teams.has_key(team_id):
 			team = teams[team_id]
@@ -647,29 +745,30 @@ def teams(request):
 				'name': team_name,
 			}
 			teams[team_id] = team
-		player = stats.get_player(row[2])
-		if player is None:
-			u_totals = team['unknown_totals']
-			u_totals['salary'] += salary
-			u_totals['num_players'] += 1
-		elif player.get_position() == 'P':
-			p_totals = team['pitcher_totals']
-			p_totals['ERA_dollar'] += player.era_dollar(stats)
-			p_totals['WHIP_dollar'] += player.whip_dollar(stats)
-			p_totals['W_dollar'] += player.w_dollar(stats)
-			p_totals['K_dollar'] += player.k_dollar(stats)
-			p_totals['S_dollar'] += player.s_dollar(stats)
-			p_totals['salary'] += salary
-			p_totals['num_players'] += 1
-		else:
-			h_totals = team['hitter_totals']
-			h_totals['BA_dollar'] += player.h_dollar(stats)
-			h_totals['R_dollar'] += player.r_dollar(stats)
-			h_totals['HR_dollar'] += player.hr_dollar(stats)
-			h_totals['RBI_dollar'] += player.rbi_dollar(stats)
-			h_totals['SB_dollar'] += player.sb_dollar(stats)
-			h_totals['salary'] += salary
-			h_totals['num_players'] += 1
+		if player_id is not None and salary is not None:
+			player = stats.get_player(player_id)
+			if player is None:
+				u_totals = team['unknown_totals']
+				u_totals['salary'] += salary
+				u_totals['num_players'] += 1
+			elif player.get_position() == 'P':
+				p_totals = team['pitcher_totals']
+				p_totals['ERA_dollar'] += player.era_dollar(stats)
+				p_totals['WHIP_dollar'] += player.whip_dollar(stats)
+				p_totals['W_dollar'] += player.w_dollar(stats)
+				p_totals['K_dollar'] += player.k_dollar(stats)
+				p_totals['S_dollar'] += player.s_dollar(stats)
+				p_totals['salary'] += salary
+				p_totals['num_players'] += 1
+			else:
+				h_totals = team['hitter_totals']
+				h_totals['BA_dollar'] += player.h_dollar(stats)
+				h_totals['R_dollar'] += player.r_dollar(stats)
+				h_totals['HR_dollar'] += player.hr_dollar(stats)
+				h_totals['RBI_dollar'] += player.rbi_dollar(stats)
+				h_totals['SB_dollar'] += player.sb_dollar(stats)
+				h_totals['salary'] += salary
+				h_totals['num_players'] += 1
 			
 
 	return render_to_response('teams.html',
