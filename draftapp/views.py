@@ -672,6 +672,7 @@ def team(request, team_id):
 						'unknown': unknown,
 						'unknown_totals': unknown_totals,
 						'dataset_form': dataset_form,
+						'draftable_positions': draftable_positions,
 					       }, context_instance=RequestContext(request))
 
 class TeamSummary(object):
