@@ -280,30 +280,6 @@ def player(request, player_id):
 		return hitter(request, player)
 
 
-class HitterForm(forms.Form):
-	lahmanid = forms.IntegerField(widget=forms.HiddenInput)
-	playerid = forms.CharField(widget=forms.HiddenInput)
-	namefirst = forms.CharField()
-	namelast = forms.CharField()
-	positions = forms.MultipleChoiceField(choices=(
-		'C', '1B', '2B', '3B', 'SS', 'OF'))
-
-def hitter_form_view(request):
-	if request.method == 'POST':
-		form = HitterForm(request.POST)
-		if form.is_valid():
-		if lahmanid is not None:
-			player = get_object_or_404(Player, lahmanid=lahmanid)
-			if not player.playerid.startswith('tnpl'):
-				return HttpResponseBadRequest()
-			
-	else:
-		form = HitterForm(request.GET)
-		
-	
-	
-
-
 def hitter(request, player):
 	name = "%s %s" % (player.namefirst, player.namelast)
 
