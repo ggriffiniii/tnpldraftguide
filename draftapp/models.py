@@ -11,7 +11,8 @@ from django.db import models
 
 
 class Player(models.Model):
-    lahmanid = models.IntegerField(null=True, db_column='lahmanID', blank=True, primary_key=True) 
+    lahmanid = models.AutoField(db_column='lahmanID', primary_key=True) 
+    #lahmanid = models.IntegerField(null=True, db_column='lahmanID', blank=True, primary_key=True) 
     playerid = models.CharField(max_length=30, db_column='playerID', unique=True) 
     managerid = models.CharField(max_length=30, db_column='managerID', blank=True) 
     hofid = models.CharField(max_length=30, db_column='hofID', blank=True) 
