@@ -6,21 +6,21 @@ from django.forms.widgets import CheckboxSelectMultiple
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, HttpResponseBadRequest
-from django.db.models import Q
+from django.db.models import Sum, Q
 from django.template import Context, loader, RequestContext
-from draftapp.models import *
+from tnpldraft.draftapp.models import *
 import copy
-import draftapp.stats
+import tnpldraft.draftapp.stats
 import operator
 from django.db import connection
 import datetime
+import json
 import time
-from django.utils import simplejson
 import math
 
 def get_dataset_choices():
 	choices = []
-	prev_year = draftapp.stats.PREV_YEAR
+	prev_year = tnpldraft.draftapp.stats.PREV_YEAR
 	for year in xrange(prev_year, prev_year-6, -1):
 		choices.append((str(year), str(year)));
 
@@ -57,7 +57,7 @@ def player_filter(request):
 		filter_form = PlayerFilterForm(request.GET)
 	else:
 		filter_form = PlayerFilterForm({'position': 'U',
-						'dataset': 'proj_MONEYBALLERS'})
+						'dataset': '2013'})
 	if filter_form.is_valid():
 		js_data = js_players(**filter_form.cleaned_data)
 
@@ -76,7 +76,7 @@ def player_filter_submit(request):
 
 
 def js_players(position, dataset):
-	stats = draftapp.stats.PopulationStats()
+	stats = tnpldraft.draftapp.stats.PopulationStats()
 
 	# Calculate necessary stats (mean and standard deviation) and sort the
 	# hitters and pitchers in descending order of calculated score
@@ -131,7 +131,7 @@ def js_players(position, dataset):
 		dist_data = stats.get_hitting_distributions()
 		
 
-	return simplejson.dumps({'distributions': dist_data,
+	return json.dumps({'distributions': dist_data,
 				 'players_table': table_rows})
 
 class UpdateBattingProjForm(forms.Form):
@@ -209,12 +209,12 @@ def player_dollar_value_submit(request):
 							      data['dataset'],
 							      data['is_pitcher'])
 			return HttpResponse(
-				simplejson.dumps(dollar_value),
+				json.dumps(dollar_value),
 				mimetype='application/json')
 	return HttpResponseBadRequest()
 
 def js_player_dollar_value(player_id, dataset, is_pitcher):
-	stats = draftapp.stats.PopulationStats()
+	stats = tnpldraft.draftapp.stats.PopulationStats()
 	stats.UpdateStats(dataset)
 	player = stats.get_player(player_id)
 	if player is None:
@@ -292,14 +292,14 @@ def hitter(request, player):
 		'OF': 0,
 	}
 	try:
-		appearances = player.appearances_set.get(yearid=draftapp.stats.PREV_YEAR)
+		aggregate = player.appearances_set.filter(yearid=tnpldraft.draftapp.stats.PREV_YEAR).aggregate(Sum('g_c'), Sum('g_1b'), Sum('g_2b'), Sum('g_3b'), Sum('g_ss'), Sum('g_of'))
 		apps = {
-			'C': appearances.g_c,
-			'1B': appearances.g_1b,
-			'2B': appearances.g_2b,
-			'3B': appearances.g_3b,
-			'SS': appearances.g_ss,
-			'OF': appearances.g_of,
+			'C': aggregate['g_c__sum'],
+			'1B': aggregate['g_1b__sum'],
+			'2B': aggregate['g_2b__sum'],
+			'3B': aggregate['g_3b__sum'],
+			'SS': aggregate['g_ss__sum'],
+			'OF': aggregate['g_of__sum'],
 		}
 	except ObjectDoesNotExist:
 		pass
@@ -388,8 +388,8 @@ def hitter(request, player):
 	return render_to_response('hitter.html', {'name': name,
 						  'id': player.lahmanid,
 						  'appearances': appearances,
-			                	  'seasons': simplejson.dumps(seasons),
-						  'projections': simplejson.dumps(projections),
+			                	  'seasons': json.dumps(seasons),
+						  'projections': json.dumps(projections),
 						  'bats': player.bats,
 						  'throws': player.throws,
 						  'birthdate': birthdate,
@@ -467,8 +467,8 @@ def pitcher(request, player):
 
 	return render_to_response('pitcher.html', {'name': name,
 						   'id': player.lahmanid,
-						   'seasons': simplejson.dumps(seasons),
-						   'projections': simplejson.dumps(projections),
+						   'seasons': json.dumps(seasons),
+						   'projections': json.dumps(projections),
 						   'bats': player.bats,
 						   'throws': player.throws,
 						   'birthdate': birthdate,
@@ -494,24 +494,24 @@ def player_search(request):
 				      'name': '%s %s' % (player.namefirst, player.namelast)}
 			data.append(playerdata)
 
-		return HttpResponse(simplejson.dumps(data),
+		return HttpResponse(json.dumps(data),
 			    mimetype='application/json')
 	
 	return HttpResponseBadRequest()
 
 def team(request, team_id):
-        team = get_object_or_404(TNPLTeam, id=team_id)
+	team = get_object_or_404(TNPLTeam, id=team_id)
 	name = team.name
 
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_MONEYBALLERS'})
+		dataset_form = DataSetForm({'dataset': '2013'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
 
-	stats = draftapp.stats.PopulationStats()
+	stats = tnpldraft.draftapp.stats.PopulationStats()
 	stats.UpdateStats(dataset_form.cleaned_data['dataset'])
 
 	cursor = connection.cursor()
@@ -625,13 +625,13 @@ def team(request, team_id):
 	}
 	
 
-	if num_players >= draftapp.stats.NUM_PLAYERS:
+	if num_players >= tnpldraft.draftapp.stats.NUM_PLAYERS:
 		salary_remaining = 0.0
 		positions_remaining = 0
 		avg_salary = 0.0
 	else:
-		salary_remaining = draftapp.stats.SALARY_PER_TEAM - salary_spent
-		positions_remaining = draftapp.stats.NUM_PLAYERS - num_players
+		salary_remaining = tnpldraft.draftapp.stats.SALARY_PER_TEAM - salary_spent
+		positions_remaining = tnpldraft.draftapp.stats.NUM_PLAYERS - num_players
 		avg_salary = salary_remaining / positions_remaining
 
 	# Determine what positions are still draftable
@@ -641,11 +641,11 @@ def team(request, team_id):
 			lineup_copy = lineup.copy()
 			for k,v in lineup_copy.iteritems():
 				lineup_copy[k] = v[:]
-			for pos in [k for (k,v) in lineup_copy.iteritems() if len(v) < draftapp.stats.POS_COUNT[k]]:
+			for pos in [k for (k,v) in lineup_copy.iteritems() if len(v) < tnpldraft.draftapp.stats.POS_COUNT[k]]:
 				valid_lineups[pos].append(lineup_copy)
 			return
 		for pos in players[0]['positions']:
-			if draftapp.stats.POS_COUNT[pos] - len(lineup[pos]) == 0:
+			if tnpldraft.draftapp.stats.POS_COUNT[pos] - len(lineup[pos]) == 0:
 				continue
 			lineup[pos].append(players[0])
 			get_all_lineups(lineup, players[1:])
@@ -665,10 +665,10 @@ def team(request, team_id):
 						'avg_salary': avg_salary,
 						'hitters': hitters,
 						'hitter_totals': hitter_totals,
-						'hitter_totals_js': simplejson.dumps(hitter_totals),
+						'hitter_totals_js': json.dumps(hitter_totals),
 						'pitchers': pitchers,
 						'pitcher_totals': pitcher_totals,
-						'pitcher_totals_js': simplejson.dumps(pitcher_totals),
+						'pitcher_totals_js': json.dumps(pitcher_totals),
 						'unknown': unknown,
 						'unknown_totals': unknown_totals,
 						'dataset_form': dataset_form,
@@ -682,12 +682,12 @@ def teams(request):
 	if len(request.GET) > 0:
 		dataset_form = DataSetForm(request.GET)
 	else:
-		dataset_form = DataSetForm({'dataset': 'proj_MONEYBALLERS'})
+		dataset_form = DataSetForm({'dataset': '2013'})
 
 	if not dataset_form.is_valid():
 		return HttpResponseBadRequest()
 
-	stats = draftapp.stats.PopulationStats()
+	stats = tnpldraft.draftapp.stats.PopulationStats()
 	stats.UpdateStats(dataset_form.cleaned_data['dataset'])
 
 	cursor = connection.cursor()
@@ -771,11 +771,9 @@ def teams(request):
 				h_totals['salary'] += salary
 				h_totals['num_players'] += 1
 			
-
+	
 	return render_to_response('teams.html',
 				  {'teams': teams,
-				   'teams_js': simplejson.dumps(teams),
+				   'teams_js': json.dumps(teams),
 				   'dataset_form': dataset_form},
 				  context_instance=RequestContext(request))
-		
-		

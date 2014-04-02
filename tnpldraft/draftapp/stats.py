@@ -3,7 +3,7 @@ import math
 import operator
 from django.db import connection
 
-PREV_YEAR = 2012
+PREV_YEAR = 2013
 NUM_TEAMS = 13
 
 POS_COUNT = {

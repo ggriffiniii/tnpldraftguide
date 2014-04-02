@@ -1,4 +1,4 @@
-from draftapp.models import Player, TNPLTeam, TNPLOwnership
+from tnpldraft.draftapp.models import Player, TNPLTeam, TNPLOwnership
 from django.contrib import admin
 
 

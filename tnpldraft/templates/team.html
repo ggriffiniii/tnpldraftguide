@@ -159,7 +159,7 @@
 		<h1>{{ name }}</h1>
 	</div>
 	<div class="grid_3 prefix_3">
-		<form action="{% url draftapp.views.team team_id=team_id %}" method="get">
+		<form action="{% url 'team-detail' team_id=team_id %}" method="get">
 			<table>
 				{{ dataset_form.as_table }}
 				<tr><th></th><td>
